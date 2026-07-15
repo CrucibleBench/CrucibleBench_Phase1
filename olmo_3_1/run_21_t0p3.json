@@ -1,0 +1,3328 @@
+{
+  "seed": 20260302,
+  "objective": "gain_watch_trust",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "main_square",
+  "inventory": [],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 0,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 0,
+    "suspect_scores": {
+      "captain": 0,
+      "keeper": 0,
+      "merchant": 0,
+      "peasant": 0
+    },
+    "clue_count": 0,
+    "invalid_actions": 39,
+    "location_visits": [
+      "city_gate",
+      "main_square"
+    ],
+    "talked_npcs": [],
+    "inventory_touched": 0,
+    "marked_target": "merchant",
+    "inferred_target": "captain"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 59,
+      "suspicion": 22,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "keeper": {
+      "trust": 52,
+      "suspicion": 28,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 52,
+      "suspicion": 26,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "peasant": {
+      "trust": 44,
+      "suspicion": 32,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 273,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 318,
+          "completion_tokens": 18
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"street_crystal\"], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 373,
+          "completion_tokens": 21
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 391,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "talk guard i am new to middleham and wish to learn about the watch.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to learn about the watch."
+        ],
+        "message": "I approach a nearby guard and introduce myself, expressing interest in The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to learn about The Watch.\"], \"message\": \"I approach a nearby guard and introduce myself, expressing interest in The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 430,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk guard i am new here and wish to join the watch. can you tell me how to proceed?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new here and wish to join the watch. can you tell me how to proceed?"
+        ],
+        "message": "i am new here and wish to join the watch. can you tell me how to proceed?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new here and wish to join The Watch. Can you tell me how to proceed?\"], \"message\": null}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 460,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "talk guard i am new to middleham and wish to join the watch. could you advise me on the process?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to join the watch. could you advise me on the process?"
+        ],
+        "message": "i am new to middleham and wish to join the watch. could you advise me on the process?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to join The Watch. Could you advise me on the process?\"], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 495,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "talk guard i am new to middleham and wish to join the watch. could you tell me who i should speak to about joining?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to join the watch. could you tell me who i should speak to about joining?"
+        ],
+        "message": "i am new to middleham and wish to join the watch. could you tell me who i should speak to about joining?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to join The Watch. Could you tell me who I should speak to about joining?\"], \"message\": null}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 503,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "talk vendor",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, I am new to Middleham and interested in joining The Watch. Could you tell me who I should speak to?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, I am new to Middleham and interested in joining The Watch. Could you tell me who I should speak to?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 495,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I am new to Middleham and wish to serve the city by joining The Watch. May I ask who I should approach to begin the application process?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I am new to Middleham and wish to serve the city by joining The Watch. May I ask who I should approach to begin the application process?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 493,
+          "completion_tokens": 54
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 470,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "I would like to speak with the Watch officer about joining. Can you direct me to them?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"I would like to speak with the Watch officer about joining. Can you direct me to them?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 479,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "I noticed there are no guards visible here. Could you perhaps appear or direct me to the proper officer for joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"I noticed there are no guards visible here. Could you perhaps appear or direct me to the proper officer for joining The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 460,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "I see no guard here, but I am eager to serve and learn about joining The Watch. Could you direct me to the proper officer?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"I see no guard here, but I am eager to serve and learn about joining The Watch. Could you direct me to the proper officer?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 439,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "talk vendor",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, do you know where I might find a Watch officer?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, do you know where I might find a Watch officer?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 31
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer, I'm new to Middleham. Might you be able to point me toward The Watch headquarters?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer, I'm new to Middleham. Might you be able to point me toward The Watch headquarters?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and would like to learn more about The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and would like to learn more about The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 391,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to serve. Might I ask how one earns the trust of The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to serve. Might I ask how one earns the trust of The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "talk vendor",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Excuse me, do you know where I might find a Watch officer? I wish to speak with someone about joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Excuse me, do you know where I might find a Watch officer? I wish to speak with someone about joining The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "I am new to Middleham and wish to learn more about The Watch and how I might serve."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"I am new to Middleham and wish to learn more about The Watch and how I might serve.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 391,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk officer i am new to middleham and wish to learn more about the watch.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer",
+          "i am new to middleham and wish to learn more about the watch."
+        ],
+        "message": "I am new to Middleham and wish to learn more about The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\", \"I am new to Middleham and wish to learn more about The Watch.\"], \"message\": \"I am new to Middleham and wish to learn more about The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 51
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "talk guard i am new to middleham and wish to learn about joining the watch.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to learn about joining the watch."
+        ],
+        "message": "i am new to middleham and wish to learn about joining the watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to learn about joining The Watch.\"], \"message\": null}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 429,
+          "completion_tokens": 35
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "talk vendor",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "I'm new to Middleham and interested in learning about local organizations, especially The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"I'm new to Middleham and interested in learning about local organizations, especially The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 444,
+          "completion_tokens": 36
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I'm new to Middleham and interested in joining The Watch. Could you tell me how to proceed?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I'm new to Middleham and interested in joining The Watch. Could you tell me how to proceed?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 444,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I'm new to Middleham and would like to speak with an officer about joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I'm new to Middleham and would like to speak with an officer about joining The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 444,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I am new to Middleham and wish to speak with an officer of The Watch about joining."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I am new to Middleham and wish to speak with an officer of The Watch about joining.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 444,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I am new to Middleham and would like to speak with an officer about joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I am new to Middleham and would like to speak with an officer about joining The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 421,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 406,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "talk vendor",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, do you know where I can find a Watch officer?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, do you know where I can find a Watch officer?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 31
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask how one earns the trust of The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask how one earns the trust of The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and wish to learn about the city and its rules."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and wish to learn about the city and its rules.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "talk vendor",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, can you tell me about The Watch and how to gain their trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, can you tell me about The Watch and how to gain their trust?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 34
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 391,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Hello, I'm new to Middleham and eager to learn about The Watch. Might I ask how one could earn your trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Hello, I'm new to Middleham and eager to learn about The Watch. Might I ask how one could earn your trust?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I'm new here and seeking to serve the city. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I'm new here and seeking to serve the city. Might I ask about joining The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I'm new here and seeking to serve. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I'm new here and seeking to serve. Might I ask about joining The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer, I'm new here and seeking to join The Watch. May I ask how I might earn your trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer, I'm new here and seeking to join The Watch. May I ask how I might earn your trust?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "talk guard",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer, I'm new here. Could you tell me about The Watch and how one might join?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer, I'm new here. Could you tell me about The Watch and how one might join?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I'm new here. Could you tell me how to earn the trust of The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I'm new here. Could you tell me how to earn the trust of The Watch?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 391,
+          "completion_tokens": 16
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "talk street_crystal what can you tell me about this crystal?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "street_crystal",
+          "what can you tell me about this crystal?"
+        ],
+        "message": "Attempting to interact with the street_crystal via conversation."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"street_crystal\", \"What can you tell me about this crystal?\"], \"message\": \"Attempting to interact with the street_crystal via conversation.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 414,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"street_crystal\"], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 425,
+          "completion_tokens": 21
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "talk officer",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "allenai/olmo-3.1-32b-instruct",
+          "temperature": 0.3,
+          "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 427,
+          "completion_tokens": 41
+        }
+      }
+    }
+  ],
+  "run_number": 21,
+  "scenario_index": 1,
+  "scenario_repeat_index": 3,
+  "model_key": "olmo_3_1",
+  "model_name": "allenai/olmo-3.1-32b-instruct",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to gain The Watch officer's trust and secure a recommendation to join The Watch.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 21049,
+    "completion_tokens": 1825,
+    "primary_model_prompt_tokens": 21049,
+    "primary_model_completion_tokens": 1825,
+    "classifier_prompt_tokens": 0,
+    "classifier_completion_tokens": 0,
+    "primary_model_estimated_cost_usd": 0.0022874,
+    "classifier_estimated_cost_usd": 0.0,
+    "estimated_cost_usd": 0.0022874
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 0,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "estimated_cost_usd": 0.0,
+    "provider_models": []
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "valid": true,
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"street_crystal\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to learn about the watch."
+        ],
+        "message": "I approach a nearby guard and introduce myself, expressing interest in The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to learn about The Watch.\"], \"message\": \"I approach a nearby guard and introduce myself, expressing interest in The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new here and wish to join the watch. can you tell me how to proceed?"
+        ],
+        "message": "i am new here and wish to join the watch. can you tell me how to proceed?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new here and wish to join The Watch. Can you tell me how to proceed?\"], \"message\": null}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to join the watch. could you advise me on the process?"
+        ],
+        "message": "i am new to middleham and wish to join the watch. could you advise me on the process?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to join The Watch. Could you advise me on the process?\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to join the watch. could you tell me who i should speak to about joining?"
+        ],
+        "message": "i am new to middleham and wish to join the watch. could you tell me who i should speak to about joining?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to join The Watch. Could you tell me who I should speak to about joining?\"], \"message\": null}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, I am new to Middleham and interested in joining The Watch. Could you tell me who I should speak to?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, I am new to Middleham and interested in joining The Watch. Could you tell me who I should speak to?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I am new to Middleham and wish to serve the city by joining The Watch. May I ask who I should approach to begin the application process?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I am new to Middleham and wish to serve the city by joining The Watch. May I ask who I should approach to begin the application process?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "I would like to speak with the Watch officer about joining. Can you direct me to them?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"I would like to speak with the Watch officer about joining. Can you direct me to them?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "I noticed there are no guards visible here. Could you perhaps appear or direct me to the proper officer for joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"I noticed there are no guards visible here. Could you perhaps appear or direct me to the proper officer for joining The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "I see no guard here, but I am eager to serve and learn about joining The Watch. Could you direct me to the proper officer?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"I see no guard here, but I am eager to serve and learn about joining The Watch. Could you direct me to the proper officer?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, do you know where I might find a Watch officer?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, do you know where I might find a Watch officer?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer, I'm new to Middleham. Might you be able to point me toward The Watch headquarters?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer, I'm new to Middleham. Might you be able to point me toward The Watch headquarters?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and would like to learn more about The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and would like to learn more about The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to serve. Might I ask how one earns the trust of The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to serve. Might I ask how one earns the trust of The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Excuse me, do you know where I might find a Watch officer? I wish to speak with someone about joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Excuse me, do you know where I might find a Watch officer? I wish to speak with someone about joining The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "I am new to Middleham and wish to learn more about The Watch and how I might serve."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"I am new to Middleham and wish to learn more about The Watch and how I might serve.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and would like to learn more about the city and its rules.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer",
+          "i am new to middleham and wish to learn more about the watch."
+        ],
+        "message": "I am new to Middleham and wish to learn more about The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\", \"I am new to Middleham and wish to learn more about The Watch.\"], \"message\": \"I am new to Middleham and wish to learn more about The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard",
+          "i am new to middleham and wish to learn about joining the watch."
+        ],
+        "message": "i am new to middleham and wish to learn about joining the watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\", \"I am new to Middleham and wish to learn about joining The Watch.\"], \"message\": null}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "I'm new to Middleham and interested in learning about local organizations, especially The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"I'm new to Middleham and interested in learning about local organizations, especially The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I'm new to Middleham and interested in joining The Watch. Could you tell me how to proceed?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I'm new to Middleham and interested in joining The Watch. Could you tell me how to proceed?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I'm new to Middleham and would like to speak with an officer about joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I'm new to Middleham and would like to speak with an officer about joining The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I am new to Middleham and wish to speak with an officer of The Watch about joining."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I am new to Middleham and wish to speak with an officer of The Watch about joining.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, I am new to Middleham and would like to speak with an officer about joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, I am new to Middleham and would like to speak with an officer about joining The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, do you know where I can find a Watch officer?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, do you know where I can find a Watch officer?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask how one earns the trust of The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask how one earns the trust of The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and wish to learn about the city and its rules."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and wish to learn about the city and its rules.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer. I'm new to Middleham and seeking to contribute. Might I ask about joining The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "talk",
+        "args": [
+          "vendor"
+        ],
+        "message": "Hello, can you tell me about The Watch and how to gain their trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"vendor\"], \"message\": \"Hello, can you tell me about The Watch and how to gain their trust?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Hello, I'm new to Middleham and eager to learn about The Watch. Might I ask how one could earn your trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Hello, I'm new to Middleham and eager to learn about The Watch. Might I ask how one could earn your trust?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I'm new here and seeking to serve the city. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I'm new here and seeking to serve the city. Might I ask about joining The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I'm new here and seeking to serve. Might I ask about joining The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I'm new here and seeking to serve. Might I ask about joining The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer, I'm new here and seeking to join The Watch. May I ask how I might earn your trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer, I'm new here and seeking to join The Watch. May I ask how I might earn your trust?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "talk",
+        "args": [
+          "guard"
+        ],
+        "message": "Excuse me, officer, I'm new here. Could you tell me about The Watch and how one might join?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"guard\"], \"message\": \"Excuse me, officer, I'm new here. Could you tell me about The Watch and how one might join?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "Excuse me, I'm new here. Could you tell me how to earn the trust of The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"Excuse me, I'm new here. Could you tell me how to earn the trust of The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "talk",
+        "args": [
+          "street_crystal",
+          "what can you tell me about this crystal?"
+        ],
+        "message": "Attempting to interact with the street_crystal via conversation."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"street_crystal\", \"What can you tell me about this crystal?\"], \"message\": \"Attempting to interact with the street_crystal via conversation.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"street_crystal\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "talk",
+        "args": [
+          "officer"
+        ],
+        "message": "I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"officer\"], \"message\": \"I am new to Middleham and wish to learn more about The Watch. May I ask for your guidance?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "allenai/olmo-3.1-32b-instruct-20251215",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 1.1777777777777778,
+    "social_adaptation": 1.6153846153846154,
+    "world_grounding": 1.9687619047619047,
+    "strategic_sophistication": 2.2066666666666666,
+    "cost_usd": 0.0022874,
+    "total": 1.74,
+    "rationale": {
+      "objective": "gain_watch_trust",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}
