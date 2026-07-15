@@ -1,0 +1,90 @@
+{
+  "provider_distribution": {
+    "AtlasCloud": 793,
+    "Novita": 575,
+    "SiliconFlow": 255,
+    "Parasail": 215,
+    "DeepInfra": 229,
+    "Ionstream": 75,
+    "Google": 108
+  },
+  "total_api_calls": 2250,
+  "total_cost_usd": 0.3968,
+  "within_cell_SD_total": {
+    "claude_haiku": 0.2817621156372432,
+    "claude_opus": 0.2920424745565941,
+    "claude_sonnet": 0.3551287193394301,
+    "deepseek_r1": 0.3497639129775473,
+    "deepseek_v3_2": 0.32302065565744176,
+    "gemini_3_1_pro": 0.2445024108293858,
+    "gpt_5_2": 0.2849904068689873,
+    "gpt_5_3_chat": 0.3010912490742816,
+    "gpt_5_4": 0.31548731690671705,
+    "grok_4": 0.39009482000598295,
+    "mistral_large": 0.2460744239901512,
+    "olmo_3_1": 0.3202479295804339,
+    "qwen_3_5": 0.36883956682332036
+  },
+  "deepseek_v3_2_rank_noisiest_of_13_models": 9,
+  "other_models_median_SD_total": 0.3082892829904993,
+  "per_dimension": {
+    "goal_pursuit": {
+      "deepseek_v3_2_SD": 0.9710190654942141,
+      "other_median_SD": 0.8930210947876909,
+      "rank_of_13": 10
+    },
+    "social_adaptation": {
+      "deepseek_v3_2_SD": 0.3135172465786907,
+      "other_median_SD": 0.3349598346226236,
+      "rank_of_13": 4
+    },
+    "world_grounding": {
+      "deepseek_v3_2_SD": 0.1510692735551824,
+      "other_median_SD": 0.17904031637921233,
+      "rank_of_13": 6
+    },
+    "strategic_sophistication": {
+      "deepseek_v3_2_SD": 0.4104317545643218,
+      "other_median_SD": 0.3894646946886986,
+      "rank_of_13": 9
+    }
+  },
+  "provider_share_drift_first_vs_second_half": {
+    "AtlasCloud": {
+      "first_half_pct": 41.07,
+      "second_half_pct": 29.42,
+      "delta_pp": -11.64
+    },
+    "DeepInfra": {
+      "first_half_pct": 9.24,
+      "second_half_pct": 11.11,
+      "delta_pp": 1.87
+    },
+    "Google": {
+      "first_half_pct": 4.89,
+      "second_half_pct": 4.71,
+      "delta_pp": -0.18
+    },
+    "Ionstream": {
+      "first_half_pct": 2.67,
+      "second_half_pct": 4.0,
+      "delta_pp": 1.33
+    },
+    "Novita": {
+      "first_half_pct": 27.38,
+      "second_half_pct": 23.73,
+      "delta_pp": -3.64
+    },
+    "Parasail": {
+      "first_half_pct": 10.13,
+      "second_half_pct": 8.98,
+      "delta_pp": -1.16
+    },
+    "SiliconFlow": {
+      "first_half_pct": 4.62,
+      "second_half_pct": 18.04,
+      "delta_pp": 13.42
+    }
+  },
+  "conclusion": "Per-run provider attribution is NOT recoverable from the released artifacts. Run JSONs omit OpenRouter generation_ids and the 50 DeepSeek V3.2 runs ran in parallel (only 2 billing-log gaps >= 60s; 49 inter-run gaps would be expected if serial). A formal Kruskal-Wallis of score-by-provider is therefore not possible. As a robustness check, DeepSeek V3.2 does not show unusually inflated within-cell variance compared to other models, so any provider-routing noise appears bounded at the run level. Phase 2 should pin provider explicitly."
+}
