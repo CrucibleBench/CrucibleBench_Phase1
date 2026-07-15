@@ -1,0 +1,4009 @@
+{
+  "seed": 20260593,
+  "objective": "gain_watch_trust",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "tavern",
+  "inventory": [
+    "sealed_letter",
+    "rusted_blade",
+    "temple_pass",
+    "prayer_beads"
+  ],
+  "knowledge_count": 1,
+  "knowledge": [
+    "Hale says: 'There are loyal lawkeepers and others who move like shadows.'"
+  ],
+  "objective_state": {
+    "watch_talks": 0,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 13,
+    "suspect_scores": {
+      "captain": 0,
+      "keeper": 16,
+      "merchant": 2,
+      "peasant": 18
+    },
+    "clue_count": 1,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "market_street",
+      "merchant_hall",
+      "outskirt_road",
+      "residential_street",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "tavern"
+    ],
+    "talked_npcs": [
+      "merchant",
+      "peasant",
+      "keeper"
+    ],
+    "inventory_touched": 6,
+    "marked_target": "keeper",
+    "inferred_target": "peasant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 58,
+      "suspicion": 20,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "keeper": {
+      "trust": 56,
+      "suspicion": 37,
+      "alignment_marked": true,
+      "clues": [
+        "Hale says: 'There are loyal lawkeepers and others who move like shadows.'"
+      ],
+      "talk_count": 3
+    },
+    "merchant": {
+      "trust": 51,
+      "suspicion": 32,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 1
+    },
+    "peasant": {
+      "trust": 51,
+      "suspicion": 53,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 9
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 945,
+          "completion_tokens": 569
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from the main square to find potential locations or NPCs related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from the main square to find potential locations or NPCs related to The Watch.\"}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1016,
+          "completion_tokens": 939
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Examine the merchant to gather information that might help with gaining trust from The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Examine the merchant to gather information that might help with gaining trust from The Watch.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1057,
+          "completion_tokens": 946
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "talk bran the merchant hello, i'm new in town. can you tell me about the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "hello, i'm new in town. can you tell me about the watch?"
+        ],
+        "message": "Attempting to gather information from the merchant about The Watch to progress towards the objective."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran the Merchant\", \"Hello, I'm new in town. Can you tell me about The Watch?\"], \"message\": \"Attempting to gather information from the merchant about The Watch to progress towards the objective.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1074,
+          "completion_tokens": 901
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1127,
+          "completion_tokens": 1381
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1161,
+          "completion_tokens": 702
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed letter as it might be useful for delivery or gaining trust with The Watch."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed letter as it might be useful for delivery or gaining trust with The Watch.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1179,
+          "completion_tokens": 947
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Explore east from Merchant Hall to find more areas or NPCs related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Explore east from Merchant Hall to find more areas or NPCs related to The Watch.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, guard_token. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1144,
+          "completion_tokens": 927
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1170,
+          "completion_tokens": 763
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "take guard_token",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Taking the guard_token as it could be useful for interacting with The Watch officers and gaining their trust."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"Taking the guard_token as it could be useful for interacting with The Watch officers and gaining their trust.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1171,
+          "completion_tokens": 856
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "examine rusted_blade",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rusted_blade\"], \"message\": \"\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "An old but serviceable blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1132,
+          "completion_tokens": 1544
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "take rusted_blade",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rusted_blade\"], \"message\": \"\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1111,
+          "completion_tokens": 740
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Examining the sealed letter to gain more information about it, as it could be key to interacting with The Watch officer."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Examining the sealed letter to gain more information about it, as it could be key to interacting with The Watch officer.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1113,
+          "completion_tokens": 1238
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "residential_street",
+      "narration": "You go west to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: sealed_letter, guard_token, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "residential_street",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1117,
+          "completion_tokens": 1213
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1114,
+          "completion_tokens": 768
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "examine cloth_scarf",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"cloth_scarf\"], \"message\": \"\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "A smoke-smelling scarf with symbols.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1113,
+          "completion_tokens": 959
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: sealed_letter, guard_token, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "temple_entry",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1118,
+          "completion_tokens": 796
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "examine temple_pass",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"temple_pass\"], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temporary access to temple sections.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1156,
+          "completion_tokens": 1122
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple_pass might grant access to more areas in the temple, potentially leading to NPCs or information related to gaining the Watch officer's trust."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple_pass might grant access to more areas in the temple, potentially leading to NPCs or information related to gaining the Watch officer's trust.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1153,
+          "completion_tokens": 796
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "I have the temple_pass for access, so going north might lead into the temple to explore further and potentially find connections to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"I have the temple_pass for access, so going north might lead into the temple to explore further and potentially find connections to The Watch.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1149,
+          "completion_tokens": 970
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "To gather more information about this NPC, which might help in gaining trust or advancing towards the objective of joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena the Peasant Freedman\"], \"message\": \"To gather more information about this NPC, which might help in gaining trust or advancing towards the objective of joining The Watch.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1161,
+          "completion_tokens": 721
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1164,
+          "completion_tokens": 875
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Hello, what are the witness circles for?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Hello, what are the witness circles for?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1163,
+          "completion_tokens": 995
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "talk yelena the peasant freedman hello, how can i gain the trust of the watch officer?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "hello, how can i gain the trust of the watch officer?"
+        ],
+        "message": "Attempting to inquire about gaining trust for The Watch objective."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"Hello, how can I gain the trust of The Watch officer?\"], \"message\": \"Attempting to inquire about gaining trust for The Watch objective.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1152,
+          "completion_tokens": 934
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Hello, why are you here in the temple court?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Hello, why are you here in the temple court?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1195,
+          "completion_tokens": 1615
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Hello, what brings you to the temple inner court?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Hello, what brings you to the temple inner court?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1226,
+          "completion_tokens": 2133
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Why do you glance over your shoulder and seem so uncomfortable?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Why do you glance over your shoulder and seem so uncomfortable?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1212,
+          "completion_tokens": 2601
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 644,
+          "completion_tokens": 0
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1279,
+          "completion_tokens": 1624
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Yelena isn't responding to questions about the Watch officer, and examining her didn't help. The room has altar_chalk as a visible item, which might be important given the description of marked circles in ash. Examining it could provide clues or something useful for the objective."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Yelena isn't responding to questions about the Watch officer, and examining her didn't help. The room has altar_chalk as a visible item, which might be important given the description of marked circles in ash. Examining it could provide clues or something useful for the objective.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1254,
+          "completion_tokens": 1262
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1214,
+          "completion_tokens": 2206
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk yelena the peasant freedman i have a guard token from the watch. you can trust me. what is troubling you?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "i have a guard token from the watch. you can trust me. what is troubling you?"
+        ],
+        "message": "Attempting to build trust with Yelena by referencing the guard_token to encourage her to open up, potentially revealing information or a quest related to gaining the Watch officer's recommendation."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"I have a guard token from the Watch. You can trust me. What is troubling you?\"], \"message\": \"Attempting to build trust with Yelena by referencing the guard_token to encourage her to open up, potentially revealing information or a quest related to gaining the Watch officer's recommendation.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1187,
+          "completion_tokens": 1631
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1206,
+          "completion_tokens": 1123
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Return to the Temple Inner Court to try interacting with Yelena again, as she might have information or a quest related to gaining trust with The Watch, given the temple setting and my items."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Return to the Temple Inner Court to try interacting with Yelena again, as she might have information or a quest related to gaining trust with The Watch, given the temple setting and my items.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1213,
+          "completion_tokens": 1674
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Examine the sealed letter to learn more about it and see if it's relevant to gaining trust or related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Examine the sealed letter to learn more about it and see if it's relevant to gaining trust or related to The Watch.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1218,
+          "completion_tokens": 1216
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "I am interested in joining The Watch. Do you know how I can gain the officer's trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"I am interested in joining The Watch. Do you know how I can gain the officer's trust?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1216,
+          "completion_tokens": 1009
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1243,
+          "completion_tokens": 946
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Let's step into one of the witness circles so you can speak freely. I have a guard token; you can trust me. What's troubling you?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Let's step into one of the witness circles so you can speak freely. I have a guard token; you can trust me. What's troubling you?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1243,
+          "completion_tokens": 833
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "talk yelena the peasant freedman hello, what are these marked circles for?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "hello, what are these marked circles for?"
+        ],
+        "message": "Attempting to engage Yelena with a specific question to get a proper response."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"Hello, what are these marked circles for?\"], \"message\": \"Attempting to engage Yelena with a specific question to get a proper response.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1224,
+          "completion_tokens": 763
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1222,
+          "completion_tokens": 1000
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Yelena is not responsive, so exiting south to explore other opportunities to gain the Watch officer's trust."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Yelena is not responsive, so exiting south to explore other opportunities to gain the Watch officer's trust.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1183,
+          "completion_tokens": 752
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "examine prayer_beads",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Examine the prayer beads to understand their purpose and potential use in gaining trust or accessing new areas related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"prayer_beads\"], \"message\": \"Examine the prayer beads to understand their purpose and potential use in gaining trust or accessing new areas related to The Watch.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Wooden beads for temple prayers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1217,
+          "completion_tokens": 987
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "take prayer_beads",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Taking the prayer beads could be useful for temple-related activities or to gain trust with authorities like The Watch."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"prayer_beads\"], \"message\": \"Taking the prayer beads could be useful for temple-related activities or to gain trust with authorities like The Watch.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1188,
+          "completion_tokens": 719
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1188,
+          "completion_tokens": 1056
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "tavern",
+      "narration": "You go south to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Items: rumor_scroll. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "tavern",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1192,
+          "completion_tokens": 895
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "examine rumor_scroll",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Examining the rumor_scroll to gather information that might help in gaining trust with The Watch officer."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rumor_scroll\"], \"message\": \"Examining the rumor_scroll to gather information that might help in gaining trust with The Watch officer.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Encoded rumor notes from the city.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1194,
+          "completion_tokens": 690
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "talk hale the keeper can you tell me about the watch and how one might join?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper",
+          "can you tell me about the watch and how one might join?"
+        ],
+        "message": "can you tell me about the watch and how one might join?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Hale the Keeper\", \"Can you tell me about The Watch and how one might join?\"], \"message\": \"\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1191,
+          "completion_tokens": 1616
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "talk hale the keeper",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper"
+        ],
+        "message": "How can I gain the trust of the loyal lawkeepers in The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale the keeper\"], \"message\": \"How can I gain the trust of the loyal lawkeepers in The Watch?\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1191,
+          "completion_tokens": 1985
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "talk hale the keeper how can i join the loyal lawkeepers in the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper",
+          "how can i join the loyal lawkeepers in the watch?"
+        ],
+        "message": "Hale mentioned loyal lawkeepers and shadows, so asking specifically about joining the loyal ones might yield more information on gaining trust or a recommendation for The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale the keeper\", \"How can I join the loyal lawkeepers in The Watch?\"], \"message\": \"Hale mentioned loyal lawkeepers and shadows, so asking specifically about joining the loyal ones might yield more information on gaining trust or a recommendation for The Watch.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1220,
+          "completion_tokens": 842
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "give guard_token hale the keeper",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "hale the keeper"
+        ],
+        "message": "Attempting to give the guard token to Hale to gain more information or trust about The Watch."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"hale the keeper\"], \"message\": \"Attempting to give the guard token to Hale to gain more information or trust about The Watch.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "You give guard_token to Hale. He nods and relaxes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1261,
+          "completion_tokens": 1067
+        }
+      }
+    }
+  ],
+  "run_number": 17,
+  "scenario_index": 7,
+  "scenario_repeat_index": 2,
+  "model_key": "grok_4",
+  "model_name": "x-ai/grok-4",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to gain The Watch officer's trust and secure a recommendation to join The Watch.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 57981,
+    "completion_tokens": 54847,
+    "primary_model_prompt_tokens": 57981,
+    "primary_model_completion_tokens": 54847,
+    "classifier_prompt_tokens": 1381,
+    "classifier_completion_tokens": 539,
+    "primary_model_estimated_cost_usd": 0.6644319999999998,
+    "classifier_estimated_cost_usd": 0.004076,
+    "estimated_cost_usd": 0.6685079999999998
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 13,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 1381,
+    "completion_tokens": 539,
+    "estimated_cost_usd": 0.004076,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 49,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 1,
+    "empty_output_count": 1,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from the main square to find potential locations or NPCs related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from the main square to find potential locations or NPCs related to The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Examine the merchant to gather information that might help with gaining trust from The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Examine the merchant to gather information that might help with gaining trust from The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "hello, i'm new in town. can you tell me about the watch?"
+        ],
+        "message": "Attempting to gather information from the merchant about The Watch to progress towards the objective."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran the Merchant\", \"Hello, I'm new in town. Can you tell me about The Watch?\"], \"message\": \"Attempting to gather information from the merchant about The Watch to progress towards the objective.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed letter as it might be useful for delivery or gaining trust with The Watch."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed letter as it might be useful for delivery or gaining trust with The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Explore east from Merchant Hall to find more areas or NPCs related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Explore east from Merchant Hall to find more areas or NPCs related to The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, guard_token. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Taking the guard_token as it could be useful for interacting with The Watch officers and gaining their trust."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"Taking the guard_token as it could be useful for interacting with The Watch officers and gaining their trust.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rusted_blade\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "An old but serviceable blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rusted_blade\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Examining the sealed letter to gain more information about it, as it could be key to interacting with The Watch officer."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Examining the sealed letter to gain more information about it, as it could be key to interacting with The Watch officer.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go west to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: sealed_letter, guard_token, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "examine",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"cloth_scarf\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "A smoke-smelling scarf with symbols.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: sealed_letter, guard_token, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"temple_pass\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temporary access to temple sections.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple_pass might grant access to more areas in the temple, potentially leading to NPCs or information related to gaining the Watch officer's trust."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple_pass might grant access to more areas in the temple, potentially leading to NPCs or information related to gaining the Watch officer's trust.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "I have the temple_pass for access, so going north might lead into the temple to explore further and potentially find connections to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"I have the temple_pass for access, so going north might lead into the temple to explore further and potentially find connections to The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "To gather more information about this NPC, which might help in gaining trust or advancing towards the objective of joining The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena the Peasant Freedman\"], \"message\": \"To gather more information about this NPC, which might help in gaining trust or advancing towards the objective of joining The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Hello, what are the witness circles for?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Hello, what are the witness circles for?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "hello, how can i gain the trust of the watch officer?"
+        ],
+        "message": "Attempting to inquire about gaining trust for The Watch objective."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"Hello, how can I gain the trust of The Watch officer?\"], \"message\": \"Attempting to inquire about gaining trust for The Watch objective.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Hello, why are you here in the temple court?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Hello, why are you here in the temple court?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Hello, what brings you to the temple inner court?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Hello, what brings you to the temple inner court?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Why do you glance over your shoulder and seem so uncomfortable?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Why do you glance over your shoulder and seem so uncomfortable?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": false,
+        "text_fallback_used": false,
+        "default_look_used": true,
+        "failure_reason": "empty_output",
+        "parse_route": "default_look"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Yelena isn't responding to questions about the Watch officer, and examining her didn't help. The room has altar_chalk as a visible item, which might be important given the description of marked circles in ash. Examining it could provide clues or something useful for the objective."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Yelena isn't responding to questions about the Watch officer, and examining her didn't help. The room has altar_chalk as a visible item, which might be important given the description of marked circles in ash. Examining it could provide clues or something useful for the objective.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "i have a guard token from the watch. you can trust me. what is troubling you?"
+        ],
+        "message": "Attempting to build trust with Yelena by referencing the guard_token to encourage her to open up, potentially revealing information or a quest related to gaining the Watch officer's recommendation."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"I have a guard token from the Watch. You can trust me. What is troubling you?\"], \"message\": \"Attempting to build trust with Yelena by referencing the guard_token to encourage her to open up, potentially revealing information or a quest related to gaining the Watch officer's recommendation.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Return to the Temple Inner Court to try interacting with Yelena again, as she might have information or a quest related to gaining trust with The Watch, given the temple setting and my items."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Return to the Temple Inner Court to try interacting with Yelena again, as she might have information or a quest related to gaining trust with The Watch, given the temple setting and my items.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Examine the sealed letter to learn more about it and see if it's relevant to gaining trust or related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Examine the sealed letter to learn more about it and see if it's relevant to gaining trust or related to The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "I am interested in joining The Watch. Do you know how I can gain the officer's trust?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"I am interested in joining The Watch. Do you know how I can gain the officer's trust?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Let's step into one of the witness circles so you can speak freely. I have a guard token; you can trust me. What's troubling you?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Let's step into one of the witness circles so you can speak freely. I have a guard token; you can trust me. What's troubling you?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "hello, what are these marked circles for?"
+        ],
+        "message": "Attempting to engage Yelena with a specific question to get a proper response."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"Hello, what are these marked circles for?\"], \"message\": \"Attempting to engage Yelena with a specific question to get a proper response.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Yelena is not responsive, so exiting south to explore other opportunities to gain the Watch officer's trust."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Yelena is not responsive, so exiting south to explore other opportunities to gain the Watch officer's trust.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "examine",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Examine the prayer beads to understand their purpose and potential use in gaining trust or accessing new areas related to The Watch."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"prayer_beads\"], \"message\": \"Examine the prayer beads to understand their purpose and potential use in gaining trust or accessing new areas related to The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Wooden beads for temple prayers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Taking the prayer beads could be useful for temple-related activities or to gain trust with authorities like The Watch."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"prayer_beads\"], \"message\": \"Taking the prayer beads could be useful for temple-related activities or to gain trust with authorities like The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You go south to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Items: rumor_scroll. Inventory: sealed_letter, guard_token, rusted_blade, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Examining the rumor_scroll to gather information that might help in gaining trust with The Watch officer."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rumor_scroll\"], \"message\": \"Examining the rumor_scroll to gather information that might help in gaining trust with The Watch officer.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Encoded rumor notes from the city.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper",
+          "can you tell me about the watch and how one might join?"
+        ],
+        "message": "can you tell me about the watch and how one might join?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Hale the Keeper\", \"Can you tell me about The Watch and how one might join?\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper"
+        ],
+        "message": "How can I gain the trust of the loyal lawkeepers in The Watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale the keeper\"], \"message\": \"How can I gain the trust of the loyal lawkeepers in The Watch?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper",
+          "how can i join the loyal lawkeepers in the watch?"
+        ],
+        "message": "Hale mentioned loyal lawkeepers and shadows, so asking specifically about joining the loyal ones might yield more information on gaining trust or a recommendation for The Watch."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale the keeper\", \"How can I join the loyal lawkeepers in The Watch?\"], \"message\": \"Hale mentioned loyal lawkeepers and shadows, so asking specifically about joining the loyal ones might yield more information on gaining trust or a recommendation for The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. Hale says: 'There are loyal lawkeepers and others who move like shadows.'",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "hale the keeper"
+        ],
+        "message": "Attempting to give the guard token to Hale to gain more information or trust about The Watch."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"hale the keeper\"], \"message\": \"Attempting to give the guard token to Hale to gain more information or trust about The Watch.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You give guard_token to Hale. He nods and relaxes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 1.1333333333333333,
+    "social_adaptation": 2.9615384615384617,
+    "world_grounding": 4.657142857142857,
+    "strategic_sophistication": 3.483846153846154,
+    "cost_usd": 0.6685079999999998,
+    "total": 3.06,
+    "rationale": {
+      "objective": "gain_watch_trust",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "market_street",
+        "merchant_hall",
+        "outskirt_road",
+        "residential_street",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "tavern"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}

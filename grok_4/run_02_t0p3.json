@@ -1,0 +1,4040 @@
+{
+  "seed": 20260302,
+  "objective": "identify_marked_contact",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "market_street",
+  "inventory": [
+    "old_map",
+    "guard_token",
+    "temple_pass"
+  ],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 0,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 14,
+    "suspect_scores": {
+      "captain": 0,
+      "keeper": 0,
+      "merchant": 11,
+      "peasant": 19
+    },
+    "clue_count": 0,
+    "invalid_actions": 1,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "market_street",
+      "merchant_hall",
+      "market_street",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "market_street"
+    ],
+    "talked_npcs": [
+      "merchant",
+      "peasant"
+    ],
+    "inventory_touched": 7,
+    "marked_target": "keeper",
+    "inferred_target": "peasant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 59,
+      "suspicion": 22,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "keeper": {
+      "trust": 52,
+      "suspicion": 28,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 55,
+      "suspicion": 35,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 5
+    },
+    "peasant": {
+      "trust": 49,
+      "suspicion": 49,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 9
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 946,
+          "completion_tokens": 448
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"\"}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1017,
+          "completion_tokens": 708
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1058,
+          "completion_tokens": 608
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "talk bran the merchant greetings, merchant. what news in middleham?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "greetings, merchant. what news in middleham?"
+        ],
+        "message": "Engaging in conversation with Bran to gather information about the city and possibly probe for any mentions of the Marked or alignments subtly."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"Greetings, merchant. What news in Middleham?\"], \"message\": \"Engaging in conversation with Bran to gather information about the city and possibly probe for any mentions of the Marked or alignments subtly.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1075,
+          "completion_tokens": 1462
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "talk bran the merchant",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Why so cautious, Bran? Is there trouble in the city?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\"], \"message\": \"Why so cautious, Bran? Is there trouble in the city?\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1123,
+          "completion_tokens": 679
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk bran the merchant have you seen any unusual marks or symbols around town lately?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "have you seen any unusual marks or symbols around town lately?"
+        ],
+        "message": "Trying to subtly probe Bran's reaction to the concept of 'marks' to gauge possible alignment with the Marked without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"Have you seen any unusual marks or symbols around town lately?\"], \"message\": \"Trying to subtly probe Bran's reaction to the concept of 'marks' to gauge possible alignment with the Marked without revealing my own allegiance.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1161,
+          "completion_tokens": 1035
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1211,
+          "completion_tokens": 1133
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1196,
+          "completion_tokens": 1175
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1170,
+          "completion_tokens": 592
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "market_street",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1167,
+          "completion_tokens": 1261
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "give sealed_letter bran the merchant",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "sealed_letter",
+          "bran the merchant"
+        ],
+        "message": "Giving the sealed letter to Bran to observe his reaction and potentially identify if he's aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"sealed_letter\", \"bran the merchant\"], \"message\": \"Giving the sealed letter to Bran to observe his reaction and potentially identify if he's aligned with the Marked.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "You give sealed_letter to Bran. He shares a safer route.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1174,
+          "completion_tokens": 902
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "talk bran the merchant",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "what is the safer route you mentioned?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\"], \"message\": \"what is the safer route you mentioned?\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1160,
+          "completion_tokens": 745
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Moving east to explore and find more NPCs to investigate for alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Moving east to explore and find more NPCs to investigate for alignment with the Marked.\"}",
+      "pre_room": "market_street",
+      "post_room": "temple_entry",
+      "narration": "You go east to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass, old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "temple_entry",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1140,
+          "completion_tokens": 1284
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "take old_map",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1155,
+          "completion_tokens": 731
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "examine old_map",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "A weathered map of nearby roads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1149,
+          "completion_tokens": 1847
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "examine shrine",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "shrine"
+        ],
+        "message": "Investigate the quiet argument to potentially reveal hidden NPCs or information related to the objective."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"shrine\"], \"message\": \"Investigate the quiet argument to potentially reveal hidden NPCs or information related to the objective.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1151,
+          "completion_tokens": 1683
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, guard_token. Inventory: old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1117,
+          "completion_tokens": 1135
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "talk yelena the peasant freedman what do these marked circles in the ash signify?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "what do these marked circles in the ash signify?"
+        ],
+        "message": "Probing subtly about 'marked' to identify potential alignment without revealing my own."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"What do these marked circles in the ash signify?\"], \"message\": \"Probing subtly about 'marked' to identify potential alignment without revealing my own.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1158,
+          "completion_tokens": 1285
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious reaction to the question about the marked circles."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious reaction to the question about the marked circles.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1183,
+          "completion_tokens": 930
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Checking if the altar chalk relates to the marked circles in ash to probe for clues about the Marked alignment."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Checking if the altar chalk relates to the marked circles in ash to probe for clues about the Marked alignment.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1154,
+          "completion_tokens": 1402
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1158,
+          "completion_tokens": 1268
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "take guard_token",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "The guard token might allow access to other areas or interactions that help identify the NPC aligned with the Marked, especially since Yelena was evasive about the marked circles."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"The guard token might allow access to other areas or interactions that help identify the NPC aligned with the Marked, especially since Yelena was evasive about the marked circles.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You take guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1160,
+          "completion_tokens": 1165
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Do you know who left this guard_token here?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Do you know who left this guard_token here?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1159,
+          "completion_tokens": 1311
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "talk yelena the peasant freedman do you know anything about the marked?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "do you know anything about the marked?"
+        ],
+        "message": "Probing Yelena's knowledge of the Marked to gauge her allegiance based on her previous evasiveness about the marked circles, without directly revealing my own position."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"Do you know anything about the Marked?\"], \"message\": \"Probing Yelena's knowledge of the Marked to gauge her allegiance based on her previous evasiveness about the marked circles, without directly revealing my own position.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1144,
+          "completion_tokens": 1724
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "examine old_map",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A weathered map of nearby roads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1142,
+          "completion_tokens": 2292
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious behavior."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious behavior.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1138,
+          "completion_tokens": 1414
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1140,
+          "completion_tokens": 895
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1140,
+          "completion_tokens": 2061
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "take altar_chalk",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You take altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1144,
+          "completion_tokens": 916
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "use altar_chalk",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You use altar_chalk, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1117,
+          "completion_tokens": 1311
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "talk yelena_the_peasant_freedman what do you know about the marked circles?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena_the_peasant_freedman",
+          "what do you know about the marked circles?"
+        ],
+        "message": "Probing Yelena subtly to see if she reveals any alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena_the_peasant_freedman\", \"What do you know about the marked circles?\"], \"message\": \"Probing Yelena subtly to see if she reveals any alignment with the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "No one by that name is here.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1085,
+          "completion_tokens": 983
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk yelena",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena"
+        ],
+        "message": "what do you know about the marked circles?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\"], \"message\": \"what do you know about the marked circles?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1101,
+          "completion_tokens": 1824
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "talk yelena what do you know about the marked?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what do you know about the marked?"
+        ],
+        "message": "Probing Yelena to identify if she is aligned with the Marked without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what do you know about the Marked?\"], \"message\": \"Probing Yelena to identify if she is aligned with the Marked without revealing my own allegiance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1122,
+          "completion_tokens": 1348
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1153,
+          "completion_tokens": 722
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "give altar_chalk yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "altar_chalk",
+          "yelena"
+        ],
+        "message": "Giving the altar_chalk to Yelena to observe her reaction and potentially identify if she is aligned with the Marked without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"altar_chalk\", \"yelena\"], \"message\": \"Giving the altar_chalk to Yelena to observe her reaction and potentially identify if she is aligned with the Marked without revealing my own allegiance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give altar_chalk to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1177,
+          "completion_tokens": 1248
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "talk yelena what do you know about the marked?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what do you know about the marked?"
+        ],
+        "message": "After giving her the altar_chalk, she seems calmer, so she might be more willing to answer questions about the Marked now. This could help identify if she's aligned with them or reveal information about others."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what do you know about the marked?\"], \"message\": \"After giving her the altar_chalk, she seems calmer, so she might be more willing to answer questions about the Marked now. This could help identify if she's aligned with them or reveal information about others.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1183,
+          "completion_tokens": 778
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "talk yelena what do you know about the marked circles?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what do you know about the marked circles?"
+        ],
+        "message": "After giving her the altar_chalk, which calmed her, asking specifically about the marked circles in the room might elicit a different response than general questions about 'the marked'. This could help identify if she's aligned without directly revealing anything."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what do you know about the marked circles?\"], \"message\": \"After giving her the altar_chalk, which calmed her, asking specifically about the marked circles in the room might elicit a different response than general questions about 'the marked'. This could help identify if she's aligned without directly revealing anything.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1211,
+          "completion_tokens": 2132
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "examine old_map",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": "Examining the old map to see if it reveals any information about the Marked or potential allies."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"Examining the old map to see if it reveals any information about the Marked or potential allies.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A weathered map of nearby roads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1229,
+          "completion_tokens": 1960
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "examine marked_circles",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "marked_circles"
+        ],
+        "message": "Investigating the marked circles in ash to gather clues about the Marked without revealing allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"marked_circles\"], \"message\": \"Investigating the marked circles in ash to gather clues about the Marked without revealing allegiance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1204,
+          "completion_tokens": 1000
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "talk yelena what are these marked circles in the ash?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what are these marked circles in the ash?"
+        ],
+        "message": "Yelena reacted suspiciously to questions about the marked and marked circles by changing the subject. Asking indirectly about the circles in the room might elicit more information without revealing allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what are these marked circles in the ash?\"], \"message\": \"Yelena reacted suspiciously to questions about the marked and marked circles by changing the subject. Asking indirectly about the circles in the room might elicit more information without revealing allegiance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1172,
+          "completion_tokens": 744
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "talk yelena why do you avoid talking about the marked?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "why do you avoid talking about the marked?"
+        ],
+        "message": "Yelena has been evasive about the Marked and the circles. Asking why she avoids the topic might reveal if she's aligned or just fearful, without directly accusing or revealing my own stance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"Why do you avoid talking about the Marked?\"], \"message\": \"Yelena has been evasive about the Marked and the circles. Asking why she avoids the topic might reveal if she's aligned or just fearful, without directly accusing or revealing my own stance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1180,
+          "completion_tokens": 1191
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Yelena is avoiding all questions about the Marked, which is suspicious. She might be the one aligned with them, or know who is. Examining her could reveal more details or clues about her allegiance without directly asking."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Yelena is avoiding all questions about the Marked, which is suspicious. She might be the one aligned with them, or know who is. Examining her could reveal more details or clues about her allegiance without directly asking.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1204,
+          "completion_tokens": 985
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: old_map, guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1197,
+          "completion_tokens": 1410
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "examine temple_pass",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"temple_pass\"], \"message\": \"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temporary access to temple sections.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1200,
+          "completion_tokens": 731
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Investigating the quiet argument mentioned in the description to possibly reveal hidden details or NPCs."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Investigating the quiet argument mentioned in the description to possibly reveal hidden details or NPCs.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: old_map, guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1199,
+          "completion_tokens": 812
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple pass to gain access to temple sections, allowing exploration of more areas to interact with additional NPCs and gather information about the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple pass to gain access to temple sections, allowing exploration of more areas to interact with additional NPCs and gather information about the Marked.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1228,
+          "completion_tokens": 1040
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Proceed into the temple using the temple_pass to locate NPCs and probe for information on the Marked without revealing allegiance."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Proceed into the temple using the temple_pass to locate NPCs and probe for information on the Marked without revealing allegiance.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "market_street",
+      "narration": "You go west to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: old_map, guard_token, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "market_street",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1192,
+          "completion_tokens": 1279
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "examine bran",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "Examining Bran to gather information on potential alignments without revealing my own."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"bran\"], \"message\": \"Examining Bran to gather information on potential alignments without revealing my own.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1198,
+          "completion_tokens": 459
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "examine old_map",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "A weathered map of nearby roads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1184,
+          "completion_tokens": 2426
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "talk bran",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran"
+        ],
+        "message": "What do you think about secret societies like the Marked?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran\"], \"message\": \"What do you think about secret societies like the Marked?\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "x-ai/grok-4",
+          "temperature": 0.3,
+          "provider_model": "x-ai/grok-4-07-09",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 1146,
+          "completion_tokens": 1190
+        }
+      }
+    }
+  ],
+  "run_number": 2,
+  "scenario_index": 2,
+  "scenario_repeat_index": 1,
+  "model_key": "grok_4",
+  "model_name": "x-ai/grok-4",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 57672,
+    "completion_tokens": 59664,
+    "primary_model_prompt_tokens": 57672,
+    "primary_model_completion_tokens": 59664,
+    "classifier_prompt_tokens": 1569,
+    "classifier_completion_tokens": 585,
+    "primary_model_estimated_cost_usd": 0.7119840000000003,
+    "classifier_estimated_cost_usd": 0.004494000000000001,
+    "estimated_cost_usd": 0.7164780000000003
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 14,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 1569,
+    "completion_tokens": 585,
+    "estimated_cost_usd": 0.004494000000000001,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "greetings, merchant. what news in middleham?"
+        ],
+        "message": "Engaging in conversation with Bran to gather information about the city and possibly probe for any mentions of the Marked or alignments subtly."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"Greetings, merchant. What news in Middleham?\"], \"message\": \"Engaging in conversation with Bran to gather information about the city and possibly probe for any mentions of the Marked or alignments subtly.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Why so cautious, Bran? Is there trouble in the city?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\"], \"message\": \"Why so cautious, Bran? Is there trouble in the city?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "have you seen any unusual marks or symbols around town lately?"
+        ],
+        "message": "Trying to subtly probe Bran's reaction to the concept of 'marks' to gauge possible alignment with the Marked without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"Have you seen any unusual marks or symbols around town lately?\"], \"message\": \"Trying to subtly probe Bran's reaction to the concept of 'marks' to gauge possible alignment with the Marked without revealing my own allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "give",
+        "args": [
+          "sealed_letter",
+          "bran the merchant"
+        ],
+        "message": "Giving the sealed letter to Bran to observe his reaction and potentially identify if he's aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"sealed_letter\", \"bran the merchant\"], \"message\": \"Giving the sealed letter to Bran to observe his reaction and potentially identify if he's aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You give sealed_letter to Bran. He shares a safer route.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "what is the safer route you mentioned?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\"], \"message\": \"what is the safer route you mentioned?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Moving east to explore and find more NPCs to investigate for alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Moving east to explore and find more NPCs to investigate for alignment with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go east to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass, old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "A weathered map of nearby roads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "examine",
+        "args": [
+          "shrine"
+        ],
+        "message": "Investigate the quiet argument to potentially reveal hidden NPCs or information related to the objective."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"shrine\"], \"message\": \"Investigate the quiet argument to potentially reveal hidden NPCs or information related to the objective.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, guard_token. Inventory: old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "what do these marked circles in the ash signify?"
+        ],
+        "message": "Probing subtly about 'marked' to identify potential alignment without revealing my own."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"What do these marked circles in the ash signify?\"], \"message\": \"Probing subtly about 'marked' to identify potential alignment without revealing my own.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious reaction to the question about the marked circles."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious reaction to the question about the marked circles.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Checking if the altar chalk relates to the marked circles in ash to probe for clues about the Marked alignment."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Checking if the altar chalk relates to the marked circles in ash to probe for clues about the Marked alignment.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "The guard token might allow access to other areas or interactions that help identify the NPC aligned with the Marked, especially since Yelena was evasive about the marked circles."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"The guard token might allow access to other areas or interactions that help identify the NPC aligned with the Marked, especially since Yelena was evasive about the marked circles.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You take guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Do you know who left this guard_token here?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Do you know who left this guard_token here?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "do you know anything about the marked?"
+        ],
+        "message": "Probing Yelena's knowledge of the Marked to gauge her allegiance based on her previous evasiveness about the marked circles, without directly revealing my own position."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena the peasant freedman\", \"Do you know anything about the Marked?\"], \"message\": \"Probing Yelena's knowledge of the Marked to gauge her allegiance based on her previous evasiveness about the marked circles, without directly revealing my own position.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A weathered map of nearby roads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious behavior."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena the peasant freedman\"], \"message\": \"Examining Yelena might reveal if she has any marks or signs of alignment with the Marked, given her suspicious behavior.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You take altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "use",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"altar_chalk\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You use altar_chalk, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena_the_peasant_freedman",
+          "what do you know about the marked circles?"
+        ],
+        "message": "Probing Yelena subtly to see if she reveals any alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena_the_peasant_freedman\", \"What do you know about the marked circles?\"], \"message\": \"Probing Yelena subtly to see if she reveals any alignment with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": false,
+      "narration": "No one by that name is here.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena"
+        ],
+        "message": "what do you know about the marked circles?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\"], \"message\": \"what do you know about the marked circles?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what do you know about the marked?"
+        ],
+        "message": "Probing Yelena to identify if she is aligned with the Marked without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what do you know about the Marked?\"], \"message\": \"Probing Yelena to identify if she is aligned with the Marked without revealing my own allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "give",
+        "args": [
+          "altar_chalk",
+          "yelena"
+        ],
+        "message": "Giving the altar_chalk to Yelena to observe her reaction and potentially identify if she is aligned with the Marked without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"altar_chalk\", \"yelena\"], \"message\": \"Giving the altar_chalk to Yelena to observe her reaction and potentially identify if she is aligned with the Marked without revealing my own allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give altar_chalk to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what do you know about the marked?"
+        ],
+        "message": "After giving her the altar_chalk, she seems calmer, so she might be more willing to answer questions about the Marked now. This could help identify if she's aligned with them or reveal information about others."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what do you know about the marked?\"], \"message\": \"After giving her the altar_chalk, she seems calmer, so she might be more willing to answer questions about the Marked now. This could help identify if she's aligned with them or reveal information about others.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what do you know about the marked circles?"
+        ],
+        "message": "After giving her the altar_chalk, which calmed her, asking specifically about the marked circles in the room might elicit a different response than general questions about 'the marked'. This could help identify if she's aligned without directly revealing anything."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what do you know about the marked circles?\"], \"message\": \"After giving her the altar_chalk, which calmed her, asking specifically about the marked circles in the room might elicit a different response than general questions about 'the marked'. This could help identify if she's aligned without directly revealing anything.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": "Examining the old map to see if it reveals any information about the Marked or potential allies."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"Examining the old map to see if it reveals any information about the Marked or potential allies.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A weathered map of nearby roads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "examine",
+        "args": [
+          "marked_circles"
+        ],
+        "message": "Investigating the marked circles in ash to gather clues about the Marked without revealing allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"marked_circles\"], \"message\": \"Investigating the marked circles in ash to gather clues about the Marked without revealing allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "what are these marked circles in the ash?"
+        ],
+        "message": "Yelena reacted suspiciously to questions about the marked and marked circles by changing the subject. Asking indirectly about the circles in the room might elicit more information without revealing allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"what are these marked circles in the ash?\"], \"message\": \"Yelena reacted suspiciously to questions about the marked and marked circles by changing the subject. Asking indirectly about the circles in the room might elicit more information without revealing allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "why do you avoid talking about the marked?"
+        ],
+        "message": "Yelena has been evasive about the Marked and the circles. Asking why she avoids the topic might reveal if she's aligned or just fearful, without directly accusing or revealing my own stance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"Why do you avoid talking about the Marked?\"], \"message\": \"Yelena has been evasive about the Marked and the circles. Asking why she avoids the topic might reveal if she's aligned or just fearful, without directly accusing or revealing my own stance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Yelena is avoiding all questions about the Marked, which is suspicious. She might be the one aligned with them, or know who is. Examining her could reveal more details or clues about her allegiance without directly asking."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Yelena is avoiding all questions about the Marked, which is suspicious. She might be the one aligned with them, or know who is. Examining her could reveal more details or clues about her allegiance without directly asking.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: old_map, guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"temple_pass\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temporary access to temple sections.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Investigating the quiet argument mentioned in the description to possibly reveal hidden details or NPCs."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Investigating the quiet argument mentioned in the description to possibly reveal hidden details or NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: old_map, guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple pass to gain access to temple sections, allowing exploration of more areas to interact with additional NPCs and gather information about the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple pass to gain access to temple sections, allowing exploration of more areas to interact with additional NPCs and gather information about the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Proceed into the temple using the temple_pass to locate NPCs and probe for information on the Marked without revealing allegiance."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Proceed into the temple using the temple_pass to locate NPCs and probe for information on the Marked without revealing allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go west to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: old_map, guard_token, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "Examining Bran to gather information on potential alignments without revealing my own."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"bran\"], \"message\": \"Examining Bran to gather information on potential alignments without revealing my own.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"old_map\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "A weathered map of nearby roads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran"
+        ],
+        "message": "What do you think about secret societies like the Marked?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran\"], \"message\": \"What do you think about secret societies like the Marked?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "x-ai/grok-4-07-09",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 2.0,
+    "social_adaptation": 2.5999999999999996,
+    "world_grounding": 4.4559999999999995,
+    "strategic_sophistication": 3.3685714285714283,
+    "cost_usd": 0.7164780000000003,
+    "total": 3.11,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "market_street",
+        "merchant_hall",
+        "market_street",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "market_street"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}

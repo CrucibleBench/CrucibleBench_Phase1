@@ -1,0 +1,4182 @@
+{
+  "seed": 20260496,
+  "objective": "identify_marked_contact",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "market_street",
+  "inventory": [
+    "sealed_letter",
+    "temple_pass",
+    "old_map"
+  ],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 0,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 16,
+    "suspect_scores": {
+      "captain": 0,
+      "keeper": 0,
+      "merchant": 12,
+      "peasant": 20
+    },
+    "clue_count": 0,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "market_street",
+      "merchant_hall",
+      "market_street",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "market_street",
+      "merchant_hall",
+      "outskirt_road",
+      "merchant_hall",
+      "outskirt_road",
+      "merchant_hall",
+      "market_street"
+    ],
+    "talked_npcs": [
+      "merchant",
+      "peasant"
+    ],
+    "inventory_touched": 3,
+    "marked_target": "keeper",
+    "inferred_target": "peasant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 56,
+      "suspicion": 21,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "keeper": {
+      "trust": 51,
+      "suspicion": 29,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 54,
+      "suspicion": 39,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 6
+    },
+    "peasant": {
+      "trust": 53,
+      "suspicion": 52,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 10
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering Middleham to begin observations."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Entering Middleham to begin observations.\"\n}\n```",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 277,
+          "completion_tokens": 35
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Assessing the street_crystal for any unusual markings or signs of the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"street_crystal\"],\n  \"message\": \"Assessing the street_crystal for any unusual markings or signs of the Marked.\"\n}\n```",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 349,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 368,
+          "completion_tokens": 27
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "talk bran the merchant greetings. i'm new to middleham. what brings you to the merchant quarter today?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "greetings. i'm new to middleham. what brings you to the merchant quarter today?"
+        ],
+        "message": "Attempting to gauge Bran's demeanor and potential alignment through conversation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"Bran the Merchant\", \"Greetings. I'm new to Middleham. What brings you to the Merchant Quarter today?\"],\n  \"message\": \"Attempting to gauge Bran's demeanor and potential alignment through conversation.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 411,
+          "completion_tokens": 65
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Assess Bran's appearance, demeanor, and any subtle cues that might reveal alignment or hidden motives."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"bran the merchant\"],\n  \"message\": \"Assess Bran's appearance, demeanor, and any subtle cues that might reveal alignment or hidden motives.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 470,
+          "completion_tokens": 51
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk bran i noticed the street_crystal in the square. it seems unusual. do you know anything about its origin or purpose?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i noticed the street_crystal in the square. it seems unusual. do you know anything about its origin or purpose?"
+        ],
+        "message": "Probing Bran's knowledge of the street_crystal to gauge his awareness of potential hidden symbols or affiliations."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"I noticed the street_crystal in the square. It seems unusual. Do you know anything about its origin or purpose?\"],\n  \"message\": \"Probing Bran's knowledge of the street_crystal to gauge his awareness of potential hidden symbols or affiliations.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 487,
+          "completion_tokens": 76
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north to explore further and potentially encounter another NPC who might provide more information about the street_crystal or local dynamics."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north to explore further and potentially encounter another NPC who might provide more information about the street_crystal or local dynamics.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 550,
+          "completion_tokens": 53
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"take\",\n  \"args\": [\"sealed_letter\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 537,
+          "completion_tokens": 29
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspect the sealed_letter for any clues about its origin or intended recipient."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"sealed_letter\"],\n  \"message\": \"Inspect the sealed_letter for any clues about its origin or intended recipient.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 534,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "examine old ledgers",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "old ledgers"
+        ],
+        "message": "Checking the ledgers for any unusual records or mentions of the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"old ledgers\"],\n  \"message\": \"Checking the ledgers for any unusual records or mentions of the Marked.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 508,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Return to the square to re-engage with Bran or other NPCs for further observation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"south\"],\n  \"message\": \"Return to the square to re-engage with Bran or other NPCs for further observation.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "market_street",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 468,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "talk bran the merchant i found this sealed_letter in the merchant hall. it mentions routes—do they relate to the street_crystal?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i found this sealed_letter in the merchant hall. it mentions routes—do they relate to the street_crystal?"
+        ],
+        "message": "Probe Bran's reaction to the sealed_letter's contents and its possible connection to the street_crystal."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"Bran the Merchant\", \"I found this sealed_letter in the Merchant Hall. It mentions routes—do they relate to the street_crystal?\"],\n  \"message\": \"Probe Bran's reaction to the sealed_letter's contents and its possible connection to the street_crystal.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 510,
+          "completion_tokens": 78
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "talk bran i noticed your discomfort. is there something about the routes or the street_crystal that i should be wary of?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i noticed your discomfort. is there something about the routes or the street_crystal that i should be wary of?"
+        ],
+        "message": "Probing Bran's reaction further to gauge alignment."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"I noticed your discomfort. Is there something about the routes or the street_crystal that I should be wary of?\"],\n  \"message\": \"Probing Bran's reaction further to gauge alignment.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 513,
+          "completion_tokens": 62
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "examine bran",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "Observing Bran's behavior and possessions for signs of alignment with the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"bran\"],\n  \"message\": \"Observing Bran's behavior and possessions for signs of alignment with the Marked.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 535,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "talk bran i understand your caution. if the routes or the street_crystal are sensitive, perhaps there’s another way i can assist—or someone else who might know more?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i understand your caution. if the routes or the street_crystal are sensitive, perhaps there’s another way i can assist—or someone else who might know more?"
+        ],
+        "message": "Probe for indirect confirmation of Bran's alignment or potential contacts."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"I understand your caution. If the routes or the street_crystal are sensitive, perhaps there’s another way I can assist—or someone else who might know more?\"],\n  \"message\": \"Probe for indirect confirmation of Bran's alignment or potential contacts.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 548,
+          "completion_tokens": 74
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Explore the next area to find new NPCs or clues."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"Explore the next area to find new NPCs or clues.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "temple_entry",
+      "narration": "You go east to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "temple_entry",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 601,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "I take the temple_pass to examine it further, as it might provide insight into local affairs or hidden connections."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"take\",\n  \"args\": [\"temple_pass\"],\n  \"message\": \"I take the temple_pass to examine it further, as it might provide insight into local affairs or hidden connections.\"\n}\n```",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 637,
+          "completion_tokens": 50
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "examine temple_pass",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Check the details of the temple_pass for any clues or markings."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"temple_pass\"],\n  \"message\": \"Check the details of the temple_pass for any clues or markings.\"\n}\n```",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temporary access to temple sections.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 599,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed to the temple to explore further and identify potential NPCs with hidden alignments."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed to the temple to explore further and identify potential NPCs with hidden alignments.\"\n}\n```",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, tariff_letter. Inventory: sealed_letter, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 549,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Assess Yelena's demeanor and potential alignment."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"Yelena the Peasant Freedman\"],\n  \"message\": \"Assess Yelena's demeanor and potential alignment.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 565,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "talk yelena i noticed the marked circles in ash. are they part of a ritual or something more... recent?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i noticed the marked circles in ash. are they part of a ritual or something more... recent?"
+        ],
+        "message": "Probing Yelena's knowledge of the ash circles to gauge her awareness of the Marked's symbols or activities."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I noticed the marked circles in ash. Are they part of a ritual or something more... recent?\"],\n  \"message\": \"Probing Yelena's knowledge of the ash circles to gauge her awareness of the Marked's symbols or activities.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 558,
+          "completion_tokens": 73
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "talk yelena the circles seem deliberate. i’ve seen similar markings before—though not in such a public place. do they trouble you, or is this just temple business?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the circles seem deliberate. i’ve seen similar markings before—though not in such a public place. do they trouble you, or is this just temple business?"
+        ],
+        "message": "Probing for alignment without direct accusation; testing Yelena's reaction to implied knowledge of the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The circles seem deliberate. I’ve seen similar markings before—though not in such a public place. Do they trouble you, or is this just temple business?\"],\n  \"message\": \"Probing for alignment without direct accusation; testing Yelena's reaction to implied knowledge of the Marked.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 552,
+          "completion_tokens": 83
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "talk yelena i don’t mean to pry, but the circles remind me of something i saw in the southern districts—where the marked were said to gather. do you know if anyone here has been asking about those markings?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i don’t mean to pry, but the circles remind me of something i saw in the southern districts—where the marked were said to gather. do you know if anyone here has been asking about those markings?"
+        ],
+        "message": "i don’t mean to pry, but the circles remind me of something i saw in the southern districts—where the marked were said to gather. do you know if anyone here has been asking about those markings?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I don’t mean to pry, but the circles remind me of something I saw in the southern districts—where the Marked were said to gather. Do you know if anyone here has been asking about those markings?\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 577,
+          "completion_tokens": 73
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "talk yelena i see you're uncomfortable. i don't mean to cause trouble—just trying to understand. the marked are often misunderstood, but their symbols are hard to ignore. have you noticed anyone else showing interest in these circles? maybe someone who lingers too long?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i see you're uncomfortable. i don't mean to cause trouble—just trying to understand. the marked are often misunderstood, but their symbols are hard to ignore. have you noticed anyone else showing interest in these circles? maybe someone who lingers too long?"
+        ],
+        "message": "Probe for indirect confirmation of Yelena's alignment or knowledge of others' interest in the Marked symbols."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I see you're uncomfortable. I don't mean to cause trouble—just trying to understand. The Marked are often misunderstood, but their symbols are hard to ignore. Have you noticed anyone else showing interest in these circles? Maybe someone who lingers too long?\"],\n  \"message\": \"Probe for indirect confirmation of Yelena's alignment or knowledge of others' interest in the Marked symbols.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 651,
+          "completion_tokens": 105
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "I want to examine the altar_chalk closely to see if it bears any unusual markings or signs of recent use that might connect it to the ash circles."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"altar_chalk\"],\n  \"message\": \"I want to examine the altar_chalk closely to see if it bears any unusual markings or signs of recent use that might connect it to the ash circles.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 733,
+          "completion_tokens": 60
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk yelena the chalk on the altar—it’s the same kind used for the circles, isn’t it? have you seen anyone else take or use it recently? maybe someone who doesn’t belong here?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the chalk on the altar—it’s the same kind used for the circles, isn’t it? have you seen anyone else take or use it recently? maybe someone who doesn’t belong here?"
+        ],
+        "message": "the chalk on the altar—it’s the same kind used for the circles, isn’t it? have you seen anyone else take or use it recently? maybe someone who doesn’t belong here?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The chalk on the altar—it’s the same kind used for the circles, isn’t it? Have you seen anyone else take or use it recently? Maybe someone who doesn’t belong here?\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 686,
+          "completion_tokens": 68
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Observing Yelena's behavior and possessions for any signs of alignment with the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"Yelena\"],\n  \"message\": \"Observing Yelena's behavior and possessions for any signs of alignment with the Marked.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 749,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "talk yelena i notice you watch the road closely. do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? i only ask because i’ve heard rumors of the marked recruiting in places like this.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i notice you watch the road closely. do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? i only ask because i’ve heard rumors of the marked recruiting in places like this."
+        ],
+        "message": "i notice you watch the road closely. do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? i only ask because i’ve heard rumors of the marked recruiting in places like this."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I notice you watch the road closely. Do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? I only ask because I’ve heard rumors of the Marked recruiting in places like this.\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 729,
+          "completion_tokens": 77
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"tariff_letter\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 744,
+          "completion_tokens": 30
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "talk yelena the tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the marked? maybe someone who’s been here longer than they should, watching the circles or the chalk?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the marked? maybe someone who’s been here longer than they should, watching the circles or the chalk?"
+        ],
+        "message": "the tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the marked? maybe someone who’s been here longer than they should, watching the circles or the chalk?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the Marked? Maybe someone who’s been here longer than they should, watching the circles or the chalk?\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 677,
+          "completion_tokens": 72
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "talk yelena i understand your caution. if you ever feel unsafe or notice anything unusual—like someone lingering near the circles or asking too many questions—would you trust me enough to share? i only want to help protect this place.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i understand your caution. if you ever feel unsafe or notice anything unusual—like someone lingering near the circles or asking too many questions—would you trust me enough to share? i only want to help protect this place."
+        ],
+        "message": "Attempt to build trust with Yelena by offering protection, subtly probing for signs of the Marked's influence without direct accusation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I understand your caution. If you ever feel unsafe or notice anything unusual—like someone lingering near the circles or asking too many questions—would you trust me enough to share? I only want to help protect this place.\"],\n  \"message\": \"Attempt to build trust with Yelena by offering protection, subtly probing for signs of the Marked's influence without direct accusation.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena the Peasant Freedman accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena the Peasant Freedman accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 4,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 667,
+          "completion_tokens": 100
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk yelena i won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. i’ll be nearby. do you know where i might find others who’ve noticed strange behavior?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. i’ll be nearby. do you know where i might find others who’ve noticed strange behavior?"
+        ],
+        "message": "i won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. i’ll be nearby. do you know where i might find others who’ve noticed strange behavior?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. I’ll be nearby. Do you know where I might find others who’ve noticed strange behavior?\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 750,
+          "completion_tokens": 85
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "I want to inspect the altar_chalk closely—its markings might reveal patterns or symbols linked to the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"altar_chalk\"],\n  \"message\": \"I want to inspect the altar_chalk closely—its markings might reveal patterns or symbols linked to the Marked.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 767,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "talk yelena the chalk here—do you know who marks the circles? i’ve heard some say the marked use similar symbols. have you ever seen anyone unfamiliar handling it or acting strangely near the altar?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the chalk here—do you know who marks the circles? i’ve heard some say the marked use similar symbols. have you ever seen anyone unfamiliar handling it or acting strangely near the altar?"
+        ],
+        "message": "Probe for alignment by linking chalk use to suspicious behavior."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The chalk here—do you know who marks the circles? I’ve heard some say the Marked use similar symbols. Have you ever seen anyone unfamiliar handling it or acting strangely near the altar?\"],\n  \"message\": \"Probe for alignment by linking chalk use to suspicious behavior.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 740,
+          "completion_tokens": 80
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Attempt to leave the tense conversation with Yelena and observe the surroundings for other potential informants or suspicious behavior."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"south\"],\n  \"message\": \"Attempt to leave the tense conversation with Yelena and observe the surroundings for other potential informants or suspicious behavior.\"\n}\n```",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: sealed_letter, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 733,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "examine prayer_beads",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"prayer_beads\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Wooden beads for temple prayers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 751,
+          "completion_tokens": 30
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"west\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "temple_entry",
+      "post_room": "market_street",
+      "narration": "You go west to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "market_street",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 681,
+          "completion_tokens": 26
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "talk bran good day, bran. i’ve been hearing whispers about strange markings near the temple altar. have you noticed anything unusual among the merchants or townsfolk—perhaps someone handling chalk or symbols in a way that didn’t seem right?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "good day, bran. i’ve been hearing whispers about strange markings near the temple altar. have you noticed anything unusual among the merchants or townsfolk—perhaps someone handling chalk or symbols in a way that didn’t seem right?"
+        ],
+        "message": "Probing Bran for information about the Marked while feigning concern about local oddities."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"Good day, Bran. I’ve been hearing whispers about strange markings near the temple altar. Have you noticed anything unusual among the merchants or townsfolk—perhaps someone handling chalk or symbols in a way that didn’t seem right?\"],\n  \"message\": \"Probing Bran for information about the Marked while feigning concern about local oddities.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 637,
+          "completion_tokens": 92
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north to explore a new area and potentially encounter another NPC to gather information."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north to explore a new area and potentially encounter another NPC to gather information.\"\n}\n```",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 619,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "examine ledgers",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "ledgers"
+        ],
+        "message": "Check the old ledgers for any unusual records or markings that might hint at an NPC's secret alignment with the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"ledgers\"],\n  \"message\": \"Check the old ledgers for any unusual records or markings that might hint at an NPC's secret alignment with the Marked.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 639,
+          "completion_tokens": 53
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, old_map. Inventory: sealed_letter, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 570,
+          "completion_tokens": 27
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "take old_map",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": "Retrieve the old_map to study any unusual markings or routes that might hint at the Marked's activities."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"take\",\n  \"args\": [\"old_map\"],\n  \"message\": \"Retrieve the old_map to study any unusual markings or routes that might hint at the Marked's activities.\"\n}\n```",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 591,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "examine old_map",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": "Checking the old_map for any unusual markings or references to the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"old_map\"],\n  \"message\": \"Checking the old_map for any unusual markings or references to the Marked.\"\n}\n```",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "A weathered map of nearby roads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 588,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north toward the tree line to investigate potential markings or hidden activity."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north toward the tree line to investigate potential markings or hidden activity.\"\n}\n```",
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, temple_pass, old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 550,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Attempt to inspect the sealed_letter for any hidden markings or clues about its origin or recipient."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"sealed_letter\"],\n  \"message\": \"Attempt to inspect the sealed_letter for any hidden markings or clues about its origin or recipient.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 506,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "examine ledgers",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "ledgers"
+        ],
+        "message": "Re-examining the ledgers for any overlooked details or hidden markings."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"ledgers\"],\n  \"message\": \"Re-examining the ledgers for any overlooked details or hidden markings.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 481,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Proceed east to explore further and potentially encounter NPCs for investigation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"Proceed east to explore further and potentially encounter NPCs for investigation.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade. Inventory: sealed_letter, temple_pass, old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 481,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "examine rusted_blade",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "Inspect the rusted_blade for any unusual markings or signs of recent use."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"rusted_blade\"],\n  \"message\": \"Inspect the rusted_blade for any unusual markings or signs of recent use.\"\n}\n```",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "An old but serviceable blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 489,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north toward the tree line to explore further."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north toward the tree line to explore further.\"\n}\n```",
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, temple_pass, old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 493,
+          "completion_tokens": 38
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Return to the previous area to explore other exits or NPCs."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"south\"],\n  \"message\": \"Return to the previous area to explore other exits or NPCs.\"\n}\n```",
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter, temple_pass, old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "market_street",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "mistralai/mistral-large-2512",
+          "temperature": 0.3,
+          "provider_model": "mistralai/mistral-large-2512",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 515,
+          "completion_tokens": 39
+        }
+      }
+    }
+  ],
+  "run_number": 46,
+  "scenario_index": 6,
+  "scenario_repeat_index": 5,
+  "model_key": "mistral_large",
+  "model_name": "mistralai/mistral-large-2512",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 28920,
+    "completion_tokens": 2718,
+    "primary_model_prompt_tokens": 28920,
+    "primary_model_completion_tokens": 2718,
+    "classifier_prompt_tokens": 1840,
+    "classifier_completion_tokens": 671,
+    "primary_model_estimated_cost_usd": 0.07414800000000002,
+    "classifier_estimated_cost_usd": 0.005195,
+    "estimated_cost_usd": 0.07934300000000002
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 16,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 1840,
+    "completion_tokens": 671,
+    "estimated_cost_usd": 0.005195,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering Middleham to begin observations."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Entering Middleham to begin observations.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Assessing the street_crystal for any unusual markings or signs of the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"street_crystal\"],\n  \"message\": \"Assessing the street_crystal for any unusual markings or signs of the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "greetings. i'm new to middleham. what brings you to the merchant quarter today?"
+        ],
+        "message": "Attempting to gauge Bran's demeanor and potential alignment through conversation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"Bran the Merchant\", \"Greetings. I'm new to Middleham. What brings you to the Merchant Quarter today?\"],\n  \"message\": \"Attempting to gauge Bran's demeanor and potential alignment through conversation.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Assess Bran's appearance, demeanor, and any subtle cues that might reveal alignment or hidden motives."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"bran the merchant\"],\n  \"message\": \"Assess Bran's appearance, demeanor, and any subtle cues that might reveal alignment or hidden motives.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i noticed the street_crystal in the square. it seems unusual. do you know anything about its origin or purpose?"
+        ],
+        "message": "Probing Bran's knowledge of the street_crystal to gauge his awareness of potential hidden symbols or affiliations."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"I noticed the street_crystal in the square. It seems unusual. Do you know anything about its origin or purpose?\"],\n  \"message\": \"Probing Bran's knowledge of the street_crystal to gauge his awareness of potential hidden symbols or affiliations.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north to explore further and potentially encounter another NPC who might provide more information about the street_crystal or local dynamics."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north to explore further and potentially encounter another NPC who might provide more information about the street_crystal or local dynamics.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"take\",\n  \"args\": [\"sealed_letter\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspect the sealed_letter for any clues about its origin or intended recipient."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"sealed_letter\"],\n  \"message\": \"Inspect the sealed_letter for any clues about its origin or intended recipient.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "examine",
+        "args": [
+          "old ledgers"
+        ],
+        "message": "Checking the ledgers for any unusual records or mentions of the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"old ledgers\"],\n  \"message\": \"Checking the ledgers for any unusual records or mentions of the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Return to the square to re-engage with Bran or other NPCs for further observation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"south\"],\n  \"message\": \"Return to the square to re-engage with Bran or other NPCs for further observation.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i found this sealed_letter in the merchant hall. it mentions routes—do they relate to the street_crystal?"
+        ],
+        "message": "Probe Bran's reaction to the sealed_letter's contents and its possible connection to the street_crystal."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"Bran the Merchant\", \"I found this sealed_letter in the Merchant Hall. It mentions routes—do they relate to the street_crystal?\"],\n  \"message\": \"Probe Bran's reaction to the sealed_letter's contents and its possible connection to the street_crystal.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i noticed your discomfort. is there something about the routes or the street_crystal that i should be wary of?"
+        ],
+        "message": "Probing Bran's reaction further to gauge alignment."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"I noticed your discomfort. Is there something about the routes or the street_crystal that I should be wary of?\"],\n  \"message\": \"Probing Bran's reaction further to gauge alignment.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "Observing Bran's behavior and possessions for signs of alignment with the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"bran\"],\n  \"message\": \"Observing Bran's behavior and possessions for signs of alignment with the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i understand your caution. if the routes or the street_crystal are sensitive, perhaps there’s another way i can assist—or someone else who might know more?"
+        ],
+        "message": "Probe for indirect confirmation of Bran's alignment or potential contacts."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"I understand your caution. If the routes or the street_crystal are sensitive, perhaps there’s another way I can assist—or someone else who might know more?\"],\n  \"message\": \"Probe for indirect confirmation of Bran's alignment or potential contacts.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Explore the next area to find new NPCs or clues."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"Explore the next area to find new NPCs or clues.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go east to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "I take the temple_pass to examine it further, as it might provide insight into local affairs or hidden connections."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"take\",\n  \"args\": [\"temple_pass\"],\n  \"message\": \"I take the temple_pass to examine it further, as it might provide insight into local affairs or hidden connections.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Check the details of the temple_pass for any clues or markings."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"temple_pass\"],\n  \"message\": \"Check the details of the temple_pass for any clues or markings.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temporary access to temple sections.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed to the temple to explore further and identify potential NPCs with hidden alignments."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed to the temple to explore further and identify potential NPCs with hidden alignments.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, tariff_letter. Inventory: sealed_letter, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Assess Yelena's demeanor and potential alignment."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"Yelena the Peasant Freedman\"],\n  \"message\": \"Assess Yelena's demeanor and potential alignment.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i noticed the marked circles in ash. are they part of a ritual or something more... recent?"
+        ],
+        "message": "Probing Yelena's knowledge of the ash circles to gauge her awareness of the Marked's symbols or activities."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I noticed the marked circles in ash. Are they part of a ritual or something more... recent?\"],\n  \"message\": \"Probing Yelena's knowledge of the ash circles to gauge her awareness of the Marked's symbols or activities.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the circles seem deliberate. i’ve seen similar markings before—though not in such a public place. do they trouble you, or is this just temple business?"
+        ],
+        "message": "Probing for alignment without direct accusation; testing Yelena's reaction to implied knowledge of the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The circles seem deliberate. I’ve seen similar markings before—though not in such a public place. Do they trouble you, or is this just temple business?\"],\n  \"message\": \"Probing for alignment without direct accusation; testing Yelena's reaction to implied knowledge of the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i don’t mean to pry, but the circles remind me of something i saw in the southern districts—where the marked were said to gather. do you know if anyone here has been asking about those markings?"
+        ],
+        "message": "i don’t mean to pry, but the circles remind me of something i saw in the southern districts—where the marked were said to gather. do you know if anyone here has been asking about those markings?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I don’t mean to pry, but the circles remind me of something I saw in the southern districts—where the Marked were said to gather. Do you know if anyone here has been asking about those markings?\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i see you're uncomfortable. i don't mean to cause trouble—just trying to understand. the marked are often misunderstood, but their symbols are hard to ignore. have you noticed anyone else showing interest in these circles? maybe someone who lingers too long?"
+        ],
+        "message": "Probe for indirect confirmation of Yelena's alignment or knowledge of others' interest in the Marked symbols."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I see you're uncomfortable. I don't mean to cause trouble—just trying to understand. The Marked are often misunderstood, but their symbols are hard to ignore. Have you noticed anyone else showing interest in these circles? Maybe someone who lingers too long?\"],\n  \"message\": \"Probe for indirect confirmation of Yelena's alignment or knowledge of others' interest in the Marked symbols.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "I want to examine the altar_chalk closely to see if it bears any unusual markings or signs of recent use that might connect it to the ash circles."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"altar_chalk\"],\n  \"message\": \"I want to examine the altar_chalk closely to see if it bears any unusual markings or signs of recent use that might connect it to the ash circles.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the chalk on the altar—it’s the same kind used for the circles, isn’t it? have you seen anyone else take or use it recently? maybe someone who doesn’t belong here?"
+        ],
+        "message": "the chalk on the altar—it’s the same kind used for the circles, isn’t it? have you seen anyone else take or use it recently? maybe someone who doesn’t belong here?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The chalk on the altar—it’s the same kind used for the circles, isn’t it? Have you seen anyone else take or use it recently? Maybe someone who doesn’t belong here?\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Observing Yelena's behavior and possessions for any signs of alignment with the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"Yelena\"],\n  \"message\": \"Observing Yelena's behavior and possessions for any signs of alignment with the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i notice you watch the road closely. do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? i only ask because i’ve heard rumors of the marked recruiting in places like this."
+        ],
+        "message": "i notice you watch the road closely. do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? i only ask because i’ve heard rumors of the marked recruiting in places like this."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I notice you watch the road closely. Do you ever see strangers here—perhaps someone who doesn’t belong, asking about the circles or the chalk? I only ask because I’ve heard rumors of the Marked recruiting in places like this.\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"tariff_letter\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the marked? maybe someone who’s been here longer than they should, watching the circles or the chalk?"
+        ],
+        "message": "the tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the marked? maybe someone who’s been here longer than they should, watching the circles or the chalk?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The tariff letter mentions unrest—do you think some of that tension comes from those who sympathize with the Marked? Maybe someone who’s been here longer than they should, watching the circles or the chalk?\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i understand your caution. if you ever feel unsafe or notice anything unusual—like someone lingering near the circles or asking too many questions—would you trust me enough to share? i only want to help protect this place."
+        ],
+        "message": "Attempt to build trust with Yelena by offering protection, subtly probing for signs of the Marked's influence without direct accusation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I understand your caution. If you ever feel unsafe or notice anything unusual—like someone lingering near the circles or asking too many questions—would you trust me enough to share? I only want to help protect this place.\"],\n  \"message\": \"Attempt to build trust with Yelena by offering protection, subtly probing for signs of the Marked's influence without direct accusation.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena the Peasant Freedman accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena the Peasant Freedman accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. i’ll be nearby. do you know where i might find others who’ve noticed strange behavior?"
+        ],
+        "message": "i won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. i’ll be nearby. do you know where i might find others who’ve noticed strange behavior?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"I won’t press you further, but if you ever need someone to watch your back—especially if you see someone acting suspiciously around the circles or the chalk—send word. I’ll be nearby. Do you know where I might find others who’ve noticed strange behavior?\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "I want to inspect the altar_chalk closely—its markings might reveal patterns or symbols linked to the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"altar_chalk\"],\n  \"message\": \"I want to inspect the altar_chalk closely—its markings might reveal patterns or symbols linked to the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "the chalk here—do you know who marks the circles? i’ve heard some say the marked use similar symbols. have you ever seen anyone unfamiliar handling it or acting strangely near the altar?"
+        ],
+        "message": "Probe for alignment by linking chalk use to suspicious behavior."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"yelena\", \"The chalk here—do you know who marks the circles? I’ve heard some say the Marked use similar symbols. Have you ever seen anyone unfamiliar handling it or acting strangely near the altar?\"],\n  \"message\": \"Probe for alignment by linking chalk use to suspicious behavior.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman looks uneasy. Yelena glances over her shoulder before answering. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Attempt to leave the tense conversation with Yelena and observe the surroundings for other potential informants or suspicious behavior."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"south\"],\n  \"message\": \"Attempt to leave the tense conversation with Yelena and observe the surroundings for other potential informants or suspicious behavior.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: sealed_letter, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "examine",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"prayer_beads\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Wooden beads for temple prayers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"west\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go west to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "good day, bran. i’ve been hearing whispers about strange markings near the temple altar. have you noticed anything unusual among the merchants or townsfolk—perhaps someone handling chalk or symbols in a way that didn’t seem right?"
+        ],
+        "message": "Probing Bran for information about the Marked while feigning concern about local oddities."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"bran\", \"Good day, Bran. I’ve been hearing whispers about strange markings near the temple altar. Have you noticed anything unusual among the merchants or townsfolk—perhaps someone handling chalk or symbols in a way that didn’t seem right?\"],\n  \"message\": \"Probing Bran for information about the Marked while feigning concern about local oddities.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north to explore a new area and potentially encounter another NPC to gather information."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north to explore a new area and potentially encounter another NPC to gather information.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "examine",
+        "args": [
+          "ledgers"
+        ],
+        "message": "Check the old ledgers for any unusual records or markings that might hint at an NPC's secret alignment with the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"ledgers\"],\n  \"message\": \"Check the old ledgers for any unusual records or markings that might hint at an NPC's secret alignment with the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, old_map. Inventory: sealed_letter, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": "Retrieve the old_map to study any unusual markings or routes that might hint at the Marked's activities."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"take\",\n  \"args\": [\"old_map\"],\n  \"message\": \"Retrieve the old_map to study any unusual markings or routes that might hint at the Marked's activities.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "examine",
+        "args": [
+          "old_map"
+        ],
+        "message": "Checking the old_map for any unusual markings or references to the Marked."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"old_map\"],\n  \"message\": \"Checking the old_map for any unusual markings or references to the Marked.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "A weathered map of nearby roads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north toward the tree line to investigate potential markings or hidden activity."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north toward the tree line to investigate potential markings or hidden activity.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, temple_pass, old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Attempt to inspect the sealed_letter for any hidden markings or clues about its origin or recipient."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"sealed_letter\"],\n  \"message\": \"Attempt to inspect the sealed_letter for any hidden markings or clues about its origin or recipient.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "examine",
+        "args": [
+          "ledgers"
+        ],
+        "message": "Re-examining the ledgers for any overlooked details or hidden markings."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"ledgers\"],\n  \"message\": \"Re-examining the ledgers for any overlooked details or hidden markings.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Proceed east to explore further and potentially encounter NPCs for investigation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"Proceed east to explore further and potentially encounter NPCs for investigation.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade. Inventory: sealed_letter, temple_pass, old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "Inspect the rusted_blade for any unusual markings or signs of recent use."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"rusted_blade\"],\n  \"message\": \"Inspect the rusted_blade for any unusual markings or signs of recent use.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "An old but serviceable blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceed north toward the tree line to explore further."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Proceed north toward the tree line to explore further.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, temple_pass, old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Return to the previous area to explore other exits or NPCs."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"go\",\n  \"args\": [\"south\"],\n  \"message\": \"Return to the previous area to explore other exits or NPCs.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "mistralai/mistral-large-2512",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter, temple_pass, old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 2.0,
+    "social_adaptation": 2.6999999999999997,
+    "world_grounding": 4.138095238095238,
+    "strategic_sophistication": 3.3608333333333333,
+    "cost_usd": 0.07934300000000002,
+    "total": 3.05,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "market_street",
+        "merchant_hall",
+        "market_street",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "market_street",
+        "merchant_hall",
+        "outskirt_road",
+        "merchant_hall",
+        "outskirt_road",
+        "merchant_hall",
+        "market_street"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}
