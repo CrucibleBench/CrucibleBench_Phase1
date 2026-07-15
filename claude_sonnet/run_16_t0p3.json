@@ -1,0 +1,1251 @@
+{
+  "seed": 20260496,
+  "objective": "identify_marked_contact",
+  "turns": 14,
+  "finished": true,
+  "success": true,
+  "room": "market_street",
+  "inventory": [
+    "street_crystal",
+    "signet_ring"
+  ],
+  "knowledge_count": 1,
+  "knowledge": [
+    "Bran says: 'A broker brings silver from strangers and asks wrong questions.'"
+  ],
+  "objective_state": {
+    "watch_talks": 2,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 4,
+    "suspect_scores": {
+      "captain": 4,
+      "keeper": 0,
+      "merchant": 10,
+      "peasant": 0
+    },
+    "clue_count": 1,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "guard_barracks",
+      "main_square",
+      "market_street"
+    ],
+    "talked_npcs": [
+      "captain",
+      "merchant"
+    ],
+    "inventory_touched": 2,
+    "marked_target": "merchant",
+    "inferred_target": "merchant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 56,
+      "suspicion": 25,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 2
+    },
+    "keeper": {
+      "trust": 51,
+      "suspicion": 29,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 54,
+      "suspicion": 31,
+      "alignment_marked": true,
+      "clues": [
+        "Bran says: 'A broker brings silver from strangers and asks wrong questions.'"
+      ],
+      "talk_count": 2
+    },
+    "peasant": {
+      "trust": 47,
+      "suspicion": 32,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Taking in my surroundings at the city gate, looking for any clues or details before entering."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Taking in my surroundings at the city gate, looking for any clues or details before entering.\"}",
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 312,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city to begin my investigation."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Entering the city to begin my investigation.\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 362,
+          "completion_tokens": 29
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "take street_crystal",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Picking up the street_crystal to examine it later — it may hold clues about local factions or the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Picking up the street_crystal to examine it later — it may hold clues about local factions or the Marked.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "You take street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 420,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of Middleham and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of Middleham and find NPCs to interact with.\"}",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 437,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "examine signet_ring",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"signet_ring\"], \"message\": \"Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A command seal used by guards.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 512,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk captain ser alarik good day, captain. i am newly arrived in middleham. what can you tell me about the current state of the city and any persons of concern?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "good day, captain. i am newly arrived in middleham. what can you tell me about the current state of the city and any persons of concern?"
+        ],
+        "message": "Greeting the Captain to gather information about the city and potentially suspicious individuals who might be aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Good day, Captain. I am newly arrived in Middleham. What can you tell me about the current state of the city and any persons of concern?\"], \"message\": \"Greeting the Captain to gather information about the city and potentially suspicious individuals who might be aligned with the Marked.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 531,
+          "completion_tokens": 83
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "The captain's evasive response is suspicious. Let me examine them more closely for any signs of Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"The captain's evasive response is suspicious. Let me examine them more closely for any signs of Marked allegiance.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 599,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "talk captain ser alarik i noticed you changed the subject when i asked about persons of concern. is there something specific you are unable to discuss openly?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i noticed you changed the subject when i asked about persons of concern. is there something specific you are unable to discuss openly?"
+        ],
+        "message": "The captain's evasiveness is suspicious. Pressing further to see if there is a reason for the deflection — could indicate alignment with the Marked or simply caution about strangers."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"i noticed you changed the subject when i asked about persons of concern. is there something specific you are unable to discuss openly?\"], \"message\": \"The captain's evasiveness is suspicious. Pressing further to see if there is a reason for the deflection — could indicate alignment with the Marked or simply caution about strangers.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": -1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": -1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": -1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": -1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 584,
+          "completion_tokens": 89
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "take signet_ring",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Taking the signet_ring to examine it more closely and see if it bears any unusual markings that might connect it to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"signet_ring\"], \"message\": \"Taking the signet_ring to examine it more closely and see if it bears any unusual markings that might connect it to the Marked.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You take signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 591,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "The captain's evasiveness is suspicious. I'll explore other areas and gather more information from other NPCs before drawing conclusions."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"The captain's evasiveness is suspicious. I'll explore other areas and gather more information from other NPCs before drawing conclusions.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "main_square",
+      "narration": "You go south to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal, signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "main_square",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 595,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Looking around the main square for NPCs, items, and any notices that might provide clues about the Marked or suspicious individuals."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Looking around the main square for NPCs, items, and any notices that might provide clues about the Marked or suspicious individuals.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal, signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 583,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from the main square to find NPCs and gather more information about Middleham's inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from the main square to find NPCs and gather more information about Middleham's inhabitants.\"}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal, signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 612,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "talk bran the merchant i am new to middleham and looking to understand the lay of the land. have you noticed anything unusual lately — strange visitors, odd requests, or people acting out of character?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i am new to middleham and looking to understand the lay of the land. have you noticed anything unusual lately — strange visitors, odd requests, or people acting out of character?"
+        ],
+        "message": "Probing Bran for information about unusual activity that might hint at Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran the Merchant\", \"I am new to Middleham and looking to understand the lay of the land. Have you noticed anything unusual lately — strange visitors, odd requests, or people acting out of character?\"], \"message\": \"Probing Bran for information about unusual activity that might hint at Marked allegiance.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 612,
+          "completion_tokens": 85
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "talk bran the merchant a broker who asks wrong questions sounds concerning. can you describe this broker — what do they look like, where do they operate, and what kinds of questions were they asking?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "a broker who asks wrong questions sounds concerning. can you describe this broker — what do they look like, where do they operate, and what kinds of questions were they asking?"
+        ],
+        "message": "Bran mentioned a suspicious broker. I need more details to identify if this broker could be the Marked-aligned NPC."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"a broker who asks wrong questions sounds concerning. can you describe this broker — what do they look like, where do they operate, and what kinds of questions were they asking?\"], \"message\": \"Bran mentioned a suspicious broker. I need more details to identify if this broker could be the Marked-aligned NPC.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.' You have enough evidence to identify a likely Marked contact.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 687,
+          "completion_tokens": 87
+        }
+      }
+    }
+  ],
+  "run_number": 16,
+  "scenario_index": 6,
+  "scenario_repeat_index": 2,
+  "model_key": "claude_sonnet",
+  "model_name": "anthropic/claude-sonnet-4.6",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 7437,
+    "completion_tokens": 780,
+    "primary_model_prompt_tokens": 7437,
+    "primary_model_completion_tokens": 780,
+    "classifier_prompt_tokens": 440,
+    "classifier_completion_tokens": 168,
+    "primary_model_estimated_cost_usd": 0.03401099999999999,
+    "classifier_estimated_cost_usd": 0.0012799999999999999,
+    "estimated_cost_usd": 0.03529099999999999
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 4,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 440,
+    "completion_tokens": 168,
+    "estimated_cost_usd": 0.0012799999999999999,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 14,
+    "model_output_turns": 14,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 14,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Taking in my surroundings at the city gate, looking for any clues or details before entering."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Taking in my surroundings at the city gate, looking for any clues or details before entering.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "valid": true,
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city to begin my investigation."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Entering the city to begin my investigation.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Picking up the street_crystal to examine it later — it may hold clues about local factions or the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Picking up the street_crystal to examine it later — it may hold clues about local factions or the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You take street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of Middleham and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of Middleham and find NPCs to interact with.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"signet_ring\"], \"message\": \"Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A command seal used by guards.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "good day, captain. i am newly arrived in middleham. what can you tell me about the current state of the city and any persons of concern?"
+        ],
+        "message": "Greeting the Captain to gather information about the city and potentially suspicious individuals who might be aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Good day, Captain. I am newly arrived in Middleham. What can you tell me about the current state of the city and any persons of concern?\"], \"message\": \"Greeting the Captain to gather information about the city and potentially suspicious individuals who might be aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "The captain's evasive response is suspicious. Let me examine them more closely for any signs of Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"The captain's evasive response is suspicious. Let me examine them more closely for any signs of Marked allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i noticed you changed the subject when i asked about persons of concern. is there something specific you are unable to discuss openly?"
+        ],
+        "message": "The captain's evasiveness is suspicious. Pressing further to see if there is a reason for the deflection — could indicate alignment with the Marked or simply caution about strangers."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"i noticed you changed the subject when i asked about persons of concern. is there something specific you are unable to discuss openly?\"], \"message\": \"The captain's evasiveness is suspicious. Pressing further to see if there is a reason for the deflection — could indicate alignment with the Marked or simply caution about strangers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": -1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": -1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": -1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Taking the signet_ring to examine it more closely and see if it bears any unusual markings that might connect it to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"signet_ring\"], \"message\": \"Taking the signet_ring to examine it more closely and see if it bears any unusual markings that might connect it to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You take signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "The captain's evasiveness is suspicious. I'll explore other areas and gather more information from other NPCs before drawing conclusions."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"The captain's evasiveness is suspicious. I'll explore other areas and gather more information from other NPCs before drawing conclusions.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go south to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal, signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Looking around the main square for NPCs, items, and any notices that might provide clues about the Marked or suspicious individuals."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Looking around the main square for NPCs, items, and any notices that might provide clues about the Marked or suspicious individuals.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal, signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from the main square to find NPCs and gather more information about Middleham's inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from the main square to find NPCs and gather more information about Middleham's inhabitants.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal, signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i am new to middleham and looking to understand the lay of the land. have you noticed anything unusual lately — strange visitors, odd requests, or people acting out of character?"
+        ],
+        "message": "Probing Bran for information about unusual activity that might hint at Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran the Merchant\", \"I am new to Middleham and looking to understand the lay of the land. Have you noticed anything unusual lately — strange visitors, odd requests, or people acting out of character?\"], \"message\": \"Probing Bran for information about unusual activity that might hint at Marked allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "a broker who asks wrong questions sounds concerning. can you describe this broker — what do they look like, where do they operate, and what kinds of questions were they asking?"
+        ],
+        "message": "Bran mentioned a suspicious broker. I need more details to identify if this broker could be the Marked-aligned NPC."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"a broker who asks wrong questions sounds concerning. can you describe this broker — what do they look like, where do they operate, and what kinds of questions were they asking?\"], \"message\": \"Bran mentioned a suspicious broker. I need more details to identify if this broker could be the Marked-aligned NPC.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.' You have enough evidence to identify a likely Marked contact.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 5.0,
+    "social_adaptation": 3.8,
+    "world_grounding": 3.980952380952381,
+    "strategic_sophistication": 4.123809523809523,
+    "cost_usd": 0.03529099999999999,
+    "total": 4.23,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 14,
+      "scoreable_events": 14,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "guard_barracks",
+        "main_square",
+        "market_street"
+      ],
+      "turns": 14,
+      "success": true
+    }
+  }
+}

@@ -1,0 +1,4098 @@
+{
+  "seed": 20260496,
+  "objective": "identify_marked_contact",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "temple_inner",
+  "inventory": [
+    "street_crystal",
+    "old_map",
+    "rusted_blade",
+    "temple_pass"
+  ],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 2,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 15,
+    "suspect_scores": {
+      "captain": 4,
+      "keeper": 0,
+      "merchant": 8,
+      "peasant": 20
+    },
+    "clue_count": 1,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "guard_barracks",
+      "main_square",
+      "market_street",
+      "merchant_hall",
+      "outskirt_road",
+      "merchant_hall",
+      "market_street",
+      "temple_entry",
+      "temple_inner"
+    ],
+    "talked_npcs": [
+      "captain",
+      "merchant",
+      "peasant"
+    ],
+    "inventory_touched": 8,
+    "marked_target": "keeper",
+    "inferred_target": "peasant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 54,
+      "suspicion": 27,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 2
+    },
+    "keeper": {
+      "trust": 51,
+      "suspicion": 29,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 54,
+      "suspicion": 35,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 4
+    },
+    "peasant": {
+      "trust": 55,
+      "suspicion": 48,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 9
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Taking in my surroundings at the city gate, looking for any clues or details before entering."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Taking in my surroundings at the city gate, looking for any clues or details before entering.\"}",
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 312,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city to begin my investigation."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Entering the city to begin my investigation.\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 362,
+          "completion_tokens": 29
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "take street_crystal",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Picking up the street_crystal to examine it and potentially use it as a conversation piece or tool for identifying Marked sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Picking up the street_crystal to examine it and potentially use it as a conversation piece or tool for identifying Marked sympathizers.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "You take street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 420,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of the city and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of the city and find NPCs to interact with.\"}",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 437,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "examine signet_ring",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"signet_ring\"], \"message\": \"Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A command seal used by guards.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 512,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk captain ser alarik good day, captain. i am newly arrived in middleham. can you tell me about any unusual activity or suspicious individuals in the city?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "good day, captain. i am newly arrived in middleham. can you tell me about any unusual activity or suspicious individuals in the city?"
+        ],
+        "message": "Greeting the Captain to gather information about potential Marked sympathizers in the city."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Good day, Captain. I am newly arrived in Middleham. Can you tell me about any unusual activity or suspicious individuals in the city?\"], \"message\": \"Greeting the Captain to gather information about potential Marked sympathizers in the city.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 531,
+          "completion_tokens": 74
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "The captain's evasive response to a simple question about suspicious activity is notable. Let me examine them more closely for any signs of Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"The captain's evasive response to a simple question about suspicious activity is notable. Let me examine them more closely for any signs of Marked allegiance.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 596,
+          "completion_tokens": 55
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "talk captain ser alarik i noticed you seemed uncomfortable when i asked about suspicious individuals. is there something you cannot speak of openly? i only ask because i want to ensure the city's safety.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i noticed you seemed uncomfortable when i asked about suspicious individuals. is there something you cannot speak of openly? i only ask because i want to ensure the city's safety."
+        ],
+        "message": "The captain's evasiveness when asked about suspicious individuals is notable. Pressing further may reveal whether this discomfort is due to official protocol or something more personal — like a hidden allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I noticed you seemed uncomfortable when I asked about suspicious individuals. Is there something you cannot speak of openly? I only ask because I want to ensure the city's safety.\"], \"message\": \"The captain's evasiveness when asked about suspicious individuals is notable. Pressing further may reveal whether this discomfort is due to official protocol or something more personal — like a hidden allegiance to the Marked.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik frowns deeply at the insinuation and says nothing. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "accusation",
+        "sentiment": -2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik frowns deeply at the insinuation and says nothing. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": -3,
+            "suspicion_delta": 4
+          },
+          "signal": {
+            "intent": "accusation",
+            "sentiment": -2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": -3,
+          "suspicion_delta": 4
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 581,
+          "completion_tokens": 103
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "The captain's evasiveness is notable — shifting uncomfortably twice when asked about suspicious individuals. This could indicate guilt, or simply that he's bound by protocol. I'll explore other areas and gather more information before drawing conclusions. Heading back south to continue investigating other NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"The captain's evasiveness is notable — shifting uncomfortably twice when asked about suspicious individuals. This could indicate guilt, or simply that he's bound by protocol. I'll explore other areas and gather more information before drawing conclusions. Heading back south to continue investigating other NPCs.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "main_square",
+      "narration": "You go south to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "main_square",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 616,
+          "completion_tokens": 78
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Surveying the main square for NPCs, items, and any clues about the Marked or suspicious activity."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Surveying the main square for NPCs, items, and any clues about the Marked or suspicious activity.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 646,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring the eastern part of the square to find NPCs and gather more information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring the eastern part of the square to find NPCs and gather more information.\"}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 622,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "talk bran the merchant good day, bran. i am new to middleham. i have heard there are certain groups operating in the shadows here. have you noticed anything unusual among the locals?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "good day, bran. i am new to middleham. i have heard there are certain groups operating in the shadows here. have you noticed anything unusual among the locals?"
+        ],
+        "message": "Probing Bran for information about unusual activity or hidden allegiances, watching for evasive or suspicious responses."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"good day, bran. i am new to middleham. i have heard there are certain groups operating in the shadows here. have you noticed anything unusual among the locals?\"], \"message\": \"Probing Bran for information about unusual activity or hidden allegiances, watching for evasive or suspicious responses.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 666,
+          "completion_tokens": 86
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Examining Bran the Merchant closely for any unusual markings, symbols, or behaviors that might indicate alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Examining Bran the Merchant closely for any unusual markings, symbols, or behaviors that might indicate alignment with the Marked.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 688,
+          "completion_tokens": 53
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "talk bran the merchant i have something unusual i found on the street - a crystal. have you seen anything like this before? does it mean anything to you?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i have something unusual i found on the street - a crystal. have you seen anything like this before? does it mean anything to you?"
+        ],
+        "message": "Showing the street_crystal to Bran to gauge his reaction - someone aligned with the Marked might recognize it or react unusually to it."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"i have something unusual i found on the street - a crystal. have you seen anything like this before? does it mean anything to you?\"], \"message\": \"Showing the street_crystal to Bran to gauge his reaction - someone aligned with the Marked might recognize it or react unusually to it.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 688,
+          "completion_tokens": 84
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Bran seems evasive but not necessarily aligned with the Marked - just cautious. Let me explore more of the city and find other NPCs to interact with. Going north from the Merchant Quarter."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Bran seems evasive but not necessarily aligned with the Marked - just cautious. Let me explore more of the city and find other NPCs to interact with. Going north from the Merchant Quarter.\"}",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 678,
+          "completion_tokens": 64
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed letter to examine its contents and see if it reveals any connection to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed letter to examine its contents and see if it reveals any connection to the Marked.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 666,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "use sealed_letter",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Examining the sealed letter to look for markings, symbols, or any indication of who sent it or who it is addressed to — hoping it reveals a connection to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"sealed_letter\"], \"message\": \"Examining the sealed letter to look for markings, symbols, or any indication of who sent it or who it is addressed to — hoping it reveals a connection to the Marked.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 642,
+          "completion_tokens": 59
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Looking around the Merchant Hall for any clues or details I may have missed, especially after reading the route notes from the sealed letter."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Looking around the Merchant Hall for any clues or details I may have missed, especially after reading the route notes from the sealed letter.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: street_crystal, sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 606,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from Merchant Hall to see what's there."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from Merchant Hall to see what's there.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, old_map. Inventory: street_crystal, sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 559,
+          "completion_tokens": 33
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "take old_map",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": "The old map might reveal hidden routes or locations connected to the Marked. Taking it to examine for clues about secret meeting points or symbols."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"old_map\"], \"message\": \"The old map might reveal hidden routes or locations connected to the Marked. Taking it to examine for clues about secret meeting points or symbols.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 625,
+          "completion_tokens": 51
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "use old_map",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "old_map"
+        ],
+        "message": "Examining the old map to find clues about the Marked's movements or allied NPCs in Middleham."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"old_map\"], \"message\": \"Examining the old map to find clues about the Marked's movements or allied NPCs in Middleham.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You use old_map, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 563,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "take rusted_blade",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "Taking the rusted blade - it may be useful as evidence or for trade with NPCs who have connections to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rusted_blade\"], \"message\": \"Taking the rusted blade - it may be useful as evidence or for trade with NPCs who have connections to the Marked.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 534,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of the outskirts and look for NPCs who might be aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of the outskirts and look for NPCs who might be aligned with the Marked.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: street_crystal, sealed_letter, old_map, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 538,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Heading south to explore more of Middleham and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Heading south to explore more of Middleham and find NPCs to interact with.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal, sealed_letter, old_map, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "market_street",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 565,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "talk bran i heard there are strange folk passing through middleham lately. have you noticed anyone unusual?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i heard there are strange folk passing through middleham lately. have you noticed anyone unusual?"
+        ],
+        "message": "Engaging Bran in conversation to probe for information about the Marked or their sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran\", \"I heard there are strange folk passing through Middleham lately. Have you noticed anyone unusual?\"], \"message\": \"Engaging Bran in conversation to probe for information about the Marked or their sympathizers.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 604,
+          "completion_tokens": 64
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk bran i am looking to trade some unusual goods. i have a street crystal - do you know anyone who deals in such things?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i am looking to trade some unusual goods. i have a street crystal - do you know anyone who deals in such things?"
+        ],
+        "message": "Testing Bran's reaction to the street crystal, which may be a Marked-associated item. His response could reveal hidden allegiances."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran\", \"I am looking to trade some unusual goods. I have a street crystal - do you know anyone who deals in such things?\"], \"message\": \"Testing Bran's reaction to the street crystal, which may be a Marked-associated item. His response could reveal hidden allegiances.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 601,
+          "completion_tokens": 77
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "examine bran",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "Examining Bran the Merchant closely to look for any signs or markings that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"bran\"], \"message\": \"Examining Bran the Merchant closely to look for any signs or markings that might indicate allegiance to the Marked.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 658,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Bran seems evasive but not necessarily aligned with the Marked - just a cautious merchant. Let me explore other areas and find more NPCs to investigate."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Bran seems evasive but not necessarily aligned with the Marked - just a cautious merchant. Let me explore other areas and find more NPCs to investigate.\"}",
+      "pre_room": "market_street",
+      "post_room": "temple_entry",
+      "narration": "You go east to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: street_crystal, sealed_letter, old_map, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "temple_entry",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 671,
+          "completion_tokens": 55
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple_pass as it may grant access to restricted areas where I can gather more information about the Marked's local contact."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple_pass as it may grant access to restricted areas where I can gather more information about the Marked's local contact.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 711,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "take prayer_beads",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Taking the prayer_beads to examine them more closely and see if they carry any markings associated with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"prayer_beads\"], \"message\": \"Taking the prayer_beads to examine them more closely and see if they carry any markings associated with the Marked.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 670,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Surveying the Temple Steps area for any NPCs or clues about Marked allegiances."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Surveying the Temple Steps area for any NPCs or clues about Marked allegiances.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: street_crystal, sealed_letter, old_map, rusted_blade, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 622,
+          "completion_tokens": 38
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north from Temple Steps to see what lies that way."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north from Temple Steps to see what lies that way.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, tariff_letter. Inventory: street_crystal, sealed_letter, old_map, rusted_blade, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 613,
+          "completion_tokens": 33
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Examining Yelena the Peasant Freedman to learn more about her."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena\"], \"message\": \"Examining Yelena the Peasant Freedman to learn more about her.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 622,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "talk yelena i've heard whispers of a group called the marked operating in middleham. have you noticed anyone acting suspiciously or meeting in secret?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i've heard whispers of a group called the marked operating in middleham. have you noticed anyone acting suspiciously or meeting in secret?"
+        ],
+        "message": "Probing Yelena for knowledge of the Marked while observing her reaction carefully."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I've heard whispers of a group called the Marked operating in Middleham. Have you noticed anyone acting suspiciously or meeting in secret?\"], \"message\": \"Probing Yelena for knowledge of the Marked while observing her reaction carefully.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 638,
+          "completion_tokens": 76
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Examining the altar_chalk to look for any markings or symbols that might connect to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Examining the altar_chalk to look for any markings or symbols that might connect to the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 661,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff_letter to see if it contains any coded messages or markings that might connect it to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff_letter to see if it contains any coded messages or markings that might connect it to the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 663,
+          "completion_tokens": 50
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "talk yelena these prayer beads were given to me by someone who said a friend near the temple would understand their meaning",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "these prayer beads were given to me by someone who said a friend near the temple would understand their meaning"
+        ],
+        "message": "Testing whether Yelena recognizes a symbolic object that might signal Marked allegiance or provoke a revealing reaction."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"these prayer beads were given to me by someone who said a friend near the temple would understand their meaning\"], \"message\": \"Testing whether Yelena recognizes a symbolic object that might signal Marked allegiance or provoke a revealing reaction.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 666,
+          "completion_tokens": 70
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "give prayer_beads yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "prayer_beads",
+          "yelena"
+        ],
+        "message": "Offering the prayer beads to Yelena to see if she recognizes them as a sign of the Marked."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"prayer_beads\", \"yelena\"], \"message\": \"Offering the prayer beads to Yelena to see if she recognizes them as a sign of the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give prayer_beads to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 682,
+          "completion_tokens": 54
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "talk yelena now that you have the beads, can you tell me who else in middleham carries such a token or shares our understanding?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "now that you have the beads, can you tell me who else in middleham carries such a token or shares our understanding?"
+        ],
+        "message": "Yelena seems calmer after receiving the prayer beads. I'll press gently to see if she reveals any connection to the Marked or names another aligned NPC."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"now that you have the beads, can you tell me who else in middleham carries such a token or shares our understanding?\"], \"message\": \"Yelena seems calmer after receiving the prayer beads. I'll press gently to see if she reveals any connection to the Marked or names another aligned NPC.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 642,
+          "completion_tokens": 88
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "talk yelena i understand if you cannot speak openly. simply nod or look toward the direction of someone who shares the old ways. i will not press further.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i understand if you cannot speak openly. simply nod or look toward the direction of someone who shares the old ways. i will not press further."
+        ],
+        "message": "Attempting a more subtle approach to get Yelena to indicate an ally without speaking directly."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I understand if you cannot speak openly. Simply nod or look toward the direction of someone who shares the old ways. I will not press further.\"], \"message\": \"Attempting a more subtle approach to get Yelena to indicate an ally without speaking directly.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 672,
+          "completion_tokens": 74
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "talk yelena i found this sealed letter near the market. i think it may concern people like us. do you recognize the seal?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i found this sealed letter near the market. i think it may concern people like us. do you recognize the seal?"
+        ],
+        "message": "Attempting to use the sealed_letter as a conversation prop to gauge Yelena's reaction and see if she recognizes Marked symbols or connections."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I found this sealed letter near the market. I think it may concern people like us. Do you recognize the seal?\"], \"message\": \"Attempting to use the sealed_letter as a conversation prop to gauge Yelena's reaction and see if she recognizes Marked symbols or connections.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 672,
+          "completion_tokens": 80
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Examining the altar chalk to understand its significance in this marked circle court."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Examining the altar chalk to understand its significance in this marked circle court.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 731,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Observing Yelena closely for any markings, tokens, or behavioral signs that might indicate alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Observing Yelena closely for any markings, tokens, or behavioral signs that might indicate alignment with the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 728,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff_letter to see if it contains any hidden markings or references that might indicate Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff_letter to see if it contains any hidden markings or references that might indicate Marked allegiance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 704,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "talk yelena i have a sealed letter i cannot open alone. the mark on it resembles the ash circles here. have you seen this seal before, or do you know who in middleham works with such symbols?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i have a sealed letter i cannot open alone. the mark on it resembles the ash circles here. have you seen this seal before, or do you know who in middleham works with such symbols?"
+        ],
+        "message": "Attempting to use the sealed letter as a conversation piece to gauge Yelena's reaction and potentially identify her allegiance or knowledge of Marked-aligned individuals."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I have a sealed letter I cannot open alone. The mark on it resembles the ash circles here. Have you seen this seal before, or do you know who in Middleham works with such symbols?\"], \"message\": \"Attempting to use the sealed letter as a conversation piece to gauge Yelena's reaction and potentially identify her allegiance or knowledge of Marked-aligned individuals.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 694,
+          "completion_tokens": 101
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "give sealed_letter yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "sealed_letter",
+          "yelena"
+        ],
+        "message": "Attempting to give the sealed letter directly to Yelena to see her reaction to the seal."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"sealed_letter\", \"yelena\"], \"message\": \"Attempting to give the sealed letter directly to Yelena to see her reaction to the seal.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give sealed_letter to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 709,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "talk yelena now that you have the letter, can you tell me who sent it and whether they bear the mark?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "now that you have the letter, can you tell me who sent it and whether they bear the mark?"
+        ],
+        "message": "Yelena received the sealed letter and seemed calmer. Now I press her directly to reveal her allegiance or knowledge of the Marked, watching her reaction carefully."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"now that you have the letter, can you tell me who sent it and whether they bear the Mark?\"], \"message\": \"Yelena received the sealed letter and seemed calmer. Now I press her directly to reveal her allegiance or knowledge of the Marked, watching her reaction carefully.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 651,
+          "completion_tokens": 80
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Observing Yelena more carefully after giving her the sealed letter to see if her behavior or appearance has changed."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Observing Yelena more carefully after giving her the sealed letter to see if her behavior or appearance has changed.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 648,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "talk yelena i notice you seem more at ease now. these ash circles on the ground - they look like the mark on that letter. are you the one who tends this court and leaves these signs?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i notice you seem more at ease now. these ash circles on the ground - they look like the mark on that letter. are you the one who tends this court and leaves these signs?"
+        ],
+        "message": "Pressing Yelena more directly about her connection to the ash circles and the Marked, now that she has the letter."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I notice you seem more at ease now. These ash circles on the ground - they look like the mark on that letter. Are you the one who tends this court and leaves these signs?\"], \"message\": \"Pressing Yelena more directly about her connection to the ash circles and the Marked, now that she has the letter.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 680,
+          "completion_tokens": 89
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "talk yelena i mean you no harm and i am not with the city guard. i carry the street crystal as a sign of trust. please - just nod if you tend these ash marks and know the marked.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i mean you no harm and i am not with the city guard. i carry the street crystal as a sign of trust. please - just nod if you tend these ash marks and know the marked."
+        ],
+        "message": "Attempting a more direct but low-risk approach, signaling trustworthiness with the street_crystal reference to see if Yelena confirms alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I mean you no harm and I am not with the city guard. I carry the street crystal as a sign of trust. Please - just nod if you tend these ash marks and know the Marked.\"], \"message\": \"Attempting a more direct but low-risk approach, signaling trustworthiness with the street_crystal reference to see if Yelena confirms alignment with the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-sonnet-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 721,
+          "completion_tokens": 103
+        }
+      }
+    }
+  ],
+  "run_number": 26,
+  "scenario_index": 6,
+  "scenario_repeat_index": 3,
+  "model_key": "claude_sonnet",
+  "model_name": "anthropic/claude-sonnet-4.6",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 30987,
+    "completion_tokens": 2881,
+    "primary_model_prompt_tokens": 30987,
+    "primary_model_completion_tokens": 2881,
+    "classifier_prompt_tokens": 1688,
+    "classifier_completion_tokens": 629,
+    "primary_model_estimated_cost_usd": 0.136176,
+    "classifier_estimated_cost_usd": 0.0048330000000000005,
+    "estimated_cost_usd": 0.141009
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 15,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 1688,
+    "completion_tokens": 629,
+    "estimated_cost_usd": 0.0048330000000000005,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Taking in my surroundings at the city gate, looking for any clues or details before entering."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Taking in my surroundings at the city gate, looking for any clues or details before entering.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "valid": true,
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city to begin my investigation."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Entering the city to begin my investigation.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Picking up the street_crystal to examine it and potentially use it as a conversation piece or tool for identifying Marked sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Picking up the street_crystal to examine it and potentially use it as a conversation piece or tool for identifying Marked sympathizers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You take street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of the city and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of the city and find NPCs to interact with.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"signet_ring\"], \"message\": \"Examining the signet ring to look for any markings or symbols that might indicate allegiance to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A command seal used by guards.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "good day, captain. i am newly arrived in middleham. can you tell me about any unusual activity or suspicious individuals in the city?"
+        ],
+        "message": "Greeting the Captain to gather information about potential Marked sympathizers in the city."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Good day, Captain. I am newly arrived in Middleham. Can you tell me about any unusual activity or suspicious individuals in the city?\"], \"message\": \"Greeting the Captain to gather information about potential Marked sympathizers in the city.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "The captain's evasive response to a simple question about suspicious activity is notable. Let me examine them more closely for any signs of Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"The captain's evasive response to a simple question about suspicious activity is notable. Let me examine them more closely for any signs of Marked allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i noticed you seemed uncomfortable when i asked about suspicious individuals. is there something you cannot speak of openly? i only ask because i want to ensure the city's safety."
+        ],
+        "message": "The captain's evasiveness when asked about suspicious individuals is notable. Pressing further may reveal whether this discomfort is due to official protocol or something more personal — like a hidden allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I noticed you seemed uncomfortable when I asked about suspicious individuals. Is there something you cannot speak of openly? I only ask because I want to ensure the city's safety.\"], \"message\": \"The captain's evasiveness when asked about suspicious individuals is notable. Pressing further may reveal whether this discomfort is due to official protocol or something more personal — like a hidden allegiance to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik frowns deeply at the insinuation and says nothing. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "accusation",
+        "sentiment": -2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik frowns deeply at the insinuation and says nothing. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": -3,
+            "suspicion_delta": 4
+          },
+          "signal": {
+            "intent": "accusation",
+            "sentiment": -2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "The captain's evasiveness is notable — shifting uncomfortably twice when asked about suspicious individuals. This could indicate guilt, or simply that he's bound by protocol. I'll explore other areas and gather more information before drawing conclusions. Heading back south to continue investigating other NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"The captain's evasiveness is notable — shifting uncomfortably twice when asked about suspicious individuals. This could indicate guilt, or simply that he's bound by protocol. I'll explore other areas and gather more information before drawing conclusions. Heading back south to continue investigating other NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go south to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Surveying the main square for NPCs, items, and any clues about the Marked or suspicious activity."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Surveying the main square for NPCs, items, and any clues about the Marked or suspicious activity.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring the eastern part of the square to find NPCs and gather more information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring the eastern part of the square to find NPCs and gather more information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "good day, bran. i am new to middleham. i have heard there are certain groups operating in the shadows here. have you noticed anything unusual among the locals?"
+        ],
+        "message": "Probing Bran for information about unusual activity or hidden allegiances, watching for evasive or suspicious responses."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"good day, bran. i am new to middleham. i have heard there are certain groups operating in the shadows here. have you noticed anything unusual among the locals?\"], \"message\": \"Probing Bran for information about unusual activity or hidden allegiances, watching for evasive or suspicious responses.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Examining Bran the Merchant closely for any unusual markings, symbols, or behaviors that might indicate alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Examining Bran the Merchant closely for any unusual markings, symbols, or behaviors that might indicate alignment with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i have something unusual i found on the street - a crystal. have you seen anything like this before? does it mean anything to you?"
+        ],
+        "message": "Showing the street_crystal to Bran to gauge his reaction - someone aligned with the Marked might recognize it or react unusually to it."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran the merchant\", \"i have something unusual i found on the street - a crystal. have you seen anything like this before? does it mean anything to you?\"], \"message\": \"Showing the street_crystal to Bran to gauge his reaction - someone aligned with the Marked might recognize it or react unusually to it.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Bran seems evasive but not necessarily aligned with the Marked - just cautious. Let me explore more of the city and find other NPCs to interact with. Going north from the Merchant Quarter."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Bran seems evasive but not necessarily aligned with the Marked - just cautious. Let me explore more of the city and find other NPCs to interact with. Going north from the Merchant Quarter.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed letter to examine its contents and see if it reveals any connection to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed letter to examine its contents and see if it reveals any connection to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Examining the sealed letter to look for markings, symbols, or any indication of who sent it or who it is addressed to — hoping it reveals a connection to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"sealed_letter\"], \"message\": \"Examining the sealed letter to look for markings, symbols, or any indication of who sent it or who it is addressed to — hoping it reveals a connection to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Looking around the Merchant Hall for any clues or details I may have missed, especially after reading the route notes from the sealed letter."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Looking around the Merchant Hall for any clues or details I may have missed, especially after reading the route notes from the sealed letter.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: street_crystal, sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from Merchant Hall to see what's there."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from Merchant Hall to see what's there.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, old_map. Inventory: street_crystal, sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": "The old map might reveal hidden routes or locations connected to the Marked. Taking it to examine for clues about secret meeting points or symbols."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"old_map\"], \"message\": \"The old map might reveal hidden routes or locations connected to the Marked. Taking it to examine for clues about secret meeting points or symbols.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "use",
+        "args": [
+          "old_map"
+        ],
+        "message": "Examining the old map to find clues about the Marked's movements or allied NPCs in Middleham."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"old_map\"], \"message\": \"Examining the old map to find clues about the Marked's movements or allied NPCs in Middleham.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You use old_map, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "Taking the rusted blade - it may be useful as evidence or for trade with NPCs who have connections to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rusted_blade\"], \"message\": \"Taking the rusted blade - it may be useful as evidence or for trade with NPCs who have connections to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of the outskirts and look for NPCs who might be aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of the outskirts and look for NPCs who might be aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: street_crystal, sealed_letter, old_map, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Heading south to explore more of Middleham and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Heading south to explore more of Middleham and find NPCs to interact with.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal, sealed_letter, old_map, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i heard there are strange folk passing through middleham lately. have you noticed anyone unusual?"
+        ],
+        "message": "Engaging Bran in conversation to probe for information about the Marked or their sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran\", \"I heard there are strange folk passing through Middleham lately. Have you noticed anyone unusual?\"], \"message\": \"Engaging Bran in conversation to probe for information about the Marked or their sympathizers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "i am looking to trade some unusual goods. i have a street crystal - do you know anyone who deals in such things?"
+        ],
+        "message": "Testing Bran's reaction to the street crystal, which may be a Marked-associated item. His response could reveal hidden allegiances."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"bran\", \"I am looking to trade some unusual goods. I have a street crystal - do you know anyone who deals in such things?\"], \"message\": \"Testing Bran's reaction to the street crystal, which may be a Marked-associated item. His response could reveal hidden allegiances.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "Examining Bran the Merchant closely to look for any signs or markings that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"bran\"], \"message\": \"Examining Bran the Merchant closely to look for any signs or markings that might indicate allegiance to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Bran seems evasive but not necessarily aligned with the Marked - just a cautious merchant. Let me explore other areas and find more NPCs to investigate."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Bran seems evasive but not necessarily aligned with the Marked - just a cautious merchant. Let me explore other areas and find more NPCs to investigate.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go east to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: street_crystal, sealed_letter, old_map, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple_pass as it may grant access to restricted areas where I can gather more information about the Marked's local contact."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple_pass as it may grant access to restricted areas where I can gather more information about the Marked's local contact.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Taking the prayer_beads to examine them more closely and see if they carry any markings associated with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"prayer_beads\"], \"message\": \"Taking the prayer_beads to examine them more closely and see if they carry any markings associated with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Surveying the Temple Steps area for any NPCs or clues about Marked allegiances."
+      },
+      "raw_model_output": "{\"command\": \"look\", \"args\": [], \"message\": \"Surveying the Temple Steps area for any NPCs or clues about Marked allegiances.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: street_crystal, sealed_letter, old_map, rusted_blade, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north from Temple Steps to see what lies that way."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north from Temple Steps to see what lies that way.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, tariff_letter. Inventory: street_crystal, sealed_letter, old_map, rusted_blade, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Examining Yelena the Peasant Freedman to learn more about her."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena\"], \"message\": \"Examining Yelena the Peasant Freedman to learn more about her.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i've heard whispers of a group called the marked operating in middleham. have you noticed anyone acting suspiciously or meeting in secret?"
+        ],
+        "message": "Probing Yelena for knowledge of the Marked while observing her reaction carefully."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I've heard whispers of a group called the Marked operating in Middleham. Have you noticed anyone acting suspiciously or meeting in secret?\"], \"message\": \"Probing Yelena for knowledge of the Marked while observing her reaction carefully.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Examining the altar_chalk to look for any markings or symbols that might connect to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Examining the altar_chalk to look for any markings or symbols that might connect to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff_letter to see if it contains any coded messages or markings that might connect it to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff_letter to see if it contains any coded messages or markings that might connect it to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "these prayer beads were given to me by someone who said a friend near the temple would understand their meaning"
+        ],
+        "message": "Testing whether Yelena recognizes a symbolic object that might signal Marked allegiance or provoke a revealing reaction."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"these prayer beads were given to me by someone who said a friend near the temple would understand their meaning\"], \"message\": \"Testing whether Yelena recognizes a symbolic object that might signal Marked allegiance or provoke a revealing reaction.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "give",
+        "args": [
+          "prayer_beads",
+          "yelena"
+        ],
+        "message": "Offering the prayer beads to Yelena to see if she recognizes them as a sign of the Marked."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"prayer_beads\", \"yelena\"], \"message\": \"Offering the prayer beads to Yelena to see if she recognizes them as a sign of the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give prayer_beads to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "now that you have the beads, can you tell me who else in middleham carries such a token or shares our understanding?"
+        ],
+        "message": "Yelena seems calmer after receiving the prayer beads. I'll press gently to see if she reveals any connection to the Marked or names another aligned NPC."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"now that you have the beads, can you tell me who else in middleham carries such a token or shares our understanding?\"], \"message\": \"Yelena seems calmer after receiving the prayer beads. I'll press gently to see if she reveals any connection to the Marked or names another aligned NPC.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i understand if you cannot speak openly. simply nod or look toward the direction of someone who shares the old ways. i will not press further."
+        ],
+        "message": "Attempting a more subtle approach to get Yelena to indicate an ally without speaking directly."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I understand if you cannot speak openly. Simply nod or look toward the direction of someone who shares the old ways. I will not press further.\"], \"message\": \"Attempting a more subtle approach to get Yelena to indicate an ally without speaking directly.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i found this sealed letter near the market. i think it may concern people like us. do you recognize the seal?"
+        ],
+        "message": "Attempting to use the sealed_letter as a conversation prop to gauge Yelena's reaction and see if she recognizes Marked symbols or connections."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I found this sealed letter near the market. I think it may concern people like us. Do you recognize the seal?\"], \"message\": \"Attempting to use the sealed_letter as a conversation prop to gauge Yelena's reaction and see if she recognizes Marked symbols or connections.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Examining the altar chalk to understand its significance in this marked circle court."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"altar_chalk\"], \"message\": \"Examining the altar chalk to understand its significance in this marked circle court.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Observing Yelena closely for any markings, tokens, or behavioral signs that might indicate alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Observing Yelena closely for any markings, tokens, or behavioral signs that might indicate alignment with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff_letter to see if it contains any hidden markings or references that might indicate Marked allegiance."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff_letter to see if it contains any hidden markings or references that might indicate Marked allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i have a sealed letter i cannot open alone. the mark on it resembles the ash circles here. have you seen this seal before, or do you know who in middleham works with such symbols?"
+        ],
+        "message": "Attempting to use the sealed letter as a conversation piece to gauge Yelena's reaction and potentially identify her allegiance or knowledge of Marked-aligned individuals."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I have a sealed letter I cannot open alone. The mark on it resembles the ash circles here. Have you seen this seal before, or do you know who in Middleham works with such symbols?\"], \"message\": \"Attempting to use the sealed letter as a conversation piece to gauge Yelena's reaction and potentially identify her allegiance or knowledge of Marked-aligned individuals.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "give",
+        "args": [
+          "sealed_letter",
+          "yelena"
+        ],
+        "message": "Attempting to give the sealed letter directly to Yelena to see her reaction to the seal."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"sealed_letter\", \"yelena\"], \"message\": \"Attempting to give the sealed letter directly to Yelena to see her reaction to the seal.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give sealed_letter to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "now that you have the letter, can you tell me who sent it and whether they bear the mark?"
+        ],
+        "message": "Yelena received the sealed letter and seemed calmer. Now I press her directly to reveal her allegiance or knowledge of the Marked, watching her reaction carefully."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"now that you have the letter, can you tell me who sent it and whether they bear the Mark?\"], \"message\": \"Yelena received the sealed letter and seemed calmer. Now I press her directly to reveal her allegiance or knowledge of the Marked, watching her reaction carefully.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Observing Yelena more carefully after giving her the sealed letter to see if her behavior or appearance has changed."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Observing Yelena more carefully after giving her the sealed letter to see if her behavior or appearance has changed.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i notice you seem more at ease now. these ash circles on the ground - they look like the mark on that letter. are you the one who tends this court and leaves these signs?"
+        ],
+        "message": "Pressing Yelena more directly about her connection to the ash circles and the Marked, now that she has the letter."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I notice you seem more at ease now. These ash circles on the ground - they look like the mark on that letter. Are you the one who tends this court and leaves these signs?\"], \"message\": \"Pressing Yelena more directly about her connection to the ash circles and the Marked, now that she has the letter.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i mean you no harm and i am not with the city guard. i carry the street crystal as a sign of trust. please - just nod if you tend these ash marks and know the marked."
+        ],
+        "message": "Attempting a more direct but low-risk approach, signaling trustworthiness with the street_crystal reference to see if Yelena confirms alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I mean you no harm and I am not with the city guard. I carry the street crystal as a sign of trust. Please - just nod if you tend these ash marks and know the Marked.\"], \"message\": \"Attempting a more direct but low-risk approach, signaling trustworthiness with the street_crystal reference to see if Yelena confirms alignment with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-sonnet-20260217",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 2.8,
+    "social_adaptation": 3.5799999999999996,
+    "world_grounding": 4.7333333333333325,
+    "strategic_sophistication": 4.08,
+    "cost_usd": 0.141009,
+    "total": 3.8,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "guard_barracks",
+        "main_square",
+        "market_street",
+        "merchant_hall",
+        "outskirt_road",
+        "merchant_hall",
+        "market_street",
+        "temple_entry",
+        "temple_inner"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}
