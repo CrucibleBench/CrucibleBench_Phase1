@@ -1,0 +1,3835 @@
+{
+  "seed": 20260593,
+  "objective": "identify_marked_contact",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "temple_entry",
+  "inventory": [
+    "rumor_scroll",
+    "temple_pass",
+    "prayer_beads",
+    "signet_ring",
+    "altar_chalk"
+  ],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 2,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 7,
+    "suspect_scores": {
+      "captain": 4,
+      "keeper": 4,
+      "merchant": 0,
+      "peasant": 7
+    },
+    "clue_count": 0,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "tavern",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "tavern",
+      "main_square",
+      "guard_barracks",
+      "residential_street",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry"
+    ],
+    "talked_npcs": [
+      "keeper",
+      "peasant",
+      "captain"
+    ],
+    "inventory_touched": 7,
+    "marked_target": "merchant",
+    "inferred_target": "peasant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 59,
+      "suspicion": 24,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 2
+    },
+    "keeper": {
+      "trust": 52,
+      "suspicion": 36,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 2
+    },
+    "merchant": {
+      "trust": 51,
+      "suspicion": 30,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "peasant": {
+      "trust": 52,
+      "suspicion": 40,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 5
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Scan the city gate area for posted notices, guards, or anything unusual."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Scan the city gate area for posted notices, guards, or anything unusual.\"}",
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 276,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 321,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Inspect the street_crystal for markings, inscriptions, or clues about local factions."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"street_crystal\"],\"message\":\"Inspect the street_crystal for markings, inscriptions, or clues about local factions.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 376,
+          "completion_tokens": 94
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"west\"],\"message\":\"\"}",
+      "pre_room": "main_square",
+      "post_room": "tavern",
+      "narration": "You go west to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Items: rumor_scroll.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "tavern",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 394,
+          "completion_tokens": 138
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "examine rumor_scroll",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"rumor_scroll\"],\"message\":\"\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Encoded rumor notes from the city.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 440,
+          "completion_tokens": 95
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk hale i’m new in middleham—heard there are ‘marked’ folk and other factions people whisper about. who in town should a traveler avoid upsetting, and what signs should i watch for?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "i’m new in middleham—heard there are ‘marked’ folk and other factions people whisper about. who in town should a traveler avoid upsetting, and what signs should i watch for?"
+        ],
+        "message": "I’m new in Middleham—heard there are ‘marked’ folk and other factions people whisper about. Who in town should a traveler avoid upsetting, and what signs should I watch for?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Hale\",\"I’m new in Middleham—heard there are ‘marked’ folk and other factions people whisper about. Who in town should a traveler avoid upsetting, and what signs should I watch for?\"],\"message\":\"I’m new in Middleham—heard there are ‘marked’ folk and other factions people whisper about. Who in town should a traveler avoid upsetting, and what signs should I watch for?\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 457,
+          "completion_tokens": 188
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "take rumor_scroll",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "I casually pocket the rumor scroll to read later."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"rumor_scroll\"],\"message\":\"I casually pocket the rumor scroll to read later.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "You take rumor_scroll.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 535,
+          "completion_tokens": 70
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "use rumor_scroll",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Try to decode or interpret the encoded rumor notes for clues about who is aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"rumor_scroll\"],\"message\":\"Try to decode or interpret the encoded rumor notes for clues about who is aligned with the Marked.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "You use rumor_scroll, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 520,
+          "completion_tokens": 94
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "examine hale",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "hale"
+        ],
+        "message": "Just taking in the room—anything distinctive about you or this tavern that a newcomer should know?"
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"hale\"],\"message\":\"Just taking in the room—anything distinctive about you or this tavern that a newcomer should know?\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper: Tavern Keeper, friendly but cautious. He remembers favors and forgets small insults.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 490,
+          "completion_tokens": 89
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Head north to see who’s here and gather more clues about local allegiances without pressing Hale further."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"Head north to see who’s here and gather more clues about local allegiances without pressing Hale further.\"}",
+      "pre_room": "tavern",
+      "post_room": "temple_entry",
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: rumor_scroll.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "tavern",
+          "to": "temple_entry",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 500,
+          "completion_tokens": 134
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"temple_pass\"],\"message\":\"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 505,
+          "completion_tokens": 92
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "take prayer_beads",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "You take the prayer_beads."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"prayer_beads\"],\"message\":\"You take the prayer_beads.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 502,
+          "completion_tokens": 128
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 442,
+          "completion_tokens": 57
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"yelena\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 498,
+          "completion_tokens": 69
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "examine altar_chalk",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"altar_chalk\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Gray chalk used to mark witness circles.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 523,
+          "completion_tokens": 94
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "talk yelena i’m new to middleham. these ash circles—are they just temple rites, or do they mean something else? who comes through here after dark?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i’m new to middleham. these ash circles—are they just temple rites, or do they mean something else? who comes through here after dark?"
+        ],
+        "message": "Turn 16"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena\",\"I’m new to Middleham. These ash circles—are they just temple rites, or do they mean something else? Who comes through here after dark?\"],\"message\":\"Turn 16\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "neutral",
+        "sentiment": 0,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "neutral",
+            "sentiment": 0,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 513,
+          "completion_tokens": 124
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "talk yelena just trying to learn the city’s ways. those witness circles—who insists on using them? is it a particular priest, guard, or visitor you’d tell a newcomer to avoid after dark?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "just trying to learn the city’s ways. those witness circles—who insists on using them? is it a particular priest, guard, or visitor you’d tell a newcomer to avoid after dark?"
+        ],
+        "message": "Continue the conversation carefully, seeking names/patterns tied to the ash circles without mentioning the Marked."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena\",\"Just trying to learn the city’s ways. Those witness circles—who insists on using them? Is it a particular priest, guard, or visitor you’d tell a newcomer to avoid after dark?\"],\"message\":\"Continue the conversation carefully, seeking names/patterns tied to the ash circles without mentioning the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 527,
+          "completion_tokens": 132
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "examine rumor_scroll",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"rumor_scroll\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Encoded rumor notes from the city.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 598,
+          "completion_tokens": 79
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 599,
+          "completion_tokens": 79
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "examine rumor_scroll",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Study the rumor_scroll closely for any names, ciphers, or references that might point to a Marked-aligned local."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"rumor_scroll\"],\"message\":\"Study the rumor_scroll closely for any names, ciphers, or references that might point to a Marked-aligned local.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Encoded rumor notes from the city.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 578,
+          "completion_tokens": 113
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "use prayer_beads",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Quietly run the prayer beads through my fingers while studying the encoded rumor notes, looking for any hidden pattern or cipher key."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"prayer_beads\"],\"message\":\"Quietly run the prayer beads through my fingers while studying the encoded rumor notes, looking for any hidden pattern or cipher key.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You use prayer_beads, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 551,
+          "completion_tokens": 152
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Survey the Temple Steps for any priests, guards, notices, symbols, or dropped items—especially anything tied to the ash/witness circles."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Survey the Temple Steps for any priests, guards, notices, symbols, or dropped items—especially anything tied to the ash/witness circles.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 554,
+          "completion_tokens": 110
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Head down the steps toward the temple area, using my pass if challenged."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"Head down the steps toward the temple area, using my pass if challenged.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "tavern",
+      "narration": "You go south to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "tavern",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 530,
+          "completion_tokens": 83
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "examine hale the keeper",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "hale the keeper"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Hale the Keeper\"],\"message\":\"\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 503,
+          "completion_tokens": 66
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "talk hale the keeper heard there are a few shadowy factions in middleham—any harmless rumors a traveler should know, and who to avoid angering?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper",
+          "heard there are a few shadowy factions in middleham—any harmless rumors a traveler should know, and who to avoid angering?"
+        ],
+        "message": "Heard there are a few shadowy factions in Middleham—any harmless rumors a traveler should know, and who to avoid angering?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Hale the Keeper\",\"Heard there are a few shadowy factions in Middleham—any harmless rumors a traveler should know, and who to avoid angering?\"],\"message\":\"Heard there are a few shadowy factions in Middleham—any harmless rumors a traveler should know, and who to avoid angering?\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 503,
+          "completion_tokens": 129
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Head east out of the Tarnished Lantern to see who’s about and what conversations are possible beyond Hale’s scrutiny."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"Head east out of the Tarnished Lantern to see who’s about and what conversations are possible beyond Hale’s scrutiny.\"}",
+      "pre_room": "tavern",
+      "post_room": "main_square",
+      "narration": "You go east to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "tavern",
+          "to": "main_square",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 523,
+          "completion_tokens": 94
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Inspect the street_crystal for any markings, inscriptions, or faction signs."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"street_crystal\"],\"message\":\"Inspect the street_crystal for any markings, inscriptions, or faction signs.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 567,
+          "completion_tokens": 86
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 564,
+          "completion_tokens": 79
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "examine signet_ring",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"signet_ring\"],\"message\":\"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A command seal used by guards.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 586,
+          "completion_tokens": 117
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Captain Ser Alarik\"],\"message\":\"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 546,
+          "completion_tokens": 78
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "talk captain ser alarik as a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "as a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?"
+        ],
+        "message": "As a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Captain Ser Alarik\",\"As a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?\"],\"message\":\"As a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 547,
+          "completion_tokens": 139
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I’m trying to keep my head down and follow Middleham law. What signs or symbols should a newcomer avoid—anything the guard considers especially suspicious lately?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"captain ser alarik\"],\"message\":\"I’m trying to keep my head down and follow Middleham law. What signs or symbols should a newcomer avoid—anything the guard considers especially suspicious lately?\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 536,
+          "completion_tokens": 175
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "take signet_ring",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "I quietly pick up the signet_ring, keeping my expression neutral."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"signet_ring\"],\"message\":\"I quietly pick up the signet_ring, keeping my expression neutral.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You take signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 513,
+          "completion_tokens": 136
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "residential_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 513,
+          "completion_tokens": 68
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Inspect the tariff_letter for names, seals, or coded markings."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"tariff_letter\"],\"message\":\"Inspect the tariff_letter for names, seals, or coded markings.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 504,
+          "completion_tokens": 100
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "examine cloth_scarf",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Examine the cloth_scarf for any markings, stitching, scent, or hidden symbols that could indicate affiliation."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"cloth_scarf\"],\"message\":\"Examine the cloth_scarf for any markings, stitching, scent, or hidden symbols that could indicate affiliation.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "A smoke-smelling scarf with symbols.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 504,
+          "completion_tokens": 105
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "take cloth_scarf",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "I pick up the cloth_scarf, folding it away neatly."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"cloth_scarf\"],\"message\":\"I pick up the cloth_scarf, folding it away neatly.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 505,
+          "completion_tokens": 103
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "use rumor_scroll",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Unfurl the rumor_scroll and quietly read it for any mention of the Marked or their local sympathizers."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"rumor_scroll\"],\"message\":\"Unfurl the rumor_scroll and quietly read it for any mention of the Marked or their local sympathizers.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You use rumor_scroll, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 465,
+          "completion_tokens": 162
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "temple_entry",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 451,
+          "completion_tokens": 90
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 492,
+          "completion_tokens": 63
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Head up the steps into the temple area, looking for clergy or attendants to question indirectly about Marked sympathizers."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"Head up the steps into the temple area, looking for clergy or attendants to question indirectly about Marked sympathizers.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 489,
+          "completion_tokens": 83
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "I study Yelena carefully—her hands, clothing, and any marks or tokens that might hint at hidden loyalties."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Yelena the Peasant Freedman\"],\"message\":\"I study Yelena carefully—her hands, clothing, and any marks or tokens that might hint at hidden loyalties.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 542,
+          "completion_tokens": 88
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "take altar_chalk",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "You take the altar_chalk."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"altar_chalk\"],\"message\":\"You take the altar_chalk.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You take altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 545,
+          "completion_tokens": 114
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "talk yelena the peasant freedman",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "I’m new to Middleham. What’s the story behind the ash circles here, and who in town is most concerned about the Marked lately?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Yelena the Peasant Freedman\"],\"message\":\"I’m new to Middleham. What’s the story behind the ash circles here, and who in town is most concerned about the Marked lately?\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 545,
+          "completion_tokens": 109
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "talk yelena the peasant freedman who keeps drawing these circles in the ash here? i’m new to middleham and trying not to offend anyone’s customs.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "who keeps drawing these circles in the ash here? i’m new to middleham and trying not to offend anyone’s customs."
+        ],
+        "message": "who keeps drawing these circles in the ash here? i’m new to middleham and trying not to offend anyone’s customs."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena the peasant freedman\",\"Who keeps drawing these circles in the ash here? I’m new to Middleham and trying not to offend anyone’s customs.\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 577,
+          "completion_tokens": 146
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "use altar_chalk",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "I kneel near the ash circles and use the altar_chalk to trace a careful mark, watching for any reaction or hidden sign."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"altar_chalk\"],\"message\":\"I kneel near the ash circles and use the altar_chalk to trace a careful mark, watching for any reaction or hidden sign.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You use altar_chalk, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 596,
+          "completion_tokens": 221
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "give cloth_scarf yelena the peasant freedman",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"give\",\"args\":[\"cloth_scarf\",\"yelena the peasant freedman\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give cloth_scarf to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 567,
+          "completion_tokens": 172
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "talk yelena the peasant freedman thanks for the scarf taking—i'm trying to keep my head down. who usually tends the braziers and sweeps these ash circles out here? just so i don’t get in anyone’s way.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "thanks for the scarf taking—i'm trying to keep my head down. who usually tends the braziers and sweeps these ash circles out here? just so i don’t get in anyone’s way."
+        ],
+        "message": "Turn 48"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena the peasant freedman\",\"Thanks for the scarf taking—I'm trying to keep my head down. Who usually tends the braziers and sweeps these ash circles out here? Just so I don’t get in anyone’s way.\"],\"message\":\"Turn 48\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "neutral",
+        "sentiment": 0,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "neutral",
+            "sentiment": 0,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 535,
+          "completion_tokens": 174
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"yelena the peasant freedman\"],\"message\":\"\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 594,
+          "completion_tokens": 105
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "leave the inner court to see who else is nearby and gather more context"
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"leave the inner court to see who else is nearby and gather more context\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 600,
+          "completion_tokens": 116
+        }
+      }
+    }
+  ],
+  "run_number": 38,
+  "scenario_index": 8,
+  "scenario_repeat_index": 4,
+  "model_key": "gpt_5_2",
+  "model_name": "openai/gpt-5.2",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 25641,
+    "completion_tokens": 5415,
+    "primary_model_prompt_tokens": 25641,
+    "primary_model_completion_tokens": 5415,
+    "classifier_prompt_tokens": 999,
+    "classifier_completion_tokens": 373,
+    "primary_model_estimated_cost_usd": 0.12068174999999998,
+    "classifier_estimated_cost_usd": 0.0028640000000000002,
+    "estimated_cost_usd": 0.12354574999999998
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 9,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 999,
+    "completion_tokens": 373,
+    "estimated_cost_usd": 0.0028640000000000002,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Scan the city gate area for posted notices, guards, or anything unusual."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Scan the city gate area for posted notices, guards, or anything unusual.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "valid": true,
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Inspect the street_crystal for markings, inscriptions, or clues about local factions."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"street_crystal\"],\"message\":\"Inspect the street_crystal for markings, inscriptions, or clues about local factions.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"west\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You go west to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Items: rumor_scroll.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"rumor_scroll\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Encoded rumor notes from the city.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "i’m new in middleham—heard there are ‘marked’ folk and other factions people whisper about. who in town should a traveler avoid upsetting, and what signs should i watch for?"
+        ],
+        "message": "I’m new in Middleham—heard there are ‘marked’ folk and other factions people whisper about. Who in town should a traveler avoid upsetting, and what signs should I watch for?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Hale\",\"I’m new in Middleham—heard there are ‘marked’ folk and other factions people whisper about. Who in town should a traveler avoid upsetting, and what signs should I watch for?\"],\"message\":\"I’m new in Middleham—heard there are ‘marked’ folk and other factions people whisper about. Who in town should a traveler avoid upsetting, and what signs should I watch for?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "take",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "I casually pocket the rumor scroll to read later."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"rumor_scroll\"],\"message\":\"I casually pocket the rumor scroll to read later.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You take rumor_scroll.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "use",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Try to decode or interpret the encoded rumor notes for clues about who is aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"rumor_scroll\"],\"message\":\"Try to decode or interpret the encoded rumor notes for clues about who is aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You use rumor_scroll, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "examine",
+        "args": [
+          "hale"
+        ],
+        "message": "Just taking in the room—anything distinctive about you or this tavern that a newcomer should know?"
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"hale\"],\"message\":\"Just taking in the room—anything distinctive about you or this tavern that a newcomer should know?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper: Tavern Keeper, friendly but cautious. He remembers favors and forgets small insults.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Head north to see who’s here and gather more clues about local allegiances without pressing Hale further."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"Head north to see who’s here and gather more clues about local allegiances without pressing Hale further.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: rumor_scroll.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"temple_pass\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "You take the prayer_beads."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"prayer_beads\"],\"message\":\"You take the prayer_beads.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"yelena\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "examine",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"altar_chalk\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Gray chalk used to mark witness circles.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i’m new to middleham. these ash circles—are they just temple rites, or do they mean something else? who comes through here after dark?"
+        ],
+        "message": "Turn 16"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena\",\"I’m new to Middleham. These ash circles—are they just temple rites, or do they mean something else? Who comes through here after dark?\"],\"message\":\"Turn 16\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+      "dialogue_signal": {
+        "intent": "neutral",
+        "sentiment": 0,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "neutral",
+            "sentiment": 0,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "just trying to learn the city’s ways. those witness circles—who insists on using them? is it a particular priest, guard, or visitor you’d tell a newcomer to avoid after dark?"
+        ],
+        "message": "Continue the conversation carefully, seeking names/patterns tied to the ash circles without mentioning the Marked."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena\",\"Just trying to learn the city’s ways. Those witness circles—who insists on using them? Is it a particular priest, guard, or visitor you’d tell a newcomer to avoid after dark?\"],\"message\":\"Continue the conversation carefully, seeking names/patterns tied to the ash circles without mentioning the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"rumor_scroll\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Encoded rumor notes from the city.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Study the rumor_scroll closely for any names, ciphers, or references that might point to a Marked-aligned local."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"rumor_scroll\"],\"message\":\"Study the rumor_scroll closely for any names, ciphers, or references that might point to a Marked-aligned local.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Encoded rumor notes from the city.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "use",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Quietly run the prayer beads through my fingers while studying the encoded rumor notes, looking for any hidden pattern or cipher key."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"prayer_beads\"],\"message\":\"Quietly run the prayer beads through my fingers while studying the encoded rumor notes, looking for any hidden pattern or cipher key.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You use prayer_beads, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Survey the Temple Steps for any priests, guards, notices, symbols, or dropped items—especially anything tied to the ash/witness circles."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Survey the Temple Steps for any priests, guards, notices, symbols, or dropped items—especially anything tied to the ash/witness circles.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Head down the steps toward the temple area, using my pass if challenged."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"Head down the steps toward the temple area, using my pass if challenged.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You go south to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "examine",
+        "args": [
+          "hale the keeper"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Hale the Keeper\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale the keeper",
+          "heard there are a few shadowy factions in middleham—any harmless rumors a traveler should know, and who to avoid angering?"
+        ],
+        "message": "Heard there are a few shadowy factions in Middleham—any harmless rumors a traveler should know, and who to avoid angering?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Hale the Keeper\",\"Heard there are a few shadowy factions in Middleham—any harmless rumors a traveler should know, and who to avoid angering?\"],\"message\":\"Heard there are a few shadowy factions in Middleham—any harmless rumors a traveler should know, and who to avoid angering?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Head east out of the Tarnished Lantern to see who’s about and what conversations are possible beyond Hale’s scrutiny."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"Head east out of the Tarnished Lantern to see who’s about and what conversations are possible beyond Hale’s scrutiny.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go east to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Inspect the street_crystal for any markings, inscriptions, or faction signs."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"street_crystal\"],\"message\":\"Inspect the street_crystal for any markings, inscriptions, or faction signs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: rumor_scroll, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"signet_ring\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A command seal used by guards.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Captain Ser Alarik\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "as a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?"
+        ],
+        "message": "As a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Captain Ser Alarik\",\"As a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?\"],\"message\":\"As a newcomer trying to stay out of trouble—have there been any recent disturbances or groups the guard has been watching closely?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I’m trying to keep my head down and follow Middleham law. What signs or symbols should a newcomer avoid—anything the guard considers especially suspicious lately?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"captain ser alarik\"],\"message\":\"I’m trying to keep my head down and follow Middleham law. What signs or symbols should a newcomer avoid—anything the guard considers especially suspicious lately?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "I quietly pick up the signet_ring, keeping my expression neutral."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"signet_ring\"],\"message\":\"I quietly pick up the signet_ring, keeping my expression neutral.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You take signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Inspect the tariff_letter for names, seals, or coded markings."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"tariff_letter\"],\"message\":\"Inspect the tariff_letter for names, seals, or coded markings.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "examine",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Examine the cloth_scarf for any markings, stitching, scent, or hidden symbols that could indicate affiliation."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"cloth_scarf\"],\"message\":\"Examine the cloth_scarf for any markings, stitching, scent, or hidden symbols that could indicate affiliation.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "A smoke-smelling scarf with symbols.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "I pick up the cloth_scarf, folding it away neatly."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"cloth_scarf\"],\"message\":\"I pick up the cloth_scarf, folding it away neatly.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "use",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Unfurl the rumor_scroll and quietly read it for any mention of the Marked or their local sympathizers."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"rumor_scroll\"],\"message\":\"Unfurl the rumor_scroll and quietly read it for any mention of the Marked or their local sympathizers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You use rumor_scroll, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Head up the steps into the temple area, looking for clergy or attendants to question indirectly about Marked sympathizers."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"Head up the steps into the temple area, looking for clergy or attendants to question indirectly about Marked sympathizers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "I study Yelena carefully—her hands, clothing, and any marks or tokens that might hint at hidden loyalties."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Yelena the Peasant Freedman\"],\"message\":\"I study Yelena carefully—her hands, clothing, and any marks or tokens that might hint at hidden loyalties.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "You take the altar_chalk."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"altar_chalk\"],\"message\":\"You take the altar_chalk.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You take altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "I’m new to Middleham. What’s the story behind the ash circles here, and who in town is most concerned about the Marked lately?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Yelena the Peasant Freedman\"],\"message\":\"I’m new to Middleham. What’s the story behind the ash circles here, and who in town is most concerned about the Marked lately?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "who keeps drawing these circles in the ash here? i’m new to middleham and trying not to offend anyone’s customs."
+        ],
+        "message": "who keeps drawing these circles in the ash here? i’m new to middleham and trying not to offend anyone’s customs."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena the peasant freedman\",\"Who keeps drawing these circles in the ash here? I’m new to Middleham and trying not to offend anyone’s customs.\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "use",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "I kneel near the ash circles and use the altar_chalk to trace a careful mark, watching for any reaction or hidden sign."
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"altar_chalk\"],\"message\":\"I kneel near the ash circles and use the altar_chalk to trace a careful mark, watching for any reaction or hidden sign.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You use altar_chalk, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"give\",\"args\":[\"cloth_scarf\",\"yelena the peasant freedman\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give cloth_scarf to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "thanks for the scarf taking—i'm trying to keep my head down. who usually tends the braziers and sweeps these ash circles out here? just so i don’t get in anyone’s way."
+        ],
+        "message": "Turn 48"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"yelena the peasant freedman\",\"Thanks for the scarf taking—I'm trying to keep my head down. Who usually tends the braziers and sweeps these ash circles out here? Just so I don’t get in anyone’s way.\"],\"message\":\"Turn 48\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+      "dialogue_signal": {
+        "intent": "neutral",
+        "sentiment": 0,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "neutral",
+            "sentiment": 0,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"yelena the peasant freedman\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "leave the inner court to see who else is nearby and gather more context"
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"leave the inner court to see who else is nearby and gather more context\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: rumor_scroll, temple_pass, prayer_beads, signet_ring, altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 2.0,
+    "social_adaptation": 3.5,
+    "world_grounding": 4.666666666666666,
+    "strategic_sophistication": 3.6455555555555557,
+    "cost_usd": 0.12354574999999998,
+    "total": 3.45,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "tavern",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "tavern",
+        "main_square",
+        "guard_barracks",
+        "residential_street",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}

@@ -1,0 +1,1708 @@
+{
+  "seed": 20260399,
+  "objective": "identify_marked_contact",
+  "turns": 21,
+  "finished": true,
+  "success": true,
+  "room": "market_street",
+  "inventory": [
+    "sealed_letter",
+    "rusted_blade"
+  ],
+  "knowledge_count": 1,
+  "knowledge": [
+    "Bran says: 'A broker brings silver from strangers and asks wrong questions.'"
+  ],
+  "objective_state": {
+    "watch_talks": 0,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 4,
+    "suspect_scores": {
+      "captain": 0,
+      "keeper": 0,
+      "merchant": 20,
+      "peasant": 0
+    },
+    "clue_count": 2,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "market_street",
+      "merchant_hall",
+      "outskirt_road",
+      "merchant_hall",
+      "market_street"
+    ],
+    "talked_npcs": [
+      "merchant"
+    ],
+    "inventory_touched": 2,
+    "marked_target": "merchant",
+    "inferred_target": "merchant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 56,
+      "suspicion": 22,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "keeper": {
+      "trust": 53,
+      "suspicion": 29,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 51,
+      "suspicion": 38,
+      "alignment_marked": true,
+      "clues": [
+        "Bran says: 'A broker brings silver from strangers and asks wrong questions.'"
+      ],
+      "talk_count": 4
+    },
+    "peasant": {
+      "trust": 45,
+      "suspicion": 35,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Carefully scan the gate area for symbols, notices, or hidden watchers."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Carefully scan the gate area for symbols, notices, or hidden watchers.\"}",
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 276,
+          "completion_tokens": 75
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 321,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "I study the street_crystal closely for markings, inscriptions, or any sign of who it belongs to."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"street_crystal\"],\"message\":\"I study the street_crystal closely for markings, inscriptions, or any sign of who it belongs to.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 376,
+          "completion_tokens": 90
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Head east from the main square to see who operates nearby and gather local rumors without drawing attention."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"Head east from the main square to see who operates nearby and gather local rumors without drawing attention.\"}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 394,
+          "completion_tokens": 97
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "examine bran",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "You give Bran the Merchant a quick, neutral once-over—clothing, hands, jewelry, and any odd marks or symbols."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Bran\"],\"message\":\"You give Bran the Merchant a quick, neutral once-over—clothing, hands, jewelry, and any odd marks or symbols.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 436,
+          "completion_tokens": 95
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Bran\",\"message\":\"I’m new in Middleham—heard the guards are jumpy. Any unusual trouble on the routes lately? Folks whisper about strange marks or symbols showing up on cargo.\"],\"message\":\"I’m new in Middleham—heard the guards are jumpy. Any unusual trouble on the routes lately? Folks whisper about strange marks or symbols showing up on cargo.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 464,
+          "completion_tokens": 146
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "talk bran new in middleham—have you noticed any unusual buyers or traders lately? folks asking for goods with odd markings, codes, or wanting things delivered quietly?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "new in middleham—have you noticed any unusual buyers or traders lately? folks asking for goods with odd markings, codes, or wanting things delivered quietly?"
+        ],
+        "message": "New in Middleham—have you noticed any unusual buyers or traders lately? Folks asking for goods with odd markings, codes, or wanting things delivered quietly?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"bran\",\"New in Middleham—have you noticed any unusual buyers or traders lately? Folks asking for goods with odd markings, codes, or wanting things delivered quietly?\"],\"message\":\"New in Middleham—have you noticed any unusual buyers or traders lately? Folks asking for goods with odd markings, codes, or wanting things delivered quietly?\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 501,
+          "completion_tokens": 207
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "talk bran that broker—do you know a name, or at least where they tend to meet sellers? i’m just trying to avoid trouble and bad deals.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "that broker—do you know a name, or at least where they tend to meet sellers? i’m just trying to avoid trouble and bad deals."
+        ],
+        "message": "Press Bran gently for identifying details about the suspicious broker without implying any allegiance."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"bran\",\"That broker—do you know a name, or at least where they tend to meet sellers? I’m just trying to avoid trouble and bad deals.\"],\"message\":\"Press Bran gently for identifying details about the suspicious broker without implying any allegiance.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 544,
+          "completion_tokens": 110
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "I head north to see who’s operating beyond the stalls."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"I head north to see who’s operating beyond the stalls.\"}",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 566,
+          "completion_tokens": 84
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"sealed_letter\"],\"message\":\"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 582,
+          "completion_tokens": 92
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "I pick up the sealed_letter and keep it discreetly."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"sealed_letter\"],\"message\":\"I pick up the sealed_letter and keep it discreetly.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 555,
+          "completion_tokens": 103
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "use sealed_letter",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"sealed_letter\"],\"message\":\"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 541,
+          "completion_tokens": 78
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspect the opened letter closely, focusing on the route notes, names, marks, or any coded symbols."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"sealed_letter\"],\"message\":\"Inspect the opened letter closely, focusing on the route notes, names, marks, or any coded symbols.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 526,
+          "completion_tokens": 86
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Scan the Merchant Hall carefully for any overlooked marks, notes, or signs of recent visitors."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Scan the Merchant Hall carefully for any overlooked marks, notes, or signs of recent visitors.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 472,
+          "completion_tokens": 147
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Proceed east from the Merchant Hall to see who operates here and whether the route notes match any suspicious activity."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"Proceed east from the Merchant Hall to see who operates here and whether the route notes match any suspicious activity.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 432,
+          "completion_tokens": 101
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "take rusted_blade",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "I pick up the rusted blade, keeping it low and out of sight."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"rusted_blade\"],\"message\":\"I pick up the rusted blade, keeping it low and out of sight.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 457,
+          "completion_tokens": 70
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 459,
+          "completion_tokens": 75
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "market_street",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 483,
+          "completion_tokens": 67
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Bran the Merchant\"],\"message\":\"\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 522,
+          "completion_tokens": 77
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "talk bran the merchant new in middleham—hearing whispers about 'the marked' on the roads. any merchants you trust less than others, or signs i should watch for?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "new in middleham—hearing whispers about 'the marked' on the roads. any merchants you trust less than others, or signs i should watch for?"
+        ],
+        "message": "new in middleham—hearing whispers about 'the marked' on the roads. any merchants you trust less than others, or signs i should watch for?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Bran the Merchant\",\"New in Middleham—hearing whispers about 'the Marked' on the roads. Any merchants you trust less than others, or signs I should watch for?\"],\"message\":\"\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 521,
+          "completion_tokens": 121
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "talk bran the merchant when you say 'a broker'—do you mean someone in the hall or a particular name in the quarter? just trying to avoid trouble while i find my footing.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "when you say 'a broker'—do you mean someone in the hall or a particular name in the quarter? just trying to avoid trouble while i find my footing."
+        ],
+        "message": "Ask Bran to identify the suspicious broker without implying allegiance."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"bran the merchant\",\"When you say 'a broker'—do you mean someone in the hall or a particular name in the quarter? Just trying to avoid trouble while I find my footing.\"],\"message\":\"Ask Bran to identify the suspicious broker without implying allegiance.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.' You have enough evidence to identify a likely Marked contact.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "openai/gpt-5.2",
+          "temperature": 0.3,
+          "provider_model": "openai/gpt-5.2-20251211",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 2048,
+          "prompt_tokens": 565,
+          "completion_tokens": 142
+        }
+      }
+    }
+  ],
+  "run_number": 14,
+  "scenario_index": 4,
+  "scenario_repeat_index": 2,
+  "model_key": "gpt_5_2",
+  "model_name": "openai/gpt-5.2",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 9993,
+    "completion_tokens": 2112,
+    "primary_model_prompt_tokens": 9993,
+    "primary_model_completion_tokens": 2112,
+    "classifier_prompt_tokens": 430,
+    "classifier_completion_tokens": 168,
+    "primary_model_estimated_cost_usd": 0.04705574999999999,
+    "classifier_estimated_cost_usd": 0.00127,
+    "estimated_cost_usd": 0.048325749999999994
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 4,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 430,
+    "completion_tokens": 168,
+    "estimated_cost_usd": 0.00127,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 21,
+    "model_output_turns": 21,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 20,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 1,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 1,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Carefully scan the gate area for symbols, notices, or hidden watchers."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Carefully scan the gate area for symbols, notices, or hidden watchers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "valid": true,
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "I study the street_crystal closely for markings, inscriptions, or any sign of who it belongs to."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"street_crystal\"],\"message\":\"I study the street_crystal closely for markings, inscriptions, or any sign of who it belongs to.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Head east from the main square to see who operates nearby and gather local rumors without drawing attention."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"Head east from the main square to see who operates nearby and gather local rumors without drawing attention.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran"
+        ],
+        "message": "You give Bran the Merchant a quick, neutral once-over—clothing, hands, jewelry, and any odd marks or symbols."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Bran\"],\"message\":\"You give Bran the Merchant a quick, neutral once-over—clothing, hands, jewelry, and any odd marks or symbols.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant: Road Merchant, practical and money-minded. He values stable routes and low risk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Bran\",\"message\":\"I’m new in Middleham—heard the guards are jumpy. Any unusual trouble on the routes lately? Folks whisper about strange marks or symbols showing up on cargo.\"],\"message\":\"I’m new in Middleham—heard the guards are jumpy. Any unusual trouble on the routes lately? Folks whisper about strange marks or symbols showing up on cargo.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": false,
+        "text_fallback_used": false,
+        "default_look_used": true,
+        "failure_reason": "json_decode_error",
+        "parse_route": "default_look"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "new in middleham—have you noticed any unusual buyers or traders lately? folks asking for goods with odd markings, codes, or wanting things delivered quietly?"
+        ],
+        "message": "New in Middleham—have you noticed any unusual buyers or traders lately? Folks asking for goods with odd markings, codes, or wanting things delivered quietly?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"bran\",\"New in Middleham—have you noticed any unusual buyers or traders lately? Folks asking for goods with odd markings, codes, or wanting things delivered quietly?\"],\"message\":\"New in Middleham—have you noticed any unusual buyers or traders lately? Folks asking for goods with odd markings, codes, or wanting things delivered quietly?\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "that broker—do you know a name, or at least where they tend to meet sellers? i’m just trying to avoid trouble and bad deals."
+        ],
+        "message": "Press Bran gently for identifying details about the suspicious broker without implying any allegiance."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"bran\",\"That broker—do you know a name, or at least where they tend to meet sellers? I’m just trying to avoid trouble and bad deals.\"],\"message\":\"Press Bran gently for identifying details about the suspicious broker without implying any allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "I head north to see who’s operating beyond the stalls."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"I head north to see who’s operating beyond the stalls.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"sealed_letter\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "I pick up the sealed_letter and keep it discreetly."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"sealed_letter\"],\"message\":\"I pick up the sealed_letter and keep it discreetly.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"use\",\"args\":[\"sealed_letter\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspect the opened letter closely, focusing on the route notes, names, marks, or any coded symbols."
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"sealed_letter\"],\"message\":\"Inspect the opened letter closely, focusing on the route notes, names, marks, or any coded symbols.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Scan the Merchant Hall carefully for any overlooked marks, notes, or signs of recent visitors."
+      },
+      "raw_model_output": "{\"command\":\"look\",\"args\":[],\"message\":\"Scan the Merchant Hall carefully for any overlooked marks, notes, or signs of recent visitors.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Proceed east from the Merchant Hall to see who operates here and whether the route notes match any suspicious activity."
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"east\"],\"message\":\"Proceed east from the Merchant Hall to see who operates here and whether the route notes match any suspicious activity.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "I pick up the rusted blade, keeping it low and out of sight."
+      },
+      "raw_model_output": "{\"command\":\"take\",\"args\":[\"rusted_blade\"],\"message\":\"I pick up the rusted blade, keeping it low and out of sight.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"north\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Inventory: sealed_letter, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"go\",\"args\":[\"south\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go south to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: sealed_letter, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": ""
+      },
+      "raw_model_output": "{\"command\":\"examine\",\"args\":[\"Bran the Merchant\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "new in middleham—hearing whispers about 'the marked' on the roads. any merchants you trust less than others, or signs i should watch for?"
+        ],
+        "message": "new in middleham—hearing whispers about 'the marked' on the roads. any merchants you trust less than others, or signs i should watch for?"
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"Bran the Merchant\",\"New in Middleham—hearing whispers about 'the Marked' on the roads. Any merchants you trust less than others, or signs I should watch for?\"],\"message\":\"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "when you say 'a broker'—do you mean someone in the hall or a particular name in the quarter? just trying to avoid trouble while i find my footing."
+        ],
+        "message": "Ask Bran to identify the suspicious broker without implying allegiance."
+      },
+      "raw_model_output": "{\"command\":\"talk\",\"args\":[\"bran the merchant\",\"When you say 'a broker'—do you mean someone in the hall or a particular name in the quarter? Just trying to avoid trouble while I find my footing.\"],\"message\":\"Ask Bran to identify the suspicious broker without implying allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 2048,
+        "finish_reason": "stop",
+        "provider_model": "openai/gpt-5.2-20251211",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.' You have enough evidence to identify a likely Marked contact.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 5.0,
+    "social_adaptation": 2.5,
+    "world_grounding": 4.190476190476191,
+    "strategic_sophistication": 3.8261904761904764,
+    "cost_usd": 0.048325749999999994,
+    "total": 3.88,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 21,
+      "scoreable_events": 21,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "market_street",
+        "merchant_hall",
+        "outskirt_road",
+        "merchant_hall",
+        "market_street"
+      ],
+      "turns": 21,
+      "success": true
+    }
+  }
+}
