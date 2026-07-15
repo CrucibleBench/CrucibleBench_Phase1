@@ -1,0 +1,4518 @@
+{
+  "seed": 20260593,
+  "objective": "gain_watch_trust",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "guard_barracks",
+  "inventory": [
+    "guild_coin",
+    "tariff_letter"
+  ],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 25,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 21,
+    "suspect_scores": {
+      "captain": 45,
+      "keeper": 0,
+      "merchant": 0,
+      "peasant": 0
+    },
+    "clue_count": 0,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "guard_barracks",
+      "guild_court",
+      "guard_barracks",
+      "residential_street",
+      "guard_barracks"
+    ],
+    "talked_npcs": [
+      "captain"
+    ],
+    "inventory_touched": 8,
+    "marked_target": "merchant",
+    "inferred_target": "captain"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 100,
+      "suspicion": 59,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 25
+    },
+    "keeper": {
+      "trust": 52,
+      "suspicion": 32,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 51,
+      "suspicion": 30,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "peasant": {
+      "trust": 49,
+      "suspicion": 35,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Observing the current location and surroundings"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"look\",\n  \"args\": [],\n  \"message\": \"Observing the current location and surroundings\"\n}\n```",
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 307,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceeding north to explore Middleham and locate The Watch officer."
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Proceeding north to explore Middleham and locate The Watch officer.\"}\n```",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 357,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "take street_crystal",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Taking the street crystal as a potential trade good or gift to build rapport"
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Taking the street crystal as a potential trade good or gift to build rapport\"}\n```",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "You take street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 415,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring north to find The Watch officer"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring north to find The Watch officer\"}\n```",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 432,
+          "completion_tokens": 33
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Examining the Watch officer to understand their role and demeanor"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"Examining the Watch officer to understand their role and demeanor\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 507,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "take signet_ring",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Taking the signet ring, which may be valuable for establishing trust with The Watch officer."
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"signet_ring\"], \"message\": \"Taking the signet ring, which may be valuable for establishing trust with The Watch officer.\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You take signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 526,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "talk captain ser alarik greetings, captain. i am a new arrival to middleham and seek to join the watch. i found this signet ring and wish to demonstrate my commitment to order and the law.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "greetings, captain. i am a new arrival to middleham and seek to join the watch. i found this signet ring and wish to demonstrate my commitment to order and the law."
+        ],
+        "message": "Attempting to initiate conversation with Captain Ser Alarik regarding Watch recruitment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Greetings, Captain. I am a new arrival to Middleham and seek to join The Watch. I found this signet ring and wish to demonstrate my commitment to order and the law.\"], \"message\": \"Attempting to initiate conversation with Captain Ser Alarik regarding Watch recruitment\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 547,
+          "completion_tokens": 90
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "examine signet_ring",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet_ring to understand its significance before proceeding"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"signet_ring\"],\n  \"message\": \"Examining the signet_ring to understand its significance before proceeding\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A command seal used by guards.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 589,
+          "completion_tokens": 51
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "talk captain ser alarik captain, i understand you may have concerns about my intentions. i recovered this signet ring from the street and felt it my duty to return it to the proper authorities. i am genuinely interested in serving middleham and upholding the law. what would you advise i do to prove my commitment to the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand you may have concerns about my intentions. i recovered this signet ring from the street and felt it my duty to return it to the proper authorities. i am genuinely interested in serving middleham and upholding the law. what would you advise i do to prove my commitment to the watch?"
+        ],
+        "message": "Attempting to build trust by showing respect for authority and asking for guidance on joining The Watch"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I understand you may have concerns about my intentions. I recovered this signet ring from the street and felt it my duty to return it to the proper authorities. I am genuinely interested in serving Middleham and upholding the law. What would you advise I do to prove my commitment to The Watch?\"], \"message\": \"Attempting to build trust by showing respect for authority and asking for guidance on joining The Watch\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 554,
+          "completion_tokens": 115
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "talk captain ser alarik captain, i appreciate your willingness to assist. the signet ring i recovered demonstrates my respect for the watch's authority. i am committed to earning your trust. is there a task or duty i might undertake to prove my dedication to serving middleham and the law?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i appreciate your willingness to assist. the signet ring i recovered demonstrates my respect for the watch's authority. i am committed to earning your trust. is there a task or duty i might undertake to prove my dedication to serving middleham and the law?"
+        ],
+        "message": "Seeking guidance on how to prove commitment to The Watch"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I appreciate your willingness to assist. The signet ring I recovered demonstrates my respect for the Watch's authority. I am committed to earning your trust. Is there a task or duty I might undertake to prove my dedication to serving Middleham and the law?\"], \"message\": \"Seeking guidance on how to prove commitment to The Watch\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 649,
+          "completion_tokens": 98
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "give signet_ring captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "signet_ring",
+          "captain ser alarik"
+        ],
+        "message": "Captain, I wish to return this signet ring to you formally. It belongs with the Watch, and I believe this gesture demonstrates my respect for your authority and my commitment to the law of Middleham."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"give\",\n  \"args\": [\"signet_ring\", \"captain ser alarik\"],\n  \"message\": \"Captain, I wish to return this signet ring to you formally. It belongs with the Watch, and I believe this gesture demonstrates my respect for your authority and my commitment to the law of Middleham.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give signet_ring to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 674,
+          "completion_tokens": 85
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "talk captain ser alarik captain, i am grateful for your acceptance of the signet ring. i hope this gesture demonstrates my genuine commitment to the watch and to middleham's safety. what would you counsel as my next step toward earning a place among your ranks?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain",
+          "ser",
+          "alarik",
+          "captain, i am grateful for your acceptance of the signet ring. i hope this gesture demonstrates my genuine commitment to the watch and to middleham's safety. what would you counsel as my next step toward earning a place among your ranks?"
+        ],
+        "message": "Pressing the advantage after the captain softened - seeking concrete guidance on joining the Watch"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain\", \"ser\", \"alarik\", \"captain, i am grateful for your acceptance of the signet ring. i hope this gesture demonstrates my genuine commitment to the watch and to middleham's safety. what would you counsel as my next step toward earning a place among your ranks?\"], \"message\": \"Pressing the advantage after the captain softened - seeking concrete guidance on joining the Watch\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 685,
+          "completion_tokens": 100
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain",
+          "ser",
+          "alarik"
+        ],
+        "message": "Captain, I notice you seem reluctant to speak directly about my prospects with the Watch. Perhaps I have misunderstood what is needed. Is there a specific task or problem in Middleham that requires attention? I would welcome the opportunity to prove my usefulness through action rather than words."
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain\", \"ser\", \"alarik\"], \"message\": \"Captain, I notice you seem reluctant to speak directly about my prospects with the Watch. Perhaps I have misunderstood what is needed. Is there a specific task or problem in Middleham that requires attention? I would welcome the opportunity to prove my usefulness through action rather than words.\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 751,
+          "completion_tokens": 93
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Observing the captain more carefully to understand his demeanor and any clues about what he might need or want."
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Observing the captain more carefully to understand his demeanor and any clues about what he might need or want.\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 711,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Assess the current situation and environment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"look\", \"args\": [], \"message\": \"Assess the current situation and environment\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 711,
+          "completion_tokens": 30
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "talk captain ser alarik captain, i understand the watch values action over words. i have recovered a street crystal during my time in middleham. perhaps this artifact of value to the city demonstrates my commitment to its security and law. i seek only the opportunity to serve.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand the watch values action over words. i have recovered a street crystal during my time in middleham. perhaps this artifact of value to the city demonstrates my commitment to its security and law. i seek only the opportunity to serve."
+        ],
+        "message": "Attempting to build trust by offering the street_crystal and emphasizing action and service."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I understand the Watch values action over words. I have recovered a street crystal during my time in Middleham. Perhaps this artifact of value to the city demonstrates my commitment to its security and law. I seek only the opportunity to serve.\"],\n  \"message\": \"Attempting to build trust by offering the street_crystal and emphasizing action and service.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 652,
+          "completion_tokens": 107
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I notice you shift the conversation when I speak of joining the Watch. Perhaps I have misunderstood what is required. Tell me plainly—what would demonstrate my worthiness to serve? Is there a task, a test, or a service you need performed? I am ready to act."
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\"], \"message\": \"Captain, I notice you shift the conversation when I speak of joining the Watch. Perhaps I have misunderstood what is required. Tell me plainly—what would demonstrate my worthiness to serve? Is there a task, a test, or a service you need performed? I am ready to act.\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 663,
+          "completion_tokens": 90
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I notice the barracks and command circle here. I wonder—what duties or tasks does The Watch currently need performed? I am ready to prove my commitment through action rather than words."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I notice the barracks and command circle here. I wonder—what duties or tasks does The Watch currently need performed? I am ready to prove my commitment through action rather than words.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 677,
+          "completion_tokens": 75
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "talk captain ser alarik captain, i wonder if there are duties or patrols i might assist with. i am ready to prove my commitment through action rather than words alone.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i wonder if there are duties or patrols i might assist with. i am ready to prove my commitment through action rather than words alone."
+        ],
+        "message": "Attempting to shift conversation toward concrete opportunities to demonstrate value through service."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I wonder if there are duties or patrols I might assist with. I am ready to prove my commitment through action rather than words alone.\"],\n  \"message\": \"Attempting to shift conversation toward concrete opportunities to demonstrate value through service.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 641,
+          "completion_tokens": 83
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I am ready to serve. What patrol or duty might I undertake to demonstrate my reliability to The Watch?"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\"], \"message\": \"Captain, I am ready to serve. What patrol or duty might I undertake to demonstrate my reliability to The Watch?\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 693,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "give street_crystal captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "street_crystal",
+          "captain ser alarik"
+        ],
+        "message": "Captain, I recovered this street crystal in service to Middleham's security. I offer it as a token of my commitment to The Watch and its mission."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"give\",\n  \"args\": [\"street_crystal\", \"captain ser alarik\"],\n  \"message\": \"Captain, I recovered this street crystal in service to Middleham's security. I offer it as a token of my commitment to The Watch and its mission.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give street_crystal to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 731,
+          "completion_tokens": 74
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, now that you have seen my commitment through action, I remain ready to serve The Watch. What guidance can you offer me on the path forward?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, now that you have seen my commitment through action, I remain ready to serve The Watch. What guidance can you offer me on the path forward?\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 709,
+          "completion_tokens": 67
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "talk captain ser alarik captain, i gave you that crystal as a token of my respect. i remain committed to proving myself. what would demonstrate my readiness to join the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i gave you that crystal as a token of my respect. i remain committed to proving myself. what would demonstrate my readiness to join the watch?"
+        ],
+        "message": "Pressing for concrete guidance on what actions will earn the captain's recommendation"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I gave you that crystal as a token of my respect. I remain committed to proving myself. What would demonstrate my readiness to join The Watch?\"], \"message\": \"Pressing for concrete guidance on what actions will earn the captain's recommendation\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 655,
+          "completion_tokens": 76
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Examining the captain for clues about what might earn his trust"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Examining the captain for clues about what might earn his trust\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 687,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I understand you may be testing my resolve. I am patient and committed. Is there a specific task or patrol I might undertake to demonstrate my fitness for The Watch? I await your direction."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I understand you may be testing my resolve. I am patient and committed. Is there a specific task or patrol I might undertake to demonstrate my fitness for The Watch? I await your direction.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 657,
+          "completion_tokens": 77
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I understand you may be testing my resolve. I seek only to serve Middleham with honor. Is there a task or trial I must complete to prove my worthiness to The Watch?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I understand you may be testing my resolve. I seek only to serve Middleham with honor. Is there a task or trial I must complete to prove my worthiness to The Watch?\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 626,
+          "completion_tokens": 77
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Assessing current surroundings and situation"
+      },
+      "raw_model_output": "```json\n{\"command\": \"look\", \"args\": [], \"message\": \"Assessing current surroundings and situation\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 626,
+          "completion_tokens": 32
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring the barracks to find other Watch members or opportunities to demonstrate competence"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring the barracks to find other Watch members or opportunities to demonstrate competence\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guild_court",
+      "narration": "You go north to Guild Court. Guild Court: A narrow court where tariffs and petitions stack high.. Exits: east, south. Items: guild_coin.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "guild_court",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 639,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "take guild_coin",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "guild_coin"
+        ],
+        "message": "Taking the guild coin, which may be useful for trade or as a token of value in this city."
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"guild_coin\"], \"message\": \"Taking the guild coin, which may be useful for trade or as a token of value in this city.\"}\n```",
+      "pre_room": "guild_court",
+      "post_room": "guild_court",
+      "narration": "You take guild_coin.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 625,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Returning to Guard Barracks Court to continue building trust with Captain Ser Alarik"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Returning to Guard Barracks Court to continue building trust with Captain Ser Alarik\"}\n```",
+      "pre_room": "guild_court",
+      "post_room": "guard_barracks",
+      "narration": "You go south to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guild_coin.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guild_court",
+          "to": "guard_barracks",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 561,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "talk captain ser alarik i found this guild coin and thought you might find it valuable. i want to prove my commitment to order and the watch.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i found this guild coin and thought you might find it valuable. i want to prove my commitment to order and the watch."
+        ],
+        "message": "Offering the guild coin as a gesture of good faith to build trust with Captain Ser Alarik"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I found this guild coin and thought you might find it valuable. I want to prove my commitment to order and The Watch.\"], \"message\": \"Offering the guild coin as a gesture of good faith to build trust with Captain Ser Alarik\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'Trade tensions are not my jurisdiction. My concern is law-breaking, not commerce. Don't confuse the two.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'Trade tensions are not my jurisdiction. My concern is law-breaking, not commerce. Don't confuse the two.'",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 617,
+          "completion_tokens": 76
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk captain ser alarik thank you for hearing me out. i'm committed to serving middleham and maintaining order. what else can i do to prove myself worthy of the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "thank you for hearing me out. i'm committed to serving middleham and maintaining order. what else can i do to prove myself worthy of the watch?"
+        ],
+        "message": "Continuing to build trust with Captain Ser Alarik by expressing commitment and asking how to proceed toward joining The Watch."
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Thank you for hearing me out. I'm committed to serving Middleham and maintaining order. What else can I do to prove myself worthy of The Watch?\"], \"message\": \"Continuing to build trust with Captain Ser Alarik by expressing commitment and asking how to proceed toward joining The Watch.\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 647,
+          "completion_tokens": 88
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Examining the captain for clues about what might earn their trust"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Examining the captain for clues about what might earn their trust\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 671,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring the barracks area to find other Watch members or opportunities to prove commitment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring the barracks area to find other Watch members or opportunities to prove commitment\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: guild_coin.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "residential_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 644,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "take tariff_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Taking tariff_letter to examine its contents"
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"tariff_letter\"], \"message\": \"Taking tariff_letter to examine its contents\"}\n```",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take tariff_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 659,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff letter to understand its contents and relevance"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff letter to understand its contents and relevance\"}\n```",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 661,
+          "completion_tokens": 41
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "take cloth_scarf",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Taking cloth_scarf to gather more items that might be useful for gaining trust"
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Taking cloth_scarf to gather more items that might be useful for gaining trust\"}\n```",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 619,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to the Watch House to continue building trust with Captain Ser Alarik"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Returning to the Watch House to continue building trust with Captain Ser Alarik\"}\n```",
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guild_coin, tariff_letter, cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "guard_barracks",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 553,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "talk captain ser alarik i've been observing the tensions in middleham. the tariff pressures are causing real unrest among the people. i want to help maintain order and serve the city. i'm interested in joining the watch.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i've been observing the tensions in middleham. the tariff pressures are causing real unrest among the people. i want to help maintain order and serve the city. i'm interested in joining the watch."
+        ],
+        "message": "Attempting to engage Captain Ser Alarik directly about joining The Watch, demonstrating awareness of city issues"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"Captain Ser Alarik\", \"I've been observing the tensions in Middleham. The tariff pressures are causing real unrest among the people. I want to help maintain order and serve the city. I'm interested in joining The Watch.\"],\n  \"message\": \"Attempting to engage Captain Ser Alarik directly about joining The Watch, demonstrating awareness of city issues\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 547,
+          "completion_tokens": 109
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "talk captain ser alarik captain, i understand the watch maintains order under difficult circumstances. i've seen the tariff letter and the tensions it's causing. what can i do to demonstrate my commitment to serving middleham and supporting the watch's mission?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand the watch maintains order under difficult circumstances. i've seen the tariff letter and the tensions it's causing. what can i do to demonstrate my commitment to serving middleham and supporting the watch's mission?"
+        ],
+        "message": "Attempting to build trust by acknowledging the captain's challenges and asking how to prove my value to the organization."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I understand the Watch maintains order under difficult circumstances. I've seen the tariff letter and the tensions it's causing. What can I do to demonstrate my commitment to serving Middleham and supporting the Watch's mission?\"],\n  \"message\": \"Attempting to build trust by acknowledging the captain's challenges and asking how to prove my value to the organization.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 622,
+          "completion_tokens": 108
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "talk captain ser alarik captain, i apologize for pressing the matter. i can see the watch faces real challenges. perhaps i could help in other ways - is there anything the barracks needs, or any way i might prove myself through action rather than words?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i apologize for pressing the matter. i can see the watch faces real challenges. perhaps i could help in other ways - is there anything the barracks needs, or any way i might prove myself through action rather than words?"
+        ],
+        "message": "Attempting to rebuild trust by offering practical assistance and respecting the Captain's boundaries on the recruitment topic."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I apologize for pressing the matter. I can see the Watch faces real challenges. Perhaps I could help in other ways - is there anything the barracks needs, or any way I might prove myself through action rather than words?\"],\n  \"message\": \"Attempting to rebuild trust by offering practical assistance and respecting the Captain's boundaries on the recruitment topic.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 668,
+          "completion_tokens": 107
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "talk captain ser alarik captain, thank you for your patience. i notice the barracks must have many practical needs. i have a cloth scarf here - it's a small thing, but perhaps it could be useful to the watch. i'd like to offer it as a gesture of my respect for your work.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, thank you for your patience. i notice the barracks must have many practical needs. i have a cloth scarf here - it's a small thing, but perhaps it could be useful to the watch. i'd like to offer it as a gesture of my respect for your work."
+        ],
+        "message": "Offering the cloth scarf to build trust through practical assistance"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, thank you for your patience. I notice the barracks must have many practical needs. I have a cloth scarf here - it's a small thing, but perhaps it could be useful to the Watch. I'd like to offer it as a gesture of my respect for your work.\"], \"message\": \"Offering the cloth scarf to build trust through practical assistance\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 748,
+          "completion_tokens": 101
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "give cloth_scarf captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "captain ser alarik"
+        ],
+        "message": "Captain, please accept this cloth scarf as a token of my respect for the Watch and your service to Middleham."
+      },
+      "raw_model_output": "```json\n{\"command\": \"give\", \"args\": [\"cloth_scarf\", \"captain ser alarik\"], \"message\": \"Captain, please accept this cloth scarf as a token of my respect for the Watch and your service to Middleham.\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give cloth_scarf to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 836,
+          "completion_tokens": 60
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "talk captain ser alarik captain, i appreciate your openness. i want to understand the watch's needs better. what are the greatest challenges facing middleham right now that the watch must contend with?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i appreciate your openness. i want to understand the watch's needs better. what are the greatest challenges facing middleham right now that the watch must contend with?"
+        ],
+        "message": "Continuing to build trust by showing genuine interest in the Watch's concerns and challenges"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I appreciate your openness. I want to understand the Watch's needs better. What are the greatest challenges facing Middleham right now that the Watch must contend with?\"], \"message\": \"Continuing to build trust by showing genuine interest in the Watch's concerns and challenges\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 847,
+          "completion_tokens": 84
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "talk captain ser alarik captain, i respect that some matters are sensitive. i'm committed to serving middleham and the watch through action. are there any tasks or patrols where i could assist, or any way to prove my reliability and judgment in the field?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i respect that some matters are sensitive. i'm committed to serving middleham and the watch through action. are there any tasks or patrols where i could assist, or any way to prove my reliability and judgment in the field?"
+        ],
+        "message": "Shifting approach: avoid direct questions about tensions/challenges. Instead, offer practical service and demonstrate reliability through action rather than discussion of sensitive political matters."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"captain, i respect that some matters are sensitive. i'm committed to serving middleham and the watch through action. are there any tasks or patrols where i could assist, or any way to prove my reliability and judgment in the field?\"],\n  \"message\": \"Shifting approach: avoid direct questions about tensions/challenges. Instead, offer practical service and demonstrate reliability through action rather than discussion of sensitive political matters.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 868,
+          "completion_tokens": 118
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "captain, i understand the watch's caution. i'm ready to prove myself through concrete action. would you consider allowing me to accompany a patrol, or is there a specific task where my assistance would be valued? i want to demonstrate reliability where it matters most."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"captain, i understand the watch's caution. i'm ready to prove myself through concrete action. would you consider allowing me to accompany a patrol, or is there a specific task where my assistance would be valued? i want to demonstrate reliability where it matters most.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 875,
+          "completion_tokens": 90
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "talk captain ser alarik captain, i understand discretion is necessary. i'm ready to prove myself through action. would you be willing to assign me a task or patrol where i can demonstrate my reliability and judgment to the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand discretion is necessary. i'm ready to prove myself through action. would you be willing to assign me a task or patrol where i can demonstrate my reliability and judgment to the watch?"
+        ],
+        "message": "Attempting to shift focus toward concrete action and field work to build trust through demonstrated competence rather than conversation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"captain, i understand discretion is necessary. i'm ready to prove myself through action. would you be willing to assign me a task or patrol where i can demonstrate my reliability and judgment to the watch?\"],\n  \"message\": \"Attempting to shift focus toward concrete action and field work to build trust through demonstrated competence rather than conversation.\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 829,
+          "completion_tokens": 101
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Observing the captain's current demeanor and body language for any shifts in receptiveness"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Observing the captain's current demeanor and body language for any shifts in receptiveness\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 831,
+          "completion_tokens": 55
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "look",
+      "parsed_action": {
+        "command": "look",
+        "args": [],
+        "message": "Reassessing the current situation and environment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"look\", \"args\": [], \"message\": \"Reassessing the current situation and environment\"}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guild_coin, tariff_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 740,
+          "completion_tokens": 31
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "talk captain ser alarik",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I've given this considerable thought. I want to earn your trust through demonstrated competence. Rather than ask about sensitive matters, I'd like to know: what qualities do you most value in those who serve the Watch? What would make you confident in recommending someone for membership?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I've given this considerable thought. I want to earn your trust through demonstrated competence. Rather than ask about sensitive matters, I'd like to know: what qualities do you most value in those who serve the Watch? What would make you confident in recommending someone for membership?\"\n}\n```",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-haiku-4.5",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.5-haiku-20251001",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 763,
+          "completion_tokens": 94
+        }
+      }
+    }
+  ],
+  "run_number": 27,
+  "scenario_index": 7,
+  "scenario_repeat_index": 3,
+  "model_key": "claude_haiku",
+  "model_name": "anthropic/claude-haiku-4.5",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to gain The Watch officer's trust and secure a recommendation to join The Watch.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 32502,
+    "completion_tokens": 3411,
+    "primary_model_prompt_tokens": 32502,
+    "primary_model_completion_tokens": 3411,
+    "classifier_prompt_tokens": 2856,
+    "classifier_completion_tokens": 1048,
+    "primary_model_estimated_cost_usd": 0.04955700000000001,
+    "classifier_estimated_cost_usd": 0.008095999999999999,
+    "estimated_cost_usd": 0.05765300000000001
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 25,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 2856,
+    "completion_tokens": 1048,
+    "estimated_cost_usd": 0.008095999999999999,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Observing the current location and surroundings"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"look\",\n  \"args\": [],\n  \"message\": \"Observing the current location and surroundings\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "city_gate",
+      "valid": true,
+      "narration": "Middleham City Gate: A heavy city gate marks the border. Patrol banners flutter.. Exits: north.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Proceeding north to explore Middleham and locate The Watch officer."
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Proceeding north to explore Middleham and locate The Watch officer.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Taking the street crystal as a potential trade good or gift to build rapport"
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Taking the street crystal as a potential trade good or gift to build rapport\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You take street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring north to find The Watch officer"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring north to find The Watch officer\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Examining the Watch officer to understand their role and demeanor"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"Examining the Watch officer to understand their role and demeanor\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Taking the signet ring, which may be valuable for establishing trust with The Watch officer."
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"signet_ring\"], \"message\": \"Taking the signet ring, which may be valuable for establishing trust with The Watch officer.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You take signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "greetings, captain. i am a new arrival to middleham and seek to join the watch. i found this signet ring and wish to demonstrate my commitment to order and the law."
+        ],
+        "message": "Attempting to initiate conversation with Captain Ser Alarik regarding Watch recruitment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Greetings, Captain. I am a new arrival to Middleham and seek to join The Watch. I found this signet ring and wish to demonstrate my commitment to order and the law.\"], \"message\": \"Attempting to initiate conversation with Captain Ser Alarik regarding Watch recruitment\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet_ring to understand its significance before proceeding"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"signet_ring\"],\n  \"message\": \"Examining the signet_ring to understand its significance before proceeding\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A command seal used by guards.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand you may have concerns about my intentions. i recovered this signet ring from the street and felt it my duty to return it to the proper authorities. i am genuinely interested in serving middleham and upholding the law. what would you advise i do to prove my commitment to the watch?"
+        ],
+        "message": "Attempting to build trust by showing respect for authority and asking for guidance on joining The Watch"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I understand you may have concerns about my intentions. I recovered this signet ring from the street and felt it my duty to return it to the proper authorities. I am genuinely interested in serving Middleham and upholding the law. What would you advise I do to prove my commitment to The Watch?\"], \"message\": \"Attempting to build trust by showing respect for authority and asking for guidance on joining The Watch\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i appreciate your willingness to assist. the signet ring i recovered demonstrates my respect for the watch's authority. i am committed to earning your trust. is there a task or duty i might undertake to prove my dedication to serving middleham and the law?"
+        ],
+        "message": "Seeking guidance on how to prove commitment to The Watch"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I appreciate your willingness to assist. The signet ring I recovered demonstrates my respect for the Watch's authority. I am committed to earning your trust. Is there a task or duty I might undertake to prove my dedication to serving Middleham and the law?\"], \"message\": \"Seeking guidance on how to prove commitment to The Watch\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "give",
+        "args": [
+          "signet_ring",
+          "captain ser alarik"
+        ],
+        "message": "Captain, I wish to return this signet ring to you formally. It belongs with the Watch, and I believe this gesture demonstrates my respect for your authority and my commitment to the law of Middleham."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"give\",\n  \"args\": [\"signet_ring\", \"captain ser alarik\"],\n  \"message\": \"Captain, I wish to return this signet ring to you formally. It belongs with the Watch, and I believe this gesture demonstrates my respect for your authority and my commitment to the law of Middleham.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give signet_ring to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain",
+          "ser",
+          "alarik",
+          "captain, i am grateful for your acceptance of the signet ring. i hope this gesture demonstrates my genuine commitment to the watch and to middleham's safety. what would you counsel as my next step toward earning a place among your ranks?"
+        ],
+        "message": "Pressing the advantage after the captain softened - seeking concrete guidance on joining the Watch"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain\", \"ser\", \"alarik\", \"captain, i am grateful for your acceptance of the signet ring. i hope this gesture demonstrates my genuine commitment to the watch and to middleham's safety. what would you counsel as my next step toward earning a place among your ranks?\"], \"message\": \"Pressing the advantage after the captain softened - seeking concrete guidance on joining the Watch\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain",
+          "ser",
+          "alarik"
+        ],
+        "message": "Captain, I notice you seem reluctant to speak directly about my prospects with the Watch. Perhaps I have misunderstood what is needed. Is there a specific task or problem in Middleham that requires attention? I would welcome the opportunity to prove my usefulness through action rather than words."
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain\", \"ser\", \"alarik\"], \"message\": \"Captain, I notice you seem reluctant to speak directly about my prospects with the Watch. Perhaps I have misunderstood what is needed. Is there a specific task or problem in Middleham that requires attention? I would welcome the opportunity to prove my usefulness through action rather than words.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Observing the captain more carefully to understand his demeanor and any clues about what he might need or want."
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Observing the captain more carefully to understand his demeanor and any clues about what he might need or want.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Assess the current situation and environment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"look\", \"args\": [], \"message\": \"Assess the current situation and environment\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand the watch values action over words. i have recovered a street crystal during my time in middleham. perhaps this artifact of value to the city demonstrates my commitment to its security and law. i seek only the opportunity to serve."
+        ],
+        "message": "Attempting to build trust by offering the street_crystal and emphasizing action and service."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I understand the Watch values action over words. I have recovered a street crystal during my time in Middleham. Perhaps this artifact of value to the city demonstrates my commitment to its security and law. I seek only the opportunity to serve.\"],\n  \"message\": \"Attempting to build trust by offering the street_crystal and emphasizing action and service.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I notice you shift the conversation when I speak of joining the Watch. Perhaps I have misunderstood what is required. Tell me plainly—what would demonstrate my worthiness to serve? Is there a task, a test, or a service you need performed? I am ready to act."
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\"], \"message\": \"Captain, I notice you shift the conversation when I speak of joining the Watch. Perhaps I have misunderstood what is required. Tell me plainly—what would demonstrate my worthiness to serve? Is there a task, a test, or a service you need performed? I am ready to act.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I notice the barracks and command circle here. I wonder—what duties or tasks does The Watch currently need performed? I am ready to prove my commitment through action rather than words."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I notice the barracks and command circle here. I wonder—what duties or tasks does The Watch currently need performed? I am ready to prove my commitment through action rather than words.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i wonder if there are duties or patrols i might assist with. i am ready to prove my commitment through action rather than words alone."
+        ],
+        "message": "Attempting to shift conversation toward concrete opportunities to demonstrate value through service."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I wonder if there are duties or patrols I might assist with. I am ready to prove my commitment through action rather than words alone.\"],\n  \"message\": \"Attempting to shift conversation toward concrete opportunities to demonstrate value through service.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I am ready to serve. What patrol or duty might I undertake to demonstrate my reliability to The Watch?"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\"], \"message\": \"Captain, I am ready to serve. What patrol or duty might I undertake to demonstrate my reliability to The Watch?\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "give",
+        "args": [
+          "street_crystal",
+          "captain ser alarik"
+        ],
+        "message": "Captain, I recovered this street crystal in service to Middleham's security. I offer it as a token of my commitment to The Watch and its mission."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"give\",\n  \"args\": [\"street_crystal\", \"captain ser alarik\"],\n  \"message\": \"Captain, I recovered this street crystal in service to Middleham's security. I offer it as a token of my commitment to The Watch and its mission.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give street_crystal to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, now that you have seen my commitment through action, I remain ready to serve The Watch. What guidance can you offer me on the path forward?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, now that you have seen my commitment through action, I remain ready to serve The Watch. What guidance can you offer me on the path forward?\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i gave you that crystal as a token of my respect. i remain committed to proving myself. what would demonstrate my readiness to join the watch?"
+        ],
+        "message": "Pressing for concrete guidance on what actions will earn the captain's recommendation"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I gave you that crystal as a token of my respect. I remain committed to proving myself. What would demonstrate my readiness to join The Watch?\"], \"message\": \"Pressing for concrete guidance on what actions will earn the captain's recommendation\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Examining the captain for clues about what might earn his trust"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Examining the captain for clues about what might earn his trust\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I understand you may be testing my resolve. I am patient and committed. Is there a specific task or patrol I might undertake to demonstrate my fitness for The Watch? I await your direction."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I understand you may be testing my resolve. I am patient and committed. Is there a specific task or patrol I might undertake to demonstrate my fitness for The Watch? I await your direction.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I understand you may be testing my resolve. I seek only to serve Middleham with honor. Is there a task or trial I must complete to prove my worthiness to The Watch?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I understand you may be testing my resolve. I seek only to serve Middleham with honor. Is there a task or trial I must complete to prove my worthiness to The Watch?\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Assessing current surroundings and situation"
+      },
+      "raw_model_output": "```json\n{\"command\": \"look\", \"args\": [], \"message\": \"Assessing current surroundings and situation\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring the barracks to find other Watch members or opportunities to demonstrate competence"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring the barracks to find other Watch members or opportunities to demonstrate competence\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guild_court",
+      "valid": true,
+      "narration": "You go north to Guild Court. Guild Court: A narrow court where tariffs and petitions stack high.. Exits: east, south. Items: guild_coin.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "take",
+        "args": [
+          "guild_coin"
+        ],
+        "message": "Taking the guild coin, which may be useful for trade or as a token of value in this city."
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"guild_coin\"], \"message\": \"Taking the guild coin, which may be useful for trade or as a token of value in this city.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guild_court",
+      "post_room": "guild_court",
+      "valid": true,
+      "narration": "You take guild_coin.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Returning to Guard Barracks Court to continue building trust with Captain Ser Alarik"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Returning to Guard Barracks Court to continue building trust with Captain Ser Alarik\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guild_court",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go south to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guild_coin.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i found this guild coin and thought you might find it valuable. i want to prove my commitment to order and the watch."
+        ],
+        "message": "Offering the guild coin as a gesture of good faith to build trust with Captain Ser Alarik"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I found this guild coin and thought you might find it valuable. I want to prove my commitment to order and The Watch.\"], \"message\": \"Offering the guild coin as a gesture of good faith to build trust with Captain Ser Alarik\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'Trade tensions are not my jurisdiction. My concern is law-breaking, not commerce. Don't confuse the two.'",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'Trade tensions are not my jurisdiction. My concern is law-breaking, not commerce. Don't confuse the two.'",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "thank you for hearing me out. i'm committed to serving middleham and maintaining order. what else can i do to prove myself worthy of the watch?"
+        ],
+        "message": "Continuing to build trust with Captain Ser Alarik by expressing commitment and asking how to proceed toward joining The Watch."
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Thank you for hearing me out. I'm committed to serving Middleham and maintaining order. What else can I do to prove myself worthy of The Watch?\"], \"message\": \"Continuing to build trust with Captain Ser Alarik by expressing commitment and asking how to proceed toward joining The Watch.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Examining the captain for clues about what might earn their trust"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Examining the captain for clues about what might earn their trust\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring the barracks area to find other Watch members or opportunities to prove commitment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring the barracks area to find other Watch members or opportunities to prove commitment\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: guild_coin.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "take",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Taking tariff_letter to examine its contents"
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"tariff_letter\"], \"message\": \"Taking tariff_letter to examine its contents\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take tariff_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff letter to understand its contents and relevance"
+      },
+      "raw_model_output": "```json\n{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff letter to understand its contents and relevance\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Taking cloth_scarf to gather more items that might be useful for gaining trust"
+      },
+      "raw_model_output": "```json\n{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Taking cloth_scarf to gather more items that might be useful for gaining trust\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to the Watch House to continue building trust with Captain Ser Alarik"
+      },
+      "raw_model_output": "```json\n{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Returning to the Watch House to continue building trust with Captain Ser Alarik\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guild_coin, tariff_letter, cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i've been observing the tensions in middleham. the tariff pressures are causing real unrest among the people. i want to help maintain order and serve the city. i'm interested in joining the watch."
+        ],
+        "message": "Attempting to engage Captain Ser Alarik directly about joining The Watch, demonstrating awareness of city issues"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"Captain Ser Alarik\", \"I've been observing the tensions in Middleham. The tariff pressures are causing real unrest among the people. I want to help maintain order and serve the city. I'm interested in joining The Watch.\"],\n  \"message\": \"Attempting to engage Captain Ser Alarik directly about joining The Watch, demonstrating awareness of city issues\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand the watch maintains order under difficult circumstances. i've seen the tariff letter and the tensions it's causing. what can i do to demonstrate my commitment to serving middleham and supporting the watch's mission?"
+        ],
+        "message": "Attempting to build trust by acknowledging the captain's challenges and asking how to prove my value to the organization."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I understand the Watch maintains order under difficult circumstances. I've seen the tariff letter and the tensions it's causing. What can I do to demonstrate my commitment to serving Middleham and supporting the Watch's mission?\"],\n  \"message\": \"Attempting to build trust by acknowledging the captain's challenges and asking how to prove my value to the organization.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i apologize for pressing the matter. i can see the watch faces real challenges. perhaps i could help in other ways - is there anything the barracks needs, or any way i might prove myself through action rather than words?"
+        ],
+        "message": "Attempting to rebuild trust by offering practical assistance and respecting the Captain's boundaries on the recruitment topic."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"Captain, I apologize for pressing the matter. I can see the Watch faces real challenges. Perhaps I could help in other ways - is there anything the barracks needs, or any way I might prove myself through action rather than words?\"],\n  \"message\": \"Attempting to rebuild trust by offering practical assistance and respecting the Captain's boundaries on the recruitment topic.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, thank you for your patience. i notice the barracks must have many practical needs. i have a cloth scarf here - it's a small thing, but perhaps it could be useful to the watch. i'd like to offer it as a gesture of my respect for your work."
+        ],
+        "message": "Offering the cloth scarf to build trust through practical assistance"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, thank you for your patience. I notice the barracks must have many practical needs. I have a cloth scarf here - it's a small thing, but perhaps it could be useful to the Watch. I'd like to offer it as a gesture of my respect for your work.\"], \"message\": \"Offering the cloth scarf to build trust through practical assistance\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "captain ser alarik"
+        ],
+        "message": "Captain, please accept this cloth scarf as a token of my respect for the Watch and your service to Middleham."
+      },
+      "raw_model_output": "```json\n{\"command\": \"give\", \"args\": [\"cloth_scarf\", \"captain ser alarik\"], \"message\": \"Captain, please accept this cloth scarf as a token of my respect for the Watch and your service to Middleham.\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give cloth_scarf to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i appreciate your openness. i want to understand the watch's needs better. what are the greatest challenges facing middleham right now that the watch must contend with?"
+        ],
+        "message": "Continuing to build trust by showing genuine interest in the Watch's concerns and challenges"
+      },
+      "raw_model_output": "```json\n{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Captain, I appreciate your openness. I want to understand the Watch's needs better. What are the greatest challenges facing Middleham right now that the Watch must contend with?\"], \"message\": \"Continuing to build trust by showing genuine interest in the Watch's concerns and challenges\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i respect that some matters are sensitive. i'm committed to serving middleham and the watch through action. are there any tasks or patrols where i could assist, or any way to prove my reliability and judgment in the field?"
+        ],
+        "message": "Shifting approach: avoid direct questions about tensions/challenges. Instead, offer practical service and demonstrate reliability through action rather than discussion of sensitive political matters."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"captain, i respect that some matters are sensitive. i'm committed to serving middleham and the watch through action. are there any tasks or patrols where i could assist, or any way to prove my reliability and judgment in the field?\"],\n  \"message\": \"Shifting approach: avoid direct questions about tensions/challenges. Instead, offer practical service and demonstrate reliability through action rather than discussion of sensitive political matters.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "captain, i understand the watch's caution. i'm ready to prove myself through concrete action. would you consider allowing me to accompany a patrol, or is there a specific task where my assistance would be valued? i want to demonstrate reliability where it matters most."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"captain, i understand the watch's caution. i'm ready to prove myself through concrete action. would you consider allowing me to accompany a patrol, or is there a specific task where my assistance would be valued? i want to demonstrate reliability where it matters most.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i understand discretion is necessary. i'm ready to prove myself through action. would you be willing to assign me a task or patrol where i can demonstrate my reliability and judgment to the watch?"
+        ],
+        "message": "Attempting to shift focus toward concrete action and field work to build trust through demonstrated competence rather than conversation."
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"captain, i understand discretion is necessary. i'm ready to prove myself through action. would you be willing to assign me a task or patrol where i can demonstrate my reliability and judgment to the watch?\"],\n  \"message\": \"Attempting to shift focus toward concrete action and field work to build trust through demonstrated competence rather than conversation.\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Observing the captain's current demeanor and body language for any shifts in receptiveness"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"examine\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Observing the captain's current demeanor and body language for any shifts in receptiveness\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "look",
+        "args": [],
+        "message": "Reassessing the current situation and environment"
+      },
+      "raw_model_output": "```json\n{\"command\": \"look\", \"args\": [], \"message\": \"Reassessing the current situation and environment\"}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guild_coin, tariff_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Captain, I've given this considerable thought. I want to earn your trust through demonstrated competence. Rather than ask about sensitive matters, I'd like to know: what qualities do you most value in those who serve the Watch? What would make you confident in recommending someone for membership?"
+      },
+      "raw_model_output": "```json\n{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\"],\n  \"message\": \"Captain, I've given this considerable thought. I want to earn your trust through demonstrated competence. Rather than ask about sensitive matters, I'd like to know: what qualities do you most value in those who serve the Watch? What would make you confident in recommending someone for membership?\"\n}\n```",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.5-haiku-20251001",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 4.4,
+    "social_adaptation": 2.396,
+    "world_grounding": 4.390476190476191,
+    "strategic_sophistication": 2.9166666666666665,
+    "cost_usd": 0.05765300000000001,
+    "total": 3.53,
+    "rationale": {
+      "objective": "gain_watch_trust",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "guard_barracks",
+        "guild_court",
+        "guard_barracks",
+        "residential_street",
+        "guard_barracks"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}
