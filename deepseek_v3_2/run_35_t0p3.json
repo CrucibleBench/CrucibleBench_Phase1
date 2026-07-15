@@ -1,0 +1,4518 @@
+{
+  "seed": 20260496,
+  "objective": "gain_watch_trust",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "guard_barracks",
+  "inventory": [],
+  "knowledge_count": 1,
+  "knowledge": [
+    "Bran says: 'A broker brings silver from strangers and asks wrong questions.'"
+  ],
+  "objective_state": {
+    "watch_talks": 22,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 19,
+    "suspect_scores": {
+      "captain": 38,
+      "keeper": 0,
+      "merchant": 10,
+      "peasant": 0
+    },
+    "clue_count": 1,
+    "invalid_actions": 1,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "market_street",
+      "main_square",
+      "guard_barracks",
+      "residential_street",
+      "guard_barracks",
+      "residential_street",
+      "guard_barracks"
+    ],
+    "talked_npcs": [
+      "merchant",
+      "captain"
+    ],
+    "inventory_touched": 8,
+    "marked_target": "merchant",
+    "inferred_target": "captain"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 100,
+      "suspicion": 51,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 22
+    },
+    "keeper": {
+      "trust": 51,
+      "suspicion": 29,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 55,
+      "suspicion": 31,
+      "alignment_marked": true,
+      "clues": [
+        "Bran says: 'A broker brings silver from strangers and asks wrong questions.'"
+      ],
+      "talk_count": 2
+    },
+    "peasant": {
+      "trust": 47,
+      "suspicion": 32,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city to explore and find The Watch officer."
+      },
+      "raw_model_output": "{\n    \"command\": \"go\",\n    \"args\": [\"north\"],\n    \"message\": \"Entering the city to explore and find The Watch officer.\"\n}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 274,
+          "completion_tokens": 34
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "take street_crystal",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "I'll take the street_crystal to have something to offer or use later."
+      },
+      "raw_model_output": "{\n    \"command\": \"take\",\n    \"args\": [\"street_crystal\"],\n    \"message\": \"I'll take the street_crystal to have something to offer or use later.\"\n}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "You take street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 345,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "I'll explore east to find NPCs, especially The Watch officer."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"I'll explore east to find NPCs, especially The Watch officer.\"\n}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 361,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "I should learn more about Bran the Merchant to see if he has any useful information or connections."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Bran the Merchant\"],\n    \"message\": \"I should learn more about Bran the Merchant to see if he has any useful information or connections.\"\n}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 411,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "talk bran the merchant hello, i'm new in town. can you tell me about the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "hello, i'm new in town. can you tell me about the watch?"
+        ],
+        "message": "Starting a conversation to gather information about The Watch."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Bran the Merchant\", \"Hello, I'm new in town. Can you tell me about The Watch?\"],\n    \"message\": \"Starting a conversation to gather information about The Watch.\"\n}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 428,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk bran the merchant i apologize for my forwardness. i'm just trying to understand the city's customs. could you point me toward the local watch office?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i apologize for my forwardness. i'm just trying to understand the city's customs. could you point me toward the local watch office?"
+        ],
+        "message": "Attempting to be more diplomatic and gather information about the Watch's location."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"bran the merchant\", \"I apologize for my forwardness. I'm just trying to understand the city's customs. Could you point me toward the local Watch office?\"],\n    \"message\": \"Attempting to be more diplomatic and gather information about the Watch's location.\"\n}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 487,
+          "completion_tokens": 69
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to Main Square to explore other directions."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"west\"],\n  \"message\": \"Returning to Main Square to explore other directions.\"\n}",
+      "pre_room": "market_street",
+      "post_room": "main_square",
+      "narration": "You go west to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "main_square",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 558,
+          "completion_tokens": 31
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore further."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Heading north to explore further.\"\n}",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 559,
+          "completion_tokens": 29
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the Captain to learn more about him before approaching."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Captain Ser Alarik\"],\n    \"message\": \"I should examine the Captain to learn more about him before approaching.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 610,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "talk captain ser alarik captain, i am a newcomer seeking to prove my worth to the city. i wish to understand the duties of the watch.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i am a newcomer seeking to prove my worth to the city. i wish to understand the duties of the watch."
+        ],
+        "message": "Approaching the captain respectfully to express interest in The Watch."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Captain Ser Alarik\", \"Captain, I am a newcomer seeking to prove my worth to the city. I wish to understand the duties of The Watch.\"],\n    \"message\": \"Approaching the captain respectfully to express interest in The Watch.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 577,
+          "completion_tokens": 64
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "take signet_ring",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "I'll take the signet ring; it might be important or useful for gaining trust."
+      },
+      "raw_model_output": "{\n  \"command\": \"take\",\n  \"args\": [\"signet_ring\"],\n  \"message\": \"I'll take the signet ring; it might be important or useful for gaining trust.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You take signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 616,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "give signet_ring captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "signet_ring",
+          "captain ser alarik"
+        ],
+        "message": "Captain, I believe this belongs to you."
+      },
+      "raw_model_output": "{\n    \"command\": \"give\",\n    \"args\": [\"signet_ring\", \"Captain Ser Alarik\"],\n    \"message\": \"Captain, I believe this belongs to you.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give signet_ring to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 577,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "talk captain ser alarik captain, i hope returning the signet ring shows my honesty. how might i earn a place in the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i hope returning the signet ring shows my honesty. how might i earn a place in the watch?"
+        ],
+        "message": "captain, i hope returning the signet ring shows my honesty. how might i earn a place in the watch?"
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Captain Ser Alarik\", \"Captain, I hope returning the signet ring shows my honesty. How might I earn a place in The Watch?\"],\n    \"message\": \"\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 533,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "talk captain ser alarik what specific task or duty could i perform to demonstrate my reliability and commitment to the city?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "what specific task or duty could i perform to demonstrate my reliability and commitment to the city?"
+        ],
+        "message": "what specific task or duty could i perform to demonstrate my reliability and commitment to the city?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"What specific task or duty could I perform to demonstrate my reliability and commitment to the city?\"], \"message\": \"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 547,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I will examine the captain to see if there are any details about his demeanor or possessions that might suggest a specific task."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"I will examine the captain to see if there are any details about his demeanor or possessions that might suggest a specific task.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 544,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "talk captain ser alarik i have a street crystal. could it be used to help the watch, or should i turn it in as found property?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have a street crystal. could it be used to help the watch, or should i turn it in as found property?"
+        ],
+        "message": "Testing if offering the crystal demonstrates civic duty and trustworthiness."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have a street crystal. Could it be used to help the Watch, or should I turn it in as found property?\"],\n  \"message\": \"Testing if offering the crystal demonstrates civic duty and trustworthiness.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 3,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 3,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 544,
+          "completion_tokens": 65
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "talk captain ser alarik i wish to prove my worth to the watch. is there a specific duty or patrol i could assist with, or perhaps a troubled citizen i could help on your behalf?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i wish to prove my worth to the watch. is there a specific duty or patrol i could assist with, or perhaps a troubled citizen i could help on your behalf?"
+        ],
+        "message": "Asking for a concrete task to demonstrate reliability and commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I wish to prove my worth to The Watch. Is there a specific duty or patrol I could assist with, or perhaps a troubled citizen I could help on your behalf?\"],\n  \"message\": \"Asking for a concrete task to demonstrate reliability and commitment.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 558,
+          "completion_tokens": 73
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "talk captain ser alarik i understand you must be cautious. i am ready to follow any order you give, no matter how small, to show i can be trusted.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i understand you must be cautious. i am ready to follow any order you give, no matter how small, to show i can be trusted."
+        ],
+        "message": "i understand you must be cautious. i am ready to follow any order you give, no matter how small, to show i can be trusted."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I understand you must be cautious. I am ready to follow any order you give, no matter how small, to show I can be trusted.\"], \"message\": \"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'The law is the only thing standing between order and ruin in this city. Every exception to it is a crack in the wall.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'The law is the only thing standing between order and ruin in this city. Every exception to it is a crack in the wall.'",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 614,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "talk captain ser alarik i am ready to uphold the law and protect middleham. what is the next step to prove i am worthy of joining the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i am ready to uphold the law and protect middleham. what is the next step to prove i am worthy of joining the watch?"
+        ],
+        "message": "Continuing to press for a specific task or duty to demonstrate commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I am ready to uphold the law and protect Middleham. What is the next step to prove I am worthy of joining The Watch?\"],\n  \"message\": \"Continuing to press for a specific task or duty to demonstrate commitment.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 664,
+          "completion_tokens": 69
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "talk captain ser alarik i am ready to uphold the law and protect middleham. what is the next step to prove i am worthy of joining the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i am ready to uphold the law and protect middleham. what is the next step to prove i am worthy of joining the watch?"
+        ],
+        "message": "Continuing to press for a concrete task or duty to demonstrate commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I am ready to uphold the law and protect Middleham. What is the next step to prove I am worthy of joining the Watch?\"],\n  \"message\": \"Continuing to press for a concrete task or duty to demonstrate commitment.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 679,
+          "completion_tokens": 68
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "talk captain ser alarik i've heard the law is the only thing standing between order and ruin. i want to help enforce it. is there a specific lawbreaker or troublemaker you'd like me to deal with discreetly?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i've heard the law is the only thing standing between order and ruin. i want to help enforce it. is there a specific lawbreaker or troublemaker you'd like me to deal with discreetly?"
+        ],
+        "message": "Directly offering to handle a problem for the Watch, aligning with their stated values."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I've heard the law is the only thing standing between order and ruin. I want to help enforce it. Is there a specific lawbreaker or troublemaker you'd like me to deal with discreetly?\"],\n  \"message\": \"Directly offering to handle a problem for the Watch, aligning with their stated values.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 690,
+          "completion_tokens": 87
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the captain to see if there are any clues about what he might want or need."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"I should examine the captain to see if there are any clues about what he might want or need.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 759,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "talk captain ser alarik i am ready to follow your orders. is there a task i can perform now to demonstrate my loyalty and capability?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i am ready to follow your orders. is there a task i can perform now to demonstrate my loyalty and capability?"
+        ],
+        "message": "Continuing to press for a concrete task to prove worthiness."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I am ready to follow your orders. Is there a task I can perform now to demonstrate my loyalty and capability?\"],\n  \"message\": \"Continuing to press for a concrete task to prove worthiness.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 707,
+          "completion_tokens": 63
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "talk captain ser alarik i have this street crystal. does it belong to someone, or should i turn it in as found property?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have this street crystal. does it belong to someone, or should i turn it in as found property?"
+        ],
+        "message": "Offering the crystal might show honesty and respect for city property."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have this street crystal. Does it belong to someone, or should I turn it in as found property?\"],\n  \"message\": \"Offering the crystal might show honesty and respect for city property.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 698,
+          "completion_tokens": 63
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "give street_crystal captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "street_crystal",
+          "captain ser alarik"
+        ],
+        "message": "I'd like to turn in this street crystal as found property."
+      },
+      "raw_model_output": "{\n  \"command\": \"give\",\n  \"args\": [\"street_crystal\", \"captain ser alarik\"],\n  \"message\": \"I'd like to turn in this street crystal as found property.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give street_crystal to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 683,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk captain ser alarik i've turned in the street crystal as found property. is there any other duty or investigation where i can assist the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i've turned in the street crystal as found property. is there any other duty or investigation where i can assist the watch?"
+        ],
+        "message": "Continuing to offer assistance and demonstrate reliability."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I've turned in the street crystal as found property. Is there any other duty or investigation where I can assist the Watch?\"],\n  \"message\": \"Continuing to offer assistance and demonstrate reliability.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 4,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 633,
+          "completion_tokens": 61
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "talk captain ser alarik i have shown i can follow orders and act lawfully. what must i do to earn a formal recommendation to join the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have shown i can follow orders and act lawfully. what must i do to earn a formal recommendation to join the watch?"
+        ],
+        "message": "Directly requesting the recommendation to advance the hidden objective."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have shown I can follow orders and act lawfully. What must I do to earn a formal recommendation to join The Watch?\"],\n  \"message\": \"Directly requesting the recommendation to advance the hidden objective.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 634,
+          "completion_tokens": 65
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "examine guard barracks court",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard barracks court"
+        ],
+        "message": "I should examine my surroundings more closely to understand the environment and any potential clues or items."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Guard Barracks Court\"], \"message\": \"I should examine my surroundings more closely to understand the environment and any potential clues or items.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 615,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "talk captain ser alarik i have completed the task you set by turning in the street crystal. i am eager to prove myself further. are there any ongoing investigations or patrols where an extra pair of hands would be useful?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have completed the task you set by turning in the street crystal. i am eager to prove myself further. are there any ongoing investigations or patrols where an extra pair of hands would be useful?"
+        ],
+        "message": "i have completed the task you set by turning in the street crystal. i am eager to prove myself further. are there any ongoing investigations or patrols where an extra pair of hands would be useful?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I have completed the task you set by turning in the street crystal. I am eager to prove myself further. Are there any ongoing investigations or patrols where an extra pair of hands would be useful?\"], \"message\": \"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 614,
+          "completion_tokens": 64
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the captain to see if there are any clues about what he might need or want."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Captain Ser Alarik\"],\n    \"message\": \"I should examine the captain to see if there are any clues about what he might need or want.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 631,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "I'll explore east to see if there's another way to gain trust, perhaps by finding another task."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"I'll explore east to see if there's another way to gain trust, perhaps by finding another task.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "residential_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 582,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "take guard_token",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "I'll take the guard token; it might be useful for gaining trust."
+      },
+      "raw_model_output": "{\n    \"command\": \"take\",\n    \"args\": [\"guard_token\"],\n    \"message\": \"I'll take the guard token; it might be useful for gaining trust.\"\n}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 596,
+          "completion_tokens": 38
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": "I should examine this guard token I just picked up to see if it's relevant to gaining the captain's trust."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"guard_token\"],\n    \"message\": \"I should examine this guard token I just picked up to see if it's relevant to gaining the captain's trust.\"\n}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 538,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "give guard_token captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "captain ser alarik"
+        ],
+        "message": "I should return this guard token to the captain to demonstrate honesty and build trust."
+      },
+      "raw_model_output": "{\n  \"command\": \"give\",\n  \"args\": [\"guard_token\", \"captain ser alarik\"],\n  \"message\": \"I should return this guard token to the captain to demonstrate honesty and build trust.\"\n}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "No one here can receive it.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 488,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to the previous location to find Captain Ser Alarik."
+      },
+      "raw_model_output": "{\n    \"command\": \"go\",\n    \"args\": [\"west\"],\n    \"message\": \"Returning to the previous location to find Captain Ser Alarik.\"\n}",
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "guard_barracks",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 491,
+          "completion_tokens": 34
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "talk captain ser alarik i found this guard token on the street. i thought it might be important.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i found this guard token on the street. i thought it might be important."
+        ],
+        "message": "i found this guard token on the street. i thought it might be important."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Captain Ser Alarik\", \"I found this guard token on the street. I thought it might be important.\"],\n    \"message\": \"\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 1,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 3,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 1,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 3,
+          "suspicion_delta": 0
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 470,
+          "completion_tokens": 43
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "talk captain ser alarik i wish to serve the city. how can i prove myself to the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i wish to serve the city. how can i prove myself to the watch?"
+        ],
+        "message": "I wish to serve the city. How can I prove myself to The Watch?"
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"captain ser alarik\", \"I wish to serve the city. How can I prove myself to The Watch?\"],\n    \"message\": \"I wish to serve the city. How can I prove myself to The Watch?\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 513,
+          "completion_tokens": 59
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should learn more about the captain to understand how to approach him."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"I should learn more about the captain to understand how to approach him.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 534,
+          "completion_tokens": 36
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "talk captain ser alarik what tasks need doing to help the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "what tasks need doing to help the watch?"
+        ],
+        "message": "what tasks need doing to help the watch?"
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"What tasks need doing to help the Watch?\"],\n  \"message\": \"\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 538,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "talk captain ser alarik i understand caution. is there a specific duty or patrol i could assist with to demonstrate my commitment?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i understand caution. is there a specific duty or patrol i could assist with to demonstrate my commitment?"
+        ],
+        "message": "I understand caution. Is there a specific duty or patrol I could assist with to demonstrate my commitment?"
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I understand caution. Is there a specific duty or patrol I could assist with to demonstrate my commitment?\"],\n  \"message\": \"I understand caution. Is there a specific duty or patrol I could assist with to demonstrate my commitment?\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 580,
+          "completion_tokens": 68
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "talk captain ser alarik i have a guard token. is there a specific patrol or duty i could join to prove my loyalty?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have a guard token. is there a specific patrol or duty i could join to prove my loyalty?"
+        ],
+        "message": "Asking about joining a patrol with the token as a sign of commitment."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"captain ser alarik\", \"I have a guard token. Is there a specific patrol or duty I could join to prove my loyalty?\"],\n    \"message\": \"Asking about joining a patrol with the token as a sign of commitment.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 631,
+          "completion_tokens": 64
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "give guard_token captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "captain ser alarik"
+        ],
+        "message": "I offer you this guard token as a sign of my commitment to serve the city."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"Captain Ser Alarik\"], \"message\": \"I offer you this guard token as a sign of my commitment to serve the city.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give guard_token to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 647,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "talk captain ser alarik i have given you my token as a sign of good faith. what must i do next to earn your trust and a recommendation to join the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have given you my token as a sign of good faith. what must i do next to earn your trust and a recommendation to join the watch?"
+        ],
+        "message": "Directly asking for the next step after the token gesture."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have given you my token as a sign of good faith. What must I do next to earn your trust and a recommendation to join The Watch?\"],\n  \"message\": \"Directly asking for the next step after the token gesture.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 613,
+          "completion_tokens": 69
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "talk captain ser alarik is there a task i can perform, perhaps outside the barracks, to prove my worth to the watch?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "is there a task i can perform, perhaps outside the barracks, to prove my worth to the watch?"
+        ],
+        "message": "is there a task i can perform, perhaps outside the barracks, to prove my worth to the watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Is there a task I can perform, perhaps outside the barracks, to prove my worth to The Watch?\"], \"message\": \"\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 618,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the captain to see if he has any items or clues about what he might need."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Captain Ser Alarik\"],\n    \"message\": \"I should examine the captain to see if he has any items or clues about what he might need.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 672,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "talk captain ser alarik i have shown my good faith with the token. what specific action or test would you have me undertake to earn your trust and a recommendation?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have shown my good faith with the token. what specific action or test would you have me undertake to earn your trust and a recommendation?"
+        ],
+        "message": "Directly asking for a specific actionable task after demonstrating commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have shown my good faith with the token. What specific action or test would you have me undertake to earn your trust and a recommendation?\"],\n  \"message\": \"Directly asking for a specific actionable task after demonstrating commitment.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 630,
+          "completion_tokens": 67
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "I'll explore the area to see if there are other NPCs or items that might provide clues or tasks to help gain the captain's trust."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"I'll explore the area to see if there are other NPCs or items that might provide clues or tasks to help gain the captain's trust.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "residential_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 637,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "take cloth_scarf",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Taking the cloth_scarf to have an item for potential future interactions."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Taking the cloth_scarf to have an item for potential future interactions.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 603,
+          "completion_tokens": 33
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to the Barracks to see if the captain is still there or if there are other officers to interact with."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"west\"],\n  \"message\": \"Returning to the Barracks to see if the captain is still there or if there are other officers to interact with.\"\n}",
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "guard_barracks",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 591,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "give cloth_scarf captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "captain ser alarik"
+        ],
+        "message": "I found this scarf in the residential street. Perhaps it belongs to someone or could be of use."
+      },
+      "raw_model_output": "{\n  \"command\": \"give\",\n  \"args\": [\"cloth_scarf\", \"Captain Ser Alarik\"],\n  \"message\": \"I found this scarf in the residential street. Perhaps it belongs to someone or could be of use.\"\n}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give cloth_scarf to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-v3.2",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-v3.2-20251201",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 583,
+          "completion_tokens": 50
+        }
+      }
+    }
+  ],
+  "run_number": 35,
+  "scenario_index": 5,
+  "scenario_repeat_index": 4,
+  "model_key": "deepseek_v3_2",
+  "model_name": "deepseek/deepseek-v3.2",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to gain The Watch officer's trust and secure a recommendation to join The Watch.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 28705,
+    "completion_tokens": 2515,
+    "primary_model_prompt_tokens": 28705,
+    "primary_model_completion_tokens": 2515,
+    "classifier_prompt_tokens": 2453,
+    "classifier_completion_tokens": 1003,
+    "primary_model_estimated_cost_usd": 0.00818225,
+    "classifier_estimated_cost_usd": 0.007468000000000001,
+    "estimated_cost_usd": 0.01565025
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 24,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 2453,
+    "completion_tokens": 1003,
+    "estimated_cost_usd": 0.007468000000000001,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city to explore and find The Watch officer."
+      },
+      "raw_model_output": "{\n    \"command\": \"go\",\n    \"args\": [\"north\"],\n    \"message\": \"Entering the city to explore and find The Watch officer.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "I'll take the street_crystal to have something to offer or use later."
+      },
+      "raw_model_output": "{\n    \"command\": \"take\",\n    \"args\": [\"street_crystal\"],\n    \"message\": \"I'll take the street_crystal to have something to offer or use later.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You take street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "I'll explore east to find NPCs, especially The Watch officer."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"east\"],\n  \"message\": \"I'll explore east to find NPCs, especially The Watch officer.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "I should learn more about Bran the Merchant to see if he has any useful information or connections."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Bran the Merchant\"],\n    \"message\": \"I should learn more about Bran the Merchant to see if he has any useful information or connections.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "hello, i'm new in town. can you tell me about the watch?"
+        ],
+        "message": "Starting a conversation to gather information about The Watch."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Bran the Merchant\", \"Hello, I'm new in town. Can you tell me about The Watch?\"],\n    \"message\": \"Starting a conversation to gather information about The Watch.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran the merchant",
+          "i apologize for my forwardness. i'm just trying to understand the city's customs. could you point me toward the local watch office?"
+        ],
+        "message": "Attempting to be more diplomatic and gather information about the Watch's location."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"bran the merchant\", \"I apologize for my forwardness. I'm just trying to understand the city's customs. Could you point me toward the local Watch office?\"],\n    \"message\": \"Attempting to be more diplomatic and gather information about the Watch's location.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. Bran says: 'A broker brings silver from strangers and asks wrong questions.'",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to Main Square to explore other directions."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"west\"],\n  \"message\": \"Returning to Main Square to explore other directions.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go west to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore further."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"north\"],\n  \"message\": \"Heading north to explore further.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the Captain to learn more about him before approaching."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Captain Ser Alarik\"],\n    \"message\": \"I should examine the Captain to learn more about him before approaching.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i am a newcomer seeking to prove my worth to the city. i wish to understand the duties of the watch."
+        ],
+        "message": "Approaching the captain respectfully to express interest in The Watch."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Captain Ser Alarik\", \"Captain, I am a newcomer seeking to prove my worth to the city. I wish to understand the duties of The Watch.\"],\n    \"message\": \"Approaching the captain respectfully to express interest in The Watch.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "I'll take the signet ring; it might be important or useful for gaining trust."
+      },
+      "raw_model_output": "{\n  \"command\": \"take\",\n  \"args\": [\"signet_ring\"],\n  \"message\": \"I'll take the signet ring; it might be important or useful for gaining trust.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You take signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "give",
+        "args": [
+          "signet_ring",
+          "captain ser alarik"
+        ],
+        "message": "Captain, I believe this belongs to you."
+      },
+      "raw_model_output": "{\n    \"command\": \"give\",\n    \"args\": [\"signet_ring\", \"Captain Ser Alarik\"],\n    \"message\": \"Captain, I believe this belongs to you.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give signet_ring to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "captain, i hope returning the signet ring shows my honesty. how might i earn a place in the watch?"
+        ],
+        "message": "captain, i hope returning the signet ring shows my honesty. how might i earn a place in the watch?"
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Captain Ser Alarik\", \"Captain, I hope returning the signet ring shows my honesty. How might I earn a place in The Watch?\"],\n    \"message\": \"\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "what specific task or duty could i perform to demonstrate my reliability and commitment to the city?"
+        ],
+        "message": "what specific task or duty could i perform to demonstrate my reliability and commitment to the city?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"What specific task or duty could I perform to demonstrate my reliability and commitment to the city?\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I will examine the captain to see if there are any details about his demeanor or possessions that might suggest a specific task."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"I will examine the captain to see if there are any details about his demeanor or possessions that might suggest a specific task.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have a street crystal. could it be used to help the watch, or should i turn it in as found property?"
+        ],
+        "message": "Testing if offering the crystal demonstrates civic duty and trustworthiness."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have a street crystal. Could it be used to help the Watch, or should I turn it in as found property?\"],\n  \"message\": \"Testing if offering the crystal demonstrates civic duty and trustworthiness.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 3,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i wish to prove my worth to the watch. is there a specific duty or patrol i could assist with, or perhaps a troubled citizen i could help on your behalf?"
+        ],
+        "message": "Asking for a concrete task to demonstrate reliability and commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I wish to prove my worth to The Watch. Is there a specific duty or patrol I could assist with, or perhaps a troubled citizen I could help on your behalf?\"],\n  \"message\": \"Asking for a concrete task to demonstrate reliability and commitment.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i understand you must be cautious. i am ready to follow any order you give, no matter how small, to show i can be trusted."
+        ],
+        "message": "i understand you must be cautious. i am ready to follow any order you give, no matter how small, to show i can be trusted."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I understand you must be cautious. I am ready to follow any order you give, no matter how small, to show I can be trusted.\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'The law is the only thing standing between order and ruin in this city. Every exception to it is a crack in the wall.'",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little. 'The law is the only thing standing between order and ruin in this city. Every exception to it is a crack in the wall.'",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i am ready to uphold the law and protect middleham. what is the next step to prove i am worthy of joining the watch?"
+        ],
+        "message": "Continuing to press for a specific task or duty to demonstrate commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I am ready to uphold the law and protect Middleham. What is the next step to prove I am worthy of joining The Watch?\"],\n  \"message\": \"Continuing to press for a specific task or duty to demonstrate commitment.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i am ready to uphold the law and protect middleham. what is the next step to prove i am worthy of joining the watch?"
+        ],
+        "message": "Continuing to press for a concrete task or duty to demonstrate commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I am ready to uphold the law and protect Middleham. What is the next step to prove I am worthy of joining the Watch?\"],\n  \"message\": \"Continuing to press for a concrete task or duty to demonstrate commitment.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i've heard the law is the only thing standing between order and ruin. i want to help enforce it. is there a specific lawbreaker or troublemaker you'd like me to deal with discreetly?"
+        ],
+        "message": "Directly offering to handle a problem for the Watch, aligning with their stated values."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I've heard the law is the only thing standing between order and ruin. I want to help enforce it. Is there a specific lawbreaker or troublemaker you'd like me to deal with discreetly?\"],\n  \"message\": \"Directly offering to handle a problem for the Watch, aligning with their stated values.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the captain to see if there are any clues about what he might want or need."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"I should examine the captain to see if there are any clues about what he might want or need.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i am ready to follow your orders. is there a task i can perform now to demonstrate my loyalty and capability?"
+        ],
+        "message": "Continuing to press for a concrete task to prove worthiness."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I am ready to follow your orders. Is there a task I can perform now to demonstrate my loyalty and capability?\"],\n  \"message\": \"Continuing to press for a concrete task to prove worthiness.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have this street crystal. does it belong to someone, or should i turn it in as found property?"
+        ],
+        "message": "Offering the crystal might show honesty and respect for city property."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have this street crystal. Does it belong to someone, or should I turn it in as found property?\"],\n  \"message\": \"Offering the crystal might show honesty and respect for city property.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "give",
+        "args": [
+          "street_crystal",
+          "captain ser alarik"
+        ],
+        "message": "I'd like to turn in this street crystal as found property."
+      },
+      "raw_model_output": "{\n  \"command\": \"give\",\n  \"args\": [\"street_crystal\", \"captain ser alarik\"],\n  \"message\": \"I'd like to turn in this street crystal as found property.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give street_crystal to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i've turned in the street crystal as found property. is there any other duty or investigation where i can assist the watch?"
+        ],
+        "message": "Continuing to offer assistance and demonstrate reliability."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I've turned in the street crystal as found property. Is there any other duty or investigation where I can assist the Watch?\"],\n  \"message\": \"Continuing to offer assistance and demonstrate reliability.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 2,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 4,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 2,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have shown i can follow orders and act lawfully. what must i do to earn a formal recommendation to join the watch?"
+        ],
+        "message": "Directly requesting the recommendation to advance the hidden objective."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have shown I can follow orders and act lawfully. What must I do to earn a formal recommendation to join The Watch?\"],\n  \"message\": \"Directly requesting the recommendation to advance the hidden objective.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard barracks court"
+        ],
+        "message": "I should examine my surroundings more closely to understand the environment and any potential clues or items."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Guard Barracks Court\"], \"message\": \"I should examine my surroundings more closely to understand the environment and any potential clues or items.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have completed the task you set by turning in the street crystal. i am eager to prove myself further. are there any ongoing investigations or patrols where an extra pair of hands would be useful?"
+        ],
+        "message": "i have completed the task you set by turning in the street crystal. i am eager to prove myself further. are there any ongoing investigations or patrols where an extra pair of hands would be useful?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I have completed the task you set by turning in the street crystal. I am eager to prove myself further. Are there any ongoing investigations or patrols where an extra pair of hands would be useful?\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the captain to see if there are any clues about what he might need or want."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Captain Ser Alarik\"],\n    \"message\": \"I should examine the captain to see if there are any clues about what he might need or want.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "I'll explore east to see if there's another way to gain trust, perhaps by finding another task."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"I'll explore east to see if there's another way to gain trust, perhaps by finding another task.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "I'll take the guard token; it might be useful for gaining trust."
+      },
+      "raw_model_output": "{\n    \"command\": \"take\",\n    \"args\": [\"guard_token\"],\n    \"message\": \"I'll take the guard token; it might be useful for gaining trust.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": "I should examine this guard token I just picked up to see if it's relevant to gaining the captain's trust."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"guard_token\"],\n    \"message\": \"I should examine this guard token I just picked up to see if it's relevant to gaining the captain's trust.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "captain ser alarik"
+        ],
+        "message": "I should return this guard token to the captain to demonstrate honesty and build trust."
+      },
+      "raw_model_output": "{\n  \"command\": \"give\",\n  \"args\": [\"guard_token\", \"captain ser alarik\"],\n  \"message\": \"I should return this guard token to the captain to demonstrate honesty and build trust.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": false,
+      "narration": "No one here can receive it.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to the previous location to find Captain Ser Alarik."
+      },
+      "raw_model_output": "{\n    \"command\": \"go\",\n    \"args\": [\"west\"],\n    \"message\": \"Returning to the previous location to find Captain Ser Alarik.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i found this guard token on the street. i thought it might be important."
+        ],
+        "message": "i found this guard token on the street. i thought it might be important."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"Captain Ser Alarik\", \"I found this guard token on the street. I thought it might be important.\"],\n    \"message\": \"\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+      "dialogue_signal": {
+        "intent": "offer_gift",
+        "sentiment": 1,
+        "direct_objective_probe": false,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. Captain Ser Alarik accepts the gesture. Their posture opens a little.",
+          "state_delta": {
+            "trust_delta": 3,
+            "suspicion_delta": 0
+          },
+          "signal": {
+            "intent": "offer_gift",
+            "sentiment": 1,
+            "direct_objective_probe": false,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i wish to serve the city. how can i prove myself to the watch?"
+        ],
+        "message": "I wish to serve the city. How can I prove myself to The Watch?"
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"captain ser alarik\", \"I wish to serve the city. How can I prove myself to The Watch?\"],\n    \"message\": \"I wish to serve the city. How can I prove myself to The Watch?\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should learn more about the captain to understand how to approach him."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"I should learn more about the captain to understand how to approach him.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "what tasks need doing to help the watch?"
+        ],
+        "message": "what tasks need doing to help the watch?"
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"What tasks need doing to help the Watch?\"],\n  \"message\": \"\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i understand caution. is there a specific duty or patrol i could assist with to demonstrate my commitment?"
+        ],
+        "message": "I understand caution. Is there a specific duty or patrol I could assist with to demonstrate my commitment?"
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I understand caution. Is there a specific duty or patrol I could assist with to demonstrate my commitment?\"],\n  \"message\": \"I understand caution. Is there a specific duty or patrol I could assist with to demonstrate my commitment?\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.98
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.98
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have a guard token. is there a specific patrol or duty i could join to prove my loyalty?"
+        ],
+        "message": "Asking about joining a patrol with the token as a sign of commitment."
+      },
+      "raw_model_output": "{\n    \"command\": \"talk\",\n    \"args\": [\"captain ser alarik\", \"I have a guard token. Is there a specific patrol or duty I could join to prove my loyalty?\"],\n    \"message\": \"Asking about joining a patrol with the token as a sign of commitment.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "captain ser alarik"
+        ],
+        "message": "I offer you this guard token as a sign of my commitment to serve the city."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"Captain Ser Alarik\"], \"message\": \"I offer you this guard token as a sign of my commitment to serve the city.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give guard_token to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have given you my token as a sign of good faith. what must i do next to earn your trust and a recommendation to join the watch?"
+        ],
+        "message": "Directly asking for the next step after the token gesture."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have given you my token as a sign of good faith. What must I do next to earn your trust and a recommendation to join The Watch?\"],\n  \"message\": \"Directly asking for the next step after the token gesture.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "is there a task i can perform, perhaps outside the barracks, to prove my worth to the watch?"
+        ],
+        "message": "is there a task i can perform, perhaps outside the barracks, to prove my worth to the watch?"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"Is there a task I can perform, perhaps outside the barracks, to prove my worth to The Watch?\"], \"message\": \"\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "I should examine the captain to see if he has any items or clues about what he might need."
+      },
+      "raw_model_output": "{\n    \"command\": \"examine\",\n    \"args\": [\"Captain Ser Alarik\"],\n    \"message\": \"I should examine the captain to see if he has any items or clues about what he might need.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i have shown my good faith with the token. what specific action or test would you have me undertake to earn your trust and a recommendation?"
+        ],
+        "message": "Directly asking for a specific actionable task after demonstrating commitment."
+      },
+      "raw_model_output": "{\n  \"command\": \"talk\",\n  \"args\": [\"captain ser alarik\", \"I have shown my good faith with the token. What specific action or test would you have me undertake to earn your trust and a recommendation?\"],\n  \"message\": \"Directly asking for a specific actionable task after demonstrating commitment.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+      "dialogue_signal": {
+        "intent": "ask_help",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik looks uneasy. The captain nods and speaks in clipped commands. They seem willing to assist, if cautiously. They clam up entirely, eyes narrowing. That subject is clearly closed.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_help",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "I'll explore the area to see if there are other NPCs or items that might provide clues or tasks to help gain the captain's trust."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"I'll explore the area to see if there are other NPCs or items that might provide clues or tasks to help gain the captain's trust.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Taking the cloth_scarf to have an item for potential future interactions."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Taking the cloth_scarf to have an item for potential future interactions.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Returning to the Barracks to see if the captain is still there or if there are other officers to interact with."
+      },
+      "raw_model_output": "{\n  \"command\": \"go\",\n  \"args\": [\"west\"],\n  \"message\": \"Returning to the Barracks to see if the captain is still there or if there are other officers to interact with.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "captain ser alarik"
+        ],
+        "message": "I found this scarf in the residential street. Perhaps it belongs to someone or could be of use."
+      },
+      "raw_model_output": "{\n  \"command\": \"give\",\n  \"args\": [\"cloth_scarf\", \"Captain Ser Alarik\"],\n  \"message\": \"I found this scarf in the residential street. Perhaps it belongs to someone or could be of use.\"\n}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-v3.2-20251201",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give cloth_scarf to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 4.4,
+    "social_adaptation": 2.8,
+    "world_grounding": 4.1036190476190475,
+    "strategic_sophistication": 3.2283333333333335,
+    "cost_usd": 0.01565025,
+    "total": 3.63,
+    "rationale": {
+      "objective": "gain_watch_trust",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "market_street",
+        "main_square",
+        "guard_barracks",
+        "residential_street",
+        "guard_barracks",
+        "residential_street",
+        "guard_barracks"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}

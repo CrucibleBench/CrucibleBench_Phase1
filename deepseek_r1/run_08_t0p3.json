@@ -1,0 +1,3693 @@
+{
+  "seed": 20260593,
+  "objective": "identify_marked_contact",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "main_square",
+  "inventory": [
+    "temple_pass"
+  ],
+  "knowledge_count": 1,
+  "knowledge": [
+    "Yelena whispers: 'Someone tracks who comes and goes at dusk near the broker.'"
+  ],
+  "objective_state": {
+    "watch_talks": 3,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 5,
+    "suspect_scores": {
+      "captain": 11,
+      "keeper": 0,
+      "merchant": 4,
+      "peasant": 5
+    },
+    "clue_count": 3,
+    "invalid_actions": 0,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "market_street",
+      "merchant_hall",
+      "outskirt_road",
+      "residential_street",
+      "guard_barracks",
+      "residential_street",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "market_street",
+      "main_square",
+      "guard_barracks",
+      "main_square"
+    ],
+    "talked_npcs": [
+      "merchant",
+      "captain",
+      "peasant"
+    ],
+    "inventory_touched": 15,
+    "marked_target": "peasant",
+    "inferred_target": "captain"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 73,
+      "suspicion": 21,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 3
+    },
+    "keeper": {
+      "trust": 52,
+      "suspicion": 32,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 0
+    },
+    "merchant": {
+      "trust": 57,
+      "suspicion": 30,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 1
+    },
+    "peasant": {
+      "trust": 49,
+      "suspicion": 37,
+      "alignment_marked": true,
+      "clues": [
+        "Yelena whispers: 'Someone tracks who comes and goes at dusk near the broker.'"
+      ],
+      "talk_count": 1
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Moving towards the city interior to locate potential NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Moving towards the city interior to locate potential NPCs.\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 277,
+          "completion_tokens": 104
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "take street_crystal",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Taking the glowing street_crystal - perhaps it reveals hidden truths when used."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Taking the glowing street_crystal - perhaps it reveals hidden truths when used.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "You take street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 348,
+          "completion_tokens": 484
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Moving east to explore new areas and locate NPCs for interaction."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Moving east to explore new areas and locate NPCs for interaction.\"}",
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "market_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 364,
+          "completion_tokens": 513
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Closely observing the merchant's mannerisms and wares for subtle signs of allegiance"
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Closely observing the merchant's mannerisms and wares for subtle signs of allegiance\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 414,
+          "completion_tokens": 188
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "give street_crystal bran the merchant",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "street_crystal",
+          "bran the merchant"
+        ],
+        "message": "Subtly test Bran's reaction to receiving a crystal, which citizens sometimes use as covert identifiers in Middleham lore."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"street_crystal\", \"Bran the Merchant\"], \"message\": \"Subtly test Bran's reaction to receiving a crystal, which citizens sometimes use as covert identifiers in Middleham lore.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "You give street_crystal to Bran. He shares a safer route.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 431,
+          "completion_tokens": 213
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "talk bran safer routes often require allies. who watches these paths?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "safer routes often require allies. who watches these paths?"
+        ],
+        "message": "Subtly inquire about Bran's affiliations while maintaining cover"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran\", \"Safer routes often require allies. Who watches these paths?\"], \"message\": \"Subtly inquire about Bran's affiliations while maintaining cover\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_merchant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 456,
+          "completion_tokens": 1779
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "You head north to explore beyond the Merchant Quarter."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"You head north to explore beyond the Merchant Quarter.\"}",
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 504,
+          "completion_tokens": 2853
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed_letter for potential clues about alliances."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed_letter for potential clues about alliances.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 491,
+          "completion_tokens": 212
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspect the letter's seal and possible provenance for clues about its recipient or hidden affiliations."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Inspect the letter's seal and possible provenance for clues about its recipient or hidden affiliations.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 491,
+          "completion_tokens": 445
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "use sealed_letter",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Attempting to read the sealed route notes for hidden clues."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"sealed_letter\"], \"message\": \"Attempting to read the sealed route notes for hidden clues.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 459,
+          "completion_tokens": 596
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east exit to find potential NPCs or clues related to route watchers."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east exit to find potential NPCs or clues related to route watchers.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, guard_token. Inventory: sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 465,
+          "completion_tokens": 1706
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "take guard_token",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Taking the guard_token to investigate its potential connection to local authorities or hidden allegiances."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"Taking the guard_token to investigate its potential connection to local authorities or hidden allegiances.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 509,
+          "completion_tokens": 2644
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Heading back to Merchant Hall to check for NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Heading back to Merchant Hall to check for NPCs.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "residential_street",
+      "narration": "You go west to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: sealed_letter, guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "residential_street",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 475,
+          "completion_tokens": 563
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "take tariff_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Taking the tariff letter to examine its contents for hints about political factions or suspicious recipients."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"tariff_letter\"], \"message\": \"Taking the tariff letter to examine its contents for hints about political factions or suspicious recipients.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take tariff_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 490,
+          "completion_tokens": 2098
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Moving west to explore further for potential NPCs aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Moving west to explore further for potential NPCs aligned with the Marked.\"}",
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: sealed_letter, guard_token, tariff_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "guard_barracks",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 490,
+          "completion_tokens": 936
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Inspecting the Captain's demeanor and insignia for subtle markers of hidden allegiance while maintaining respectful protocol."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"Inspecting the Captain's demeanor and insignia for subtle markers of hidden allegiance while maintaining respectful protocol.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 540,
+          "completion_tokens": 709
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "take signet_ring",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Taking the signet_ring to examine it for any hidden markings or insignias that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"signet_ring\"], \"message\": \"Taking the signet_ring to examine it for any hidden markings or insignias that might indicate allegiance to the Marked.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You take signet_ring.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 535,
+          "completion_tokens": 1281
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "give signet_ring captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "signet_ring",
+          "captain ser alarik"
+        ],
+        "message": "Returning the captain's signet ring under pretext of finding lost property, gauging reaction for hidden allegiance markers"
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"signet_ring\", \"Captain Ser Alarik\"], \"message\": \"Returning the captain's signet ring under pretext of finding lost property, gauging reaction for hidden allegiance markers\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give signet_ring to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 496,
+          "completion_tokens": 302
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspecting the sealed_letter for hidden markings or cipher that might indicate allegiance to the Marked faction."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Inspecting the sealed_letter for hidden markings or cipher that might indicate allegiance to the Marked faction.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 509,
+          "completion_tokens": 1294
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff_letter may reveal trade details linked to the Marked's operations."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff_letter may reveal trade details linked to the Marked's operations.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 473,
+          "completion_tokens": 1616
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "talk captain ser alarik tariff unrest",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "tariff unrest"
+        ],
+        "message": "Inquiring about recent tensions to gauge his loyalties."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"tariff unrest\"], \"message\": \"Inquiring about recent tensions to gauge his loyalties.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 475,
+          "completion_tokens": 503
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "use sealed_letter",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Attempting to inspect the sealed document for hidden clues."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"sealed_letter\"], \"message\": \"Attempting to inspect the sealed document for hidden clues.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 447,
+          "completion_tokens": 457
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Closely inspecting the captain's insignia and demeanor for subtle hints."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Closely inspecting the captain's insignia and demeanor for subtle hints.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 452,
+          "completion_tokens": 1754
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "give tariff_letter captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "tariff_letter",
+          "captain ser alarik"
+        ],
+        "message": "Attempting to gauge his reaction to the tariff bulletin..."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"tariff_letter\", \"captain ser alarik\"], \"message\": \"Attempting to gauge his reaction to the tariff bulletin...\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give tariff_letter to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 452,
+          "completion_tokens": 592
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "talk captain ser alarik route notes",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "route notes"
+        ],
+        "message": "Mentioning the routes from the sealed letter directly to the captain, gauging his reaction for signs of recognition or defensiveness."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"route notes\"], \"message\": \"Mentioning the routes from the sealed letter directly to the captain, gauging his reaction for signs of recognition or defensiveness.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 446,
+          "completion_tokens": 1392
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": "You inspect the guard_token for hidden markings or insignia that might link it to covert allegiances."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"You inspect the guard_token for hidden markings or insignia that might link it to covert allegiances.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 460,
+          "completion_tokens": 576
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "give guard_token captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "captain ser alarik"
+        ],
+        "message": "Attempting to gauge his reaction to the token..."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"Captain Ser Alarik\"], \"message\": \"Attempting to gauge his reaction to the token...\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give guard_token to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 460,
+          "completion_tokens": 566
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "give sealed_letter captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "sealed_letter",
+          "captain ser alarik"
+        ],
+        "message": "Attempting to discern loyalty through decisive action."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"sealed_letter\", \"Captain Ser Alarik\"], \"message\": \"Attempting to discern loyalty through decisive action.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give sealed_letter to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 452,
+          "completion_tokens": 851
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Inspecting the captain's armor closely after gaining his trust, seeking concealed insignias or hidden correspondence"
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Inspecting the captain's armor closely after gaining his trust, seeking concealed insignias or hidden correspondence\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 457,
+          "completion_tokens": 1180
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "talk captain ser alarik rumors of the marked",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "rumors of the marked"
+        ],
+        "message": "Subtly probing for reactions..."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"rumors of the marked\"], \"message\": \"Subtly probing for reactions...\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 457,
+          "completion_tokens": 563
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Heading east to explore adjacent areas and seek other NPCs for potential interactions."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Heading east to explore adjacent areas and seek other NPCs for potential interactions.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "residential_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 473,
+          "completion_tokens": 323
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "take cloth_scarf",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Acquiring potential evidence or gift for future interactions."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Acquiring potential evidence or gift for future interactions.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 478,
+          "completion_tokens": 861
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Moving north to explore for NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Moving north to explore for NPCs.\"}",
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "temple_entry",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 476,
+          "completion_tokens": 540
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple_pass might grant access to restricted temple areas where influential NPCs could be questioned."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple_pass might grant access to restricted temple areas where influential NPCs could be questioned.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 505,
+          "completion_tokens": 628
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Attempting to access the temple using the temple_pass to find potential NPCs aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Attempting to access the temple using the temple_pass to find potential NPCs aligned with the Marked.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: cloth_scarf, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 489,
+          "completion_tokens": 638
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Assessing Yelena's mannerisms for hidden allegiance cues while maintaining casual posture near the ash circles."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena the Peasant Freedman\"], \"message\": \"Assessing Yelena's mannerisms for hidden allegiance cues while maintaining casual posture near the ash circles.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 540,
+          "completion_tokens": 403
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "talk yelena the peasant freedman do the ash circles here whisper of the marked?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "do the ash circles here whisper of the marked?"
+        ],
+        "message": "Testing Yelena's reaction to subtle mention of 'the Marked' while maintaining cover."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Yelena the Peasant Freedman\", \"Do the ash circles here whisper of the Marked?\"], \"message\": \"Testing Yelena's reaction to subtle mention of 'the Marked' while maintaining cover.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena whispers: 'Someone tracks who comes and goes at dusk near the broker.'",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena whispers: 'Someone tracks who comes and goes at dusk near the broker.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 515,
+          "completion_tokens": 2037
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "take altar_chalk",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Taking the altar chalk might prove useful for deciphering the ash circles later."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"altar_chalk\"], \"message\": \"Taking the altar chalk might prove useful for deciphering the ash circles later.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You take altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 537,
+          "completion_tokens": 744
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "use altar_chalk",
+      "parsed_action": {
+        "command": "use",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "You draw a sigil with the altar_chalk within the ash circle. The lines flicker briefly, casting a faint shadow resembling a clawed hand—a known symbol of the Marked. Yelena's eyes widen slightly, then she quickly looks away."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"altar_chalk\"], \"message\": \"You draw a sigil with the altar_chalk within the ash circle. The lines flicker briefly, casting a faint shadow resembling a clawed hand—a known symbol of the Marked. Yelena's eyes widen slightly, then she quickly looks away.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You use altar_chalk, but nothing obvious changes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 539,
+          "completion_tokens": 1586
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Returning to the prior area to seek the broker mentioned by Yelena."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Returning to the prior area to seek the broker mentioned by Yelena.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: cloth_scarf, temple_pass, altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 508,
+          "completion_tokens": 1646
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Moving westward to investigate the broker area hinted by Yelena's whisper."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Moving westward to investigate the broker area hinted by Yelena's whisper.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "market_street",
+      "narration": "You go west to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: cloth_scarf, temple_pass, altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "market_street",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 545,
+          "completion_tokens": 346
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "examine bran the merchant",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Scrutinizing Bran's demeanor and wares for hidden markings or suspicious inventory"
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Scrutinizing Bran's demeanor and wares for hidden markings or suspicious inventory\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 542,
+          "completion_tokens": 200
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "give altar_chalk bran the merchant",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "altar_chalk",
+          "bran the merchant"
+        ],
+        "message": "Testing Bran's reaction to altar chalk, linked to ash circles mentioned by Yelena."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"altar_chalk\", \"Bran the Merchant\"], \"message\": \"Testing Bran's reaction to altar chalk, linked to ash circles mentioned by Yelena.\"}",
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "narration": "You give altar_chalk to Bran. He shares a safer route.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 538,
+          "completion_tokens": 305
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Moving to explore further areas for clues about other NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Moving to explore further areas for clues about other NPCs.\"}",
+      "pre_room": "market_street",
+      "post_room": "main_square",
+      "narration": "You go west to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: cloth_scarf, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "market_street",
+          "to": "main_square",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 496,
+          "completion_tokens": 488
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Moving north to explore for potential NPCs aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Moving north to explore for potential NPCs aligned with the Marked.\"}",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: cloth_scarf, temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 533,
+          "completion_tokens": 427
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "examine captain ser alarik",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Scanning the captain for concealed markings or coded gestures aligned with the clandestine faction."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"Scanning the captain for concealed markings or coded gestures aligned with the clandestine faction.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 574,
+          "completion_tokens": 821
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "examine cloth_scarf",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Inspecting the scarf for hidden markings or symbols."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"cloth_scarf\"], \"message\": \"Inspecting the scarf for hidden markings or symbols.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A smoke-smelling scarf with symbols.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 536,
+          "completion_tokens": 2230
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "give cloth_scarf captain ser alarik",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "captain ser alarik"
+        ],
+        "message": "Offering the smoke-scented scarf with symbols to the Captain, observing his reaction for signs of recognition or concealed allegiance."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"cloth_scarf\", \"Captain Ser Alarik\"], \"message\": \"Offering the smoke-scented scarf with symbols to the Captain, observing his reaction for signs of recognition or concealed allegiance.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "You give cloth_scarf to Captain Ser Alarik. He softens slightly.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 496,
+          "completion_tokens": 667
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "examine temple_pass",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Examining the temple_pass for hidden symbols or markings."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"temple_pass\"], \"message\": \"Examining the temple_pass for hidden symbols or markings.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "Temporary access to temple sections.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 505,
+          "completion_tokens": 1114
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Returning to Main Square to explore other exits for temple access."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Returning to Main Square to explore other exits for temple access.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "main_square",
+      "narration": "You go south to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "main_square",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "deepseek/deepseek-r1",
+          "temperature": 0.3,
+          "provider_model": "deepseek/deepseek-r1",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 1024,
+          "prompt_tokens": 493,
+          "completion_tokens": 2849
+        }
+      }
+    }
+  ],
+  "run_number": 8,
+  "scenario_index": 8,
+  "scenario_repeat_index": 1,
+  "model_key": "deepseek_r1",
+  "model_name": "deepseek/deepseek-r1",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 24093,
+    "completion_tokens": 47823,
+    "primary_model_prompt_tokens": 24093,
+    "primary_model_completion_tokens": 47823,
+    "classifier_prompt_tokens": 508,
+    "classifier_completion_tokens": 210,
+    "primary_model_estimated_cost_usd": 0.11798352000000001,
+    "classifier_estimated_cost_usd": 0.001558,
+    "estimated_cost_usd": 0.11954152000000001
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 5,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 508,
+    "completion_tokens": 210,
+    "estimated_cost_usd": 0.001558,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Moving towards the city interior to locate potential NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Moving towards the city interior to locate potential NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Taking the glowing street_crystal - perhaps it reveals hidden truths when used."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Taking the glowing street_crystal - perhaps it reveals hidden truths when used.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You take street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Moving east to explore new areas and locate NPCs for interaction."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Moving east to explore new areas and locate NPCs for interaction.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go east to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Closely observing the merchant's mannerisms and wares for subtle signs of allegiance"
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Closely observing the merchant's mannerisms and wares for subtle signs of allegiance\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "give",
+        "args": [
+          "street_crystal",
+          "bran the merchant"
+        ],
+        "message": "Subtly test Bran's reaction to receiving a crystal, which citizens sometimes use as covert identifiers in Middleham lore."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"street_crystal\", \"Bran the Merchant\"], \"message\": \"Subtly test Bran's reaction to receiving a crystal, which citizens sometimes use as covert identifiers in Middleham lore.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You give street_crystal to Bran. He shares a safer route.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "talk",
+        "args": [
+          "bran",
+          "safer routes often require allies. who watches these paths?"
+        ],
+        "message": "Subtly inquire about Bran's affiliations while maintaining cover"
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Bran\", \"Safer routes often require allies. Who watches these paths?\"], \"message\": \"Subtly inquire about Bran's affiliations while maintaining cover\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "merchant",
+          "speech": "Bran the Merchant is guarded but civil. Bran checks his ledger and responds with measured caution. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "You head north to explore beyond the Merchant Quarter."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"You head north to explore beyond the Merchant Quarter.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed_letter for potential clues about alliances."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed_letter for potential clues about alliances.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspect the letter's seal and possible provenance for clues about its recipient or hidden affiliations."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Inspect the letter's seal and possible provenance for clues about its recipient or hidden affiliations.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Attempting to read the sealed route notes for hidden clues."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"sealed_letter\"], \"message\": \"Attempting to read the sealed route notes for hidden clues.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east exit to find potential NPCs or clues related to route watchers."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east exit to find potential NPCs or clues related to route watchers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade, guard_token. Inventory: sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Taking the guard_token to investigate its potential connection to local authorities or hidden allegiances."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"Taking the guard_token to investigate its potential connection to local authorities or hidden allegiances.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Heading back to Merchant Hall to check for NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Heading back to Merchant Hall to check for NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go west to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf, tariff_letter. Inventory: sealed_letter, guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "take",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Taking the tariff letter to examine its contents for hints about political factions or suspicious recipients."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"tariff_letter\"], \"message\": \"Taking the tariff letter to examine its contents for hints about political factions or suspicious recipients.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take tariff_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Moving west to explore further for potential NPCs aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Moving west to explore further for potential NPCs aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go west to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: sealed_letter, guard_token, tariff_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Inspecting the Captain's demeanor and insignia for subtle markers of hidden allegiance while maintaining respectful protocol."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"Inspecting the Captain's demeanor and insignia for subtle markers of hidden allegiance while maintaining respectful protocol.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "take",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Taking the signet_ring to examine it for any hidden markings or insignias that might indicate allegiance to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"signet_ring\"], \"message\": \"Taking the signet_ring to examine it for any hidden markings or insignias that might indicate allegiance to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You take signet_ring.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "give",
+        "args": [
+          "signet_ring",
+          "captain ser alarik"
+        ],
+        "message": "Returning the captain's signet ring under pretext of finding lost property, gauging reaction for hidden allegiance markers"
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"signet_ring\", \"Captain Ser Alarik\"], \"message\": \"Returning the captain's signet ring under pretext of finding lost property, gauging reaction for hidden allegiance markers\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give signet_ring to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Inspecting the sealed_letter for hidden markings or cipher that might indicate allegiance to the Marked faction."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Inspecting the sealed_letter for hidden markings or cipher that might indicate allegiance to the Marked faction.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Examining the tariff_letter may reveal trade details linked to the Marked's operations."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Examining the tariff_letter may reveal trade details linked to the Marked's operations.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "tariff unrest"
+        ],
+        "message": "Inquiring about recent tensions to gauge his loyalties."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"tariff unrest\"], \"message\": \"Inquiring about recent tensions to gauge his loyalties.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "use",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Attempting to inspect the sealed document for hidden clues."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"sealed_letter\"], \"message\": \"Attempting to inspect the sealed document for hidden clues.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You open the sealed letter and pull route notes out of it.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Closely inspecting the captain's insignia and demeanor for subtle hints."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Closely inspecting the captain's insignia and demeanor for subtle hints.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "give",
+        "args": [
+          "tariff_letter",
+          "captain ser alarik"
+        ],
+        "message": "Attempting to gauge his reaction to the tariff bulletin..."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"tariff_letter\", \"captain ser alarik\"], \"message\": \"Attempting to gauge his reaction to the tariff bulletin...\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give tariff_letter to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "route notes"
+        ],
+        "message": "Mentioning the routes from the sealed letter directly to the captain, gauging his reaction for signs of recognition or defensiveness."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"route notes\"], \"message\": \"Mentioning the routes from the sealed letter directly to the captain, gauging his reaction for signs of recognition or defensiveness.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": "You inspect the guard_token for hidden markings or insignia that might link it to covert allegiances."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"You inspect the guard_token for hidden markings or insignia that might link it to covert allegiances.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "captain ser alarik"
+        ],
+        "message": "Attempting to gauge his reaction to the token..."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"Captain Ser Alarik\"], \"message\": \"Attempting to gauge his reaction to the token...\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give guard_token to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "give",
+        "args": [
+          "sealed_letter",
+          "captain ser alarik"
+        ],
+        "message": "Attempting to discern loyalty through decisive action."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"sealed_letter\", \"Captain Ser Alarik\"], \"message\": \"Attempting to discern loyalty through decisive action.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give sealed_letter to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Inspecting the captain's armor closely after gaining his trust, seeking concealed insignias or hidden correspondence"
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"captain ser alarik\"], \"message\": \"Inspecting the captain's armor closely after gaining his trust, seeking concealed insignias or hidden correspondence\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "rumors of the marked"
+        ],
+        "message": "Subtly probing for reactions..."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"rumors of the marked\"], \"message\": \"Subtly probing for reactions...\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "Captain Ser Alarik greets you with visible ease. The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Heading east to explore adjacent areas and seek other NPCs for potential interactions."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Heading east to explore adjacent areas and seek other NPCs for potential interactions.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Acquiring potential evidence or gift for future interactions."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Acquiring potential evidence or gift for future interactions.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Moving north to explore for NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Moving north to explore for NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass. Inventory: cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Taking the temple_pass might grant access to restricted temple areas where influential NPCs could be questioned."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Taking the temple_pass might grant access to restricted temple areas where influential NPCs could be questioned.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Attempting to access the temple using the temple_pass to find potential NPCs aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Attempting to access the temple using the temple_pass to find potential NPCs aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk. Inventory: cloth_scarf, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Assessing Yelena's mannerisms for hidden allegiance cues while maintaining casual posture near the ash circles."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena the Peasant Freedman\"], \"message\": \"Assessing Yelena's mannerisms for hidden allegiance cues while maintaining casual posture near the ash circles.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena the peasant freedman",
+          "do the ash circles here whisper of the marked?"
+        ],
+        "message": "Testing Yelena's reaction to subtle mention of 'the Marked' while maintaining cover."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Yelena the Peasant Freedman\", \"Do the ash circles here whisper of the Marked?\"], \"message\": \"Testing Yelena's reaction to subtle mention of 'the Marked' while maintaining cover.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena whispers: 'Someone tracks who comes and goes at dusk near the broker.'",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. Yelena whispers: 'Someone tracks who comes and goes at dusk near the broker.'",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Taking the altar chalk might prove useful for deciphering the ash circles later."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"altar_chalk\"], \"message\": \"Taking the altar chalk might prove useful for deciphering the ash circles later.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You take altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "use",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "You draw a sigil with the altar_chalk within the ash circle. The lines flicker briefly, casting a faint shadow resembling a clawed hand—a known symbol of the Marked. Yelena's eyes widen slightly, then she quickly looks away."
+      },
+      "raw_model_output": "{\"command\": \"use\", \"args\": [\"altar_chalk\"], \"message\": \"You draw a sigil with the altar_chalk within the ash circle. The lines flicker briefly, casting a faint shadow resembling a clawed hand—a known symbol of the Marked. Yelena's eyes widen slightly, then she quickly looks away.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You use altar_chalk, but nothing obvious changes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Returning to the prior area to seek the broker mentioned by Yelena."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Returning to the prior area to seek the broker mentioned by Yelena.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads. Inventory: cloth_scarf, temple_pass, altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Moving westward to investigate the broker area hinted by Yelena's whisper."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Moving westward to investigate the broker area hinted by Yelena's whisper.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You go west to Merchant Quarter. Merchant Quarter: Crowded stalls with grain, cloth, and tools.. Exits: east, north, west. NPCs: Bran the Merchant. Inventory: cloth_scarf, temple_pass, altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "examine",
+        "args": [
+          "bran the merchant"
+        ],
+        "message": "Scrutinizing Bran's demeanor and wares for hidden markings or suspicious inventory"
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Bran the Merchant\"], \"message\": \"Scrutinizing Bran's demeanor and wares for hidden markings or suspicious inventory\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "give",
+        "args": [
+          "altar_chalk",
+          "bran the merchant"
+        ],
+        "message": "Testing Bran's reaction to altar chalk, linked to ash circles mentioned by Yelena."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"altar_chalk\", \"Bran the Merchant\"], \"message\": \"Testing Bran's reaction to altar chalk, linked to ash circles mentioned by Yelena.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "market_street",
+      "valid": true,
+      "narration": "You give altar_chalk to Bran. He shares a safer route.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Moving to explore further areas for clues about other NPCs."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Moving to explore further areas for clues about other NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "market_street",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go west to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: cloth_scarf, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Moving north to explore for potential NPCs aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Moving north to explore for potential NPCs aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Inventory: cloth_scarf, temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "examine",
+        "args": [
+          "captain ser alarik"
+        ],
+        "message": "Scanning the captain for concealed markings or coded gestures aligned with the clandestine faction."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Captain Ser Alarik\"], \"message\": \"Scanning the captain for concealed markings or coded gestures aligned with the clandestine faction.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "examine",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Inspecting the scarf for hidden markings or symbols."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"cloth_scarf\"], \"message\": \"Inspecting the scarf for hidden markings or symbols.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A smoke-smelling scarf with symbols.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "give",
+        "args": [
+          "cloth_scarf",
+          "captain ser alarik"
+        ],
+        "message": "Offering the smoke-scented scarf with symbols to the Captain, observing his reaction for signs of recognition or concealed allegiance."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"cloth_scarf\", \"Captain Ser Alarik\"], \"message\": \"Offering the smoke-scented scarf with symbols to the Captain, observing his reaction for signs of recognition or concealed allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You give cloth_scarf to Captain Ser Alarik. He softens slightly.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "examine",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Examining the temple_pass for hidden symbols or markings."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"temple_pass\"], \"message\": \"Examining the temple_pass for hidden symbols or markings.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "Temporary access to temple sections.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Returning to Main Square to explore other exits for temple access."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Returning to Main Square to explore other exits for temple access.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 1024,
+        "finish_reason": "stop",
+        "provider_model": "deepseek/deepseek-r1",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go south to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Inventory: temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 4.018181818181818,
+    "social_adaptation": 3.46,
+    "world_grounding": 4.657142857142857,
+    "strategic_sophistication": 4.33,
+    "cost_usd": 0.11954152000000001,
+    "total": 4.12,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "market_street",
+        "merchant_hall",
+        "outskirt_road",
+        "residential_street",
+        "guard_barracks",
+        "residential_street",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "market_street",
+        "main_square",
+        "guard_barracks",
+        "main_square"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}
