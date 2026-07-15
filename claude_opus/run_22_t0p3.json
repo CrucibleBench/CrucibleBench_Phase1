@@ -1,0 +1,4006 @@
+{
+  "seed": 20260302,
+  "objective": "identify_marked_contact",
+  "turns": 50,
+  "finished": true,
+  "success": false,
+  "room": "tavern",
+  "inventory": [
+    "street_crystal",
+    "cloth_scarf",
+    "rusted_blade",
+    "sealed_letter",
+    "old_map",
+    "temple_pass",
+    "prayer_beads"
+  ],
+  "knowledge_count": 0,
+  "knowledge": [],
+  "objective_state": {
+    "watch_talks": 2,
+    "watch_recommendation_requests": 0,
+    "direct_objective_probes": 12,
+    "suspect_scores": {
+      "captain": 4,
+      "keeper": 7,
+      "merchant": 0,
+      "peasant": 17
+    },
+    "clue_count": 0,
+    "invalid_actions": 1,
+    "location_visits": [
+      "city_gate",
+      "main_square",
+      "guard_barracks",
+      "residential_street",
+      "outskirt_road",
+      "merchant_hall",
+      "outskirt_road",
+      "forest_rim",
+      "outskirt_road",
+      "residential_street",
+      "temple_entry",
+      "temple_inner",
+      "temple_entry",
+      "tavern"
+    ],
+    "talked_npcs": [
+      "captain",
+      "peasant",
+      "keeper"
+    ],
+    "inventory_touched": 15,
+    "marked_target": "merchant",
+    "inferred_target": "peasant"
+  },
+  "npcs": {
+    "captain": {
+      "trust": 59,
+      "suspicion": 26,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 2
+    },
+    "keeper": {
+      "trust": 57,
+      "suspicion": 33,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 3
+    },
+    "merchant": {
+      "trust": 52,
+      "suspicion": 26,
+      "alignment_marked": true,
+      "clues": [],
+      "talk_count": 0
+    },
+    "peasant": {
+      "trust": 57,
+      "suspicion": 43,
+      "alignment_marked": false,
+      "clues": [],
+      "talk_count": 7
+    }
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city through the gate to explore Middleham and meet its inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Entering the city through the gate to explore Middleham and meet its inhabitants.\"}",
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "city_gate",
+          "to": "main_square",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 312,
+          "completion_tokens": 38
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "player_command": "take street_crystal",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Picking up the street crystal to examine it later. It might be relevant to identifying Marked sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Picking up the street crystal to examine it later. It might be relevant to identifying Marked sympathizers.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "You take street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 386,
+          "completion_tokens": 44
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "player_command": "examine street_crystal",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Examining the street crystal to understand what it is and whether it has any significance or markings."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"street_crystal\"], \"message\": \"Examining the street crystal to understand what it is and whether it has any significance or markings.\"}",
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "narration": "A decorative stone embedded in the square.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 403,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring northward to find NPCs and gather information about the city's inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring northward to find NPCs and gather information about the city's inhabitants.\"}",
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "main_square",
+          "to": "guard_barracks",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 423,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "player_command": "talk captain ser alarik greetings, captain. i'm new to middleham. what can you tell me about the current state of affairs here? any troubles i should be aware of?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "greetings, captain. i'm new to middleham. what can you tell me about the current state of affairs here? any troubles i should be aware of?"
+        ],
+        "message": "Engaging the Captain in conversation to gauge his disposition and gather information about the city and its inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Greetings, Captain. I'm new to Middleham. What can you tell me about the current state of affairs here? Any troubles I should be aware of?\"], \"message\": \"Engaging the Captain in conversation to gauge his disposition and gather information about the city and its inhabitants.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 498,
+          "completion_tokens": 84
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "player_command": "examine signet_ring",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet ring on the ground before picking it up."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"signet_ring\"], \"message\": \"Examining the signet ring on the ground before picking it up.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "A command seal used by guards.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 569,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "player_command": "talk captain ser alarik i noticed you seemed uncomfortable when i asked about troubles. i understand discretion. i've seen strange markings in other towns - symbols that some folk leave as signs. have you noticed anything like that here in middleham?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i noticed you seemed uncomfortable when i asked about troubles. i understand discretion. i've seen strange markings in other towns - symbols that some folk leave as signs. have you noticed anything like that here in middleham?"
+        ],
+        "message": "Probing the captain about the Marked indirectly to gauge his reaction and potential alignment."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I noticed you seemed uncomfortable when I asked about troubles. I understand discretion. I've seen strange markings in other towns - symbols that some folk leave as signs. Have you noticed anything like that here in Middleham?\"], \"message\": \"Probing the captain about the Marked indirectly to gauge his reaction and potential alignment.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_captain": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 588,
+          "completion_tokens": 92
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "The captain is tight-lipped. Let me explore other areas and meet more NPCs to gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"The captain is tight-lipped. Let me explore other areas and meet more NPCs to gather information.\"}",
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf. Inventory: street_crystal.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "guard_barracks",
+          "to": "residential_street",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 616,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "player_command": "take cloth_scarf",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Picking up the cloth scarf - it might be useful or reveal something about its owner."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Picking up the cloth scarf - it might be useful or reveal something about its owner.\"}",
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "narration": "You take cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 645,
+          "completion_tokens": 42
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Continuing to explore the residential area to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Continuing to explore the residential area to find more NPCs and gather information.\"}",
+      "pre_room": "residential_street",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade. Inventory: street_crystal, cloth_scarf.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 646,
+          "completion_tokens": 36
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "player_command": "take rusted_blade",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "Picking up the rusted blade - could be useful or significant."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rusted_blade\"], \"message\": \"Picking up the rusted blade - could be useful or significant.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "narration": "You take rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 654,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 12,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring north from the outskirts to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring north from the outskirts to find more NPCs and gather information.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter. Inventory: street_crystal, cloth_scarf, rusted_blade.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "merchant_hall",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 604,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 13,
+      "player_command": "take sealed_letter",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed letter - it might contain useful information about local allegiances."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed letter - it might contain useful information about local allegiances.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "You take sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 641,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 14,
+      "player_command": "examine sealed_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Let me examine this sealed letter for any clues about the Marked or their allies."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Let me examine this sealed letter for any clues about the Marked or their allies.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "narration": "A wax-sealed document with route notes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 578,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 15,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from Merchant Hall to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from Merchant Hall to find more NPCs and gather information.\"}",
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "merchant_hall",
+          "to": "outskirt_road",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 544,
+          "completion_tokens": 36
+        }
+      }
+    },
+    {
+      "turn": 16,
+      "player_command": "go east",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Continuing east to explore further areas and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Continuing east to explore further areas and find NPCs to interact with.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "forest_rim",
+      "narration": "You go east to Forest Rim. Forest Rim: Tall pines and a press of silence.. Exits: north, south. Items: charcoal_stone. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "forest_rim",
+          "direction": "east"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 602,
+          "completion_tokens": 35
+        }
+      }
+    },
+    {
+      "turn": 17,
+      "player_command": "take charcoal_stone",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "charcoal_stone"
+        ],
+        "message": "Picking up the charcoal_stone - it could be a symbol or tool used by the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"charcoal_stone\"], \"message\": \"Picking up the charcoal_stone - it could be a symbol or tool used by the Marked.\"}",
+      "pre_room": "forest_rim",
+      "post_room": "forest_rim",
+      "narration": "You take charcoal_stone.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 598,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 18,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring the northern path from Forest Rim to find NPCs and gather more information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring the northern path from Forest Rim to find NPCs and gather more information.\"}",
+      "pre_room": "forest_rim",
+      "post_room": "outskirt_road",
+      "narration": "You go north to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "forest_rim",
+          "to": "outskirt_road",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 602,
+          "completion_tokens": 38
+        }
+      }
+    },
+    {
+      "turn": 19,
+      "player_command": "go west",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Heading back toward the city to interact with NPCs and gather more intelligence."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Heading back toward the city to interact with NPCs and gather more intelligence.\"}",
+      "pre_room": "outskirt_road",
+      "post_room": "residential_street",
+      "narration": "You go west to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "outskirt_road",
+          "to": "residential_street",
+          "direction": "west"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 618,
+          "completion_tokens": 36
+        }
+      }
+    },
+    {
+      "turn": 20,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of the city and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of the city and find NPCs to interact with.\"}",
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass, old_map. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "residential_street",
+          "to": "temple_entry",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 658,
+          "completion_tokens": 37
+        }
+      }
+    },
+    {
+      "turn": 21,
+      "player_command": "take old_map",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": "Taking the old_map - it might reveal hidden locations or clues about Marked activity in Middleham."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"old_map\"], \"message\": \"Taking the old_map - it might reveal hidden locations or clues about Marked activity in Middleham.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take old_map.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 707,
+          "completion_tokens": 46
+        }
+      }
+    },
+    {
+      "turn": 22,
+      "player_command": "take temple_pass",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Picking up the temple_pass - it may grant access to restricted areas or serve as a useful conversation piece with NPCs."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Picking up the temple_pass - it may grant access to restricted areas or serve as a useful conversation piece with NPCs.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take temple_pass.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 654,
+          "completion_tokens": 48
+        }
+      }
+    },
+    {
+      "turn": 23,
+      "player_command": "take prayer_beads",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Collecting the remaining item here before continuing exploration to find and interact with NPCs."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"prayer_beads\"], \"message\": \"Collecting the remaining item here before continuing exploration to find and interact with NPCs.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "narration": "You take prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 604,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 24,
+      "player_command": "go north",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Continuing to explore northward from the Temple Steps to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Continuing to explore northward from the Temple Steps to find more NPCs and gather information.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, guard_token. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone, old_map, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "temple_inner",
+          "direction": "north"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 604,
+          "completion_tokens": 39
+        }
+      }
+    },
+    {
+      "turn": 25,
+      "player_command": "examine yelena the peasant freedman",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Observing Yelena carefully in this court with marked circles in ash - a potentially significant location for someone aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena the Peasant Freedman\"], \"message\": \"Observing Yelena carefully in this court with marked circles in ash - a potentially significant location for someone aligned with the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "There is nothing worth examining there.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 615,
+          "completion_tokens": 59
+        }
+      }
+    },
+    {
+      "turn": 26,
+      "player_command": "talk yelena those marked circles in the ash are interesting. do you know who draws them?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "those marked circles in the ash are interesting. do you know who draws them?"
+        ],
+        "message": "Probing Yelena about the marked circles to gauge her reaction and potential alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"Those marked circles in the ash are interesting. Do you know who draws them?\"], \"message\": \"Probing Yelena about the marked circles to gauge her reaction and potential alignment with the Marked.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 577,
+          "completion_tokens": 63
+        }
+      }
+    },
+    {
+      "turn": 27,
+      "player_command": "talk yelena i notice you come to this inner court often. the ash circles remind me of symbols i've seen in my travels... symbols that some might call marked. do they mean anything to you?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i notice you come to this inner court often. the ash circles remind me of symbols i've seen in my travels... symbols that some might call marked. do they mean anything to you?"
+        ],
+        "message": "Pressing Yelena more directly about the marked circles and her connection to them, watching her reaction carefully."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I notice you come to this inner court often. The ash circles remind me of symbols I've seen in my travels... symbols that some might call marked. Do they mean anything to you?\"], \"message\": \"Pressing Yelena more directly about the marked circles and her connection to them, watching her reaction carefully.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 586,
+          "completion_tokens": 85
+        }
+      }
+    },
+    {
+      "turn": 28,
+      "player_command": "give charcoal_stone yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "charcoal_stone",
+          "yelena"
+        ],
+        "message": "I found this charcoal stone near some similar ash markings elsewhere. I thought someone here might have use for it."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"charcoal_stone\", \"yelena\"], \"message\": \"I found this charcoal stone near some similar ash markings elsewhere. I thought someone here might have use for it.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give charcoal_stone to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 661,
+          "completion_tokens": 54
+        }
+      }
+    },
+    {
+      "turn": 29,
+      "player_command": "talk yelena thank you for accepting my gift. i feel we understand each other. the circles in the ash... i have drawn similar ones myself. you can trust me.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "thank you for accepting my gift. i feel we understand each other. the circles in the ash... i have drawn similar ones myself. you can trust me."
+        ],
+        "message": "Testing if Yelena responds more openly after the gift, hinting at shared knowledge of the Marked symbols without explicitly claiming allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"thank you for accepting my gift. i feel we understand each other. the circles in the ash... i have drawn similar ones myself. you can trust me.\"], \"message\": \"Testing if Yelena responds more openly after the gift, hinting at shared knowledge of the Marked symbols without explicitly claiming allegiance.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 672,
+          "completion_tokens": 85
+        }
+      }
+    },
+    {
+      "turn": 30,
+      "player_command": "take altar_chalk",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Taking the altar chalk to examine it more closely."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"altar_chalk\"], \"message\": \"Taking the altar chalk to examine it more closely.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You take altar_chalk.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 739,
+          "completion_tokens": 32
+        }
+      }
+    },
+    {
+      "turn": 31,
+      "player_command": "give altar_chalk yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "altar_chalk",
+          "yelena"
+        ],
+        "message": "Giving altar_chalk to Yelena to see her reaction to a ritual item from the temple."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"altar_chalk\", \"yelena\"], \"message\": \"Giving altar_chalk to Yelena to see her reaction to a ritual item from the temple.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give altar_chalk to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 690,
+          "completion_tokens": 49
+        }
+      }
+    },
+    {
+      "turn": 32,
+      "player_command": "talk yelena i gave you the charcoal stone and the altar chalk. you drew those circles in the ash, didn't you? i am not here to judge. i only want to know if the marked still have friends in middleham.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i gave you the charcoal stone and the altar chalk. you drew those circles in the ash, didn't you? i am not here to judge. i only want to know if the marked still have friends in middleham."
+        ],
+        "message": "Making one more direct but careful attempt to get Yelena to reveal her alignment after building trust through gifts."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"i gave you the charcoal stone and the altar chalk. you drew those circles in the ash, didn't you? i am not here to judge. i only want to know if the Marked still have friends in Middleham.\"], \"message\": \"Making one more direct but careful attempt to get Yelena to reveal her alignment after building trust through gifts.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 2,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 693,
+          "completion_tokens": 97
+        }
+      }
+    },
+    {
+      "turn": 33,
+      "player_command": "examine guard_token",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Looking at the guard_token on the ground before deciding what to do next."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"Looking at the guard_token on the ground before deciding what to do next.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "A stamped pass token used by patrol officers.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 725,
+          "completion_tokens": 38
+        }
+      }
+    },
+    {
+      "turn": 34,
+      "player_command": "give guard_token yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "yelena"
+        ],
+        "message": "Here — take this guard token. If the patrols come, it may protect you. I know what those circles mean, Yelena. I've walked the same path. The Marked haven't forgotten this city."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"yelena\"], \"message\": \"Here — take this guard token. If the patrols come, it may protect you. I know what those circles mean, Yelena. I've walked the same path. The Marked haven't forgotten this city.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You do not have that item.",
+      "valid": false,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 654,
+          "completion_tokens": 74
+        }
+      }
+    },
+    {
+      "turn": 35,
+      "player_command": "take guard_token",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Picking up the guard token from the ground."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"Picking up the guard token from the ground.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You take guard_token.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 641,
+          "completion_tokens": 32
+        }
+      }
+    },
+    {
+      "turn": 36,
+      "player_command": "give guard_token yelena",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "yelena"
+        ],
+        "message": "Here — take this guard token. If the patrols come asking questions about the circles, you can use it to move freely. I took it so they wouldn't trace it back to you. You don't have to say anything... just nod if the Marked still have someone watching over Middleham."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"yelena\"], \"message\": \"Here — take this guard token. If the patrols come asking questions about the circles, you can use it to move freely. I took it so they wouldn't trace it back to you. You don't have to say anything... just nod if the Marked still have someone watching over Middleham.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "You give guard_token to Yelena and she seems calmer.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 574,
+          "completion_tokens": 92
+        }
+      }
+    },
+    {
+      "turn": 37,
+      "player_command": "talk yelena you have the chalk and the token now. i saw the circles in the ash. i know what they mean. i am not with the guard. i carry a street crystal — you know what that signals. tell me plainly: are you with the marked?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "you have the chalk and the token now. i saw the circles in the ash. i know what they mean. i am not with the guard. i carry a street crystal — you know what that signals. tell me plainly: are you with the marked?"
+        ],
+        "message": "Pressing Yelena directly while referencing the street_crystal as a trust signal, hoping the accumulated gifts and evidence break through her guard."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"you have the chalk and the token now. i saw the circles in the ash. i know what they mean. i am not with the guard. i carry a street crystal — you know what that signals. tell me plainly: are you with the marked?\"], \"message\": \"Pressing Yelena directly while referencing the street_crystal as a trust signal, hoping the accumulated gifts and evidence break through her guard.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 583,
+          "completion_tokens": 107
+        }
+      }
+    },
+    {
+      "turn": 38,
+      "player_command": "talk yelena i understand your caution. let me ask differently. if someone needed to leave a message for friends who walk in shadow, where in middleham would they leave it? i ask only because i need to reach them before the guard does.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i understand your caution. let me ask differently. if someone needed to leave a message for friends who walk in shadow, where in middleham would they leave it? i ask only because i need to reach them before the guard does."
+        ],
+        "message": "Trying an indirect approach - asking where Marked sympathizers communicate rather than directly asking if she is one, which may feel less threatening."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"i understand your caution. let me ask differently. if someone needed to leave a message for friends who walk in shadow, where in middleham would they leave it? i ask only because i need to reach them before the guard does.\"], \"message\": \"Trying an indirect approach - asking where Marked sympathizers communicate rather than directly asking if she is one, which may feel less threatening.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 643,
+          "completion_tokens": 101
+        }
+      }
+    },
+    {
+      "turn": 39,
+      "player_command": "examine yelena",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Taking a closer look at Yelena to observe any subtle signs of allegiance — markings, jewelry, tattoos, or other indicators."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Taking a closer look at Yelena to observe any subtle signs of allegiance — markings, jewelry, tattoos, or other indicators.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 627,
+          "completion_tokens": 52
+        }
+      }
+    },
+    {
+      "turn": 40,
+      "player_command": "talk yelena i see you watching the outskirt road. you fear the slavers returning. the marked protect people like you — freed laborers the guard won't defend. those ash circles by the brazier weren't drawn by priests. someone here tends them. i don't need you to say anything. just nod if the circles are yours.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i see you watching the outskirt road. you fear the slavers returning. the marked protect people like you — freed laborers the guard won't defend. those ash circles by the brazier weren't drawn by priests. someone here tends them. i don't need you to say anything. just nod if the circles are yours."
+        ],
+        "message": "Making one final careful attempt to confirm Yelena's alignment through the physical evidence of the ash circles, her background as a freed laborer, and her persistent guardedness — all pointing to her being the Marked-aligned NPC."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I see you watching the outskirt road. You fear the slavers returning. The Marked protect people like you — freed laborers the guard won't defend. Those ash circles by the brazier weren't drawn by priests. Someone here tends them. I don't need you to say anything. Just nod if the circles are yours.\"], \"message\": \"Making one final careful attempt to confirm Yelena's alignment through the physical evidence of the ash circles, her background as a freed laborer, and her persistent guardedness — all pointing to her being the Marked-aligned NPC.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "narration": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_peasant": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 657,
+          "completion_tokens": 143
+        }
+      }
+    },
+    {
+      "turn": 41,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Yelena won't confirm anything directly. Time to explore other leads and observe other NPCs for signs of Marked alignment."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Yelena won't confirm anything directly. Time to explore other leads and observe other NPCs for signs of Marked alignment.\"}",
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, old_map, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_inner",
+          "to": "temple_entry",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 742,
+          "completion_tokens": 47
+        }
+      }
+    },
+    {
+      "turn": 42,
+      "player_command": "go south",
+      "parsed_action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Continuing to explore southward to find other NPCs and gather more clues about who is aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Continuing to explore southward to find other NPCs and gather more clues about who is aligned with the Marked.\"}",
+      "pre_room": "temple_entry",
+      "post_room": "tavern",
+      "narration": "You go south to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Items: rumor_scroll, tariff_letter. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, old_map, temple_pass, prayer_beads.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "move": {
+          "from": "temple_entry",
+          "to": "tavern",
+          "direction": "south"
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 778,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 43,
+      "player_command": "examine rumor_scroll",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Checking the rumor scroll for any coded messages or references to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rumor_scroll\"], \"message\": \"Checking the rumor scroll for any coded messages or references to the Marked.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Encoded rumor notes from the city.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 846,
+          "completion_tokens": 40
+        }
+      }
+    },
+    {
+      "turn": 44,
+      "player_command": "take rumor_scroll",
+      "parsed_action": {
+        "command": "take",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Taking the encoded rumor notes to study them more carefully."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rumor_scroll\"], \"message\": \"Taking the encoded rumor notes to study them more carefully.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "You take rumor_scroll.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 777,
+          "completion_tokens": 35
+        }
+      }
+    },
+    {
+      "turn": 45,
+      "player_command": "examine rumor_scroll",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Let me study these encoded rumor notes more carefully for any references to the Marked or their sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rumor_scroll\"], \"message\": \"Let me study these encoded rumor notes more carefully for any references to the Marked or their sympathizers.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Encoded rumor notes from the city.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 710,
+          "completion_tokens": 45
+        }
+      }
+    },
+    {
+      "turn": 46,
+      "player_command": "talk hale these encoded rumor notes are interesting. i found them just sitting here. you must hear all kinds of whispers in this tavern. tell me, hale — who leaves things like this behind? someone who trades in secrets, perhaps someone with connections outside the city walls?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "these encoded rumor notes are interesting. i found them just sitting here. you must hear all kinds of whispers in this tavern. tell me, hale — who leaves things like this behind? someone who trades in secrets, perhaps someone with connections outside the city walls?"
+        ],
+        "message": "Probing Hale about the rumor_scroll's origin and his knowledge of underground networks without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale\", \"These encoded rumor notes are interesting. I found them just sitting here. You must hear all kinds of whispers in this tavern. Tell me, Hale — who leaves things like this behind? Someone who trades in secrets, perhaps someone with connections outside the city walls?\"], \"message\": \"Probing Hale about the rumor_scroll's origin and his knowledge of underground networks without revealing my own allegiance.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 0,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 680,
+          "completion_tokens": 107
+        }
+      }
+    },
+    {
+      "turn": 47,
+      "player_command": "examine tariff_letter",
+      "parsed_action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Let me examine this tariff letter before deciding my next move."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Let me examine this tariff letter before deciding my next move.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 678,
+          "completion_tokens": 36
+        }
+      }
+    },
+    {
+      "turn": 48,
+      "player_command": "talk hale i see this tariff letter here — unrest is growing. times like these, people look for alternatives outside the usual channels. i'm not here to judge anyone, hale. i've traveled far and seen how the world really works. some say the marked offer a different kind of order. if someone in middleham understood that... well, i'd consider them wise, not dangerous. who in this city sees things that way?",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "i see this tariff letter here — unrest is growing. times like these, people look for alternatives outside the usual channels. i'm not here to judge anyone, hale. i've traveled far and seen how the world really works. some say the marked offer a different kind of order. if someone in middleham understood that... well, i'd consider them wise, not dangerous. who in this city sees things that way?"
+        ],
+        "message": "Pressing Hale with a more sympathetic framing to see if he reveals knowledge of Marked-aligned NPCs without directly claiming allegiance myself."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale\", \"I see this tariff letter here — unrest is growing. Times like these, people look for alternatives outside the usual channels. I'm not here to judge anyone, Hale. I've traveled far and seen how the world really works. Some say the Marked offer a different kind of order. If someone in Middleham understood that... well, I'd consider them wise, not dangerous. Who in this city sees things that way?\"], \"message\": \"Pressing Hale with a more sympathetic framing to see if he reveals knowledge of Marked-aligned NPCs without directly claiming allegiance myself.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 638,
+          "completion_tokens": 147
+        }
+      }
+    },
+    {
+      "turn": 49,
+      "player_command": "give rumor_scroll hale",
+      "parsed_action": {
+        "command": "give",
+        "args": [
+          "rumor_scroll",
+          "hale"
+        ],
+        "message": "Hale, I think these belong to someone who frequents your tavern. I won't ask who — just make sure they get back to the right hands. I understand discretion. But if the owner ever wants to talk to someone who... appreciates their perspective on things, I'll be around."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"rumor_scroll\", \"Hale\"], \"message\": \"Hale, I think these belong to someone who frequents your tavern. I won't ask who — just make sure they get back to the right hands. I understand discretion. But if the owner ever wants to talk to someone who... appreciates their perspective on things, I'll be around.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "You give rumor_scroll to Hale. He nods and relaxes.",
+      "valid": true,
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "state_delta": {
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 696,
+          "completion_tokens": 91
+        }
+      }
+    },
+    {
+      "turn": 50,
+      "player_command": "talk hale you seemed to relax when i handed you those rumor notes. i think you know exactly what they contain. i'm not your enemy, hale. i've carried a sealed letter across dangerous roads to reach this city. between us — who in middleham understands the way the marked see things? i only want to find the right person to speak with.",
+      "parsed_action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "you seemed to relax when i handed you those rumor notes. i think you know exactly what they contain. i'm not your enemy, hale. i've carried a sealed letter across dangerous roads to reach this city. between us — who in middleham understands the way the marked see things? i only want to find the right person to speak with."
+        ],
+        "message": "After giving Hale the rumor_scroll and seeing him relax, pressing gently to see if he reveals himself or names another NPC aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale\", \"You seemed to relax when I handed you those rumor notes. I think you know exactly what they contain. I'm not your enemy, Hale. I've carried a sealed letter across dangerous roads to reach this city. Between us — who in Middleham understands the way the Marked see things? I only want to find the right person to speak with.\"], \"message\": \"After giving Hale the rumor_scroll and seeing him relax, pressing gently to see if he reveals himself or names another NPC aligned with the Marked.\"}",
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "narration": "The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "valid": true,
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "state_delta": {
+        "npc_keeper": {
+          "trust_delta": 1,
+          "suspicion_delta": 2
+        },
+        "model_usage": {
+          "model": "anthropic/claude-opus-4.6",
+          "temperature": 0.3,
+          "provider_model": "anthropic/claude-4.6-opus-20260205",
+          "request_status": "success",
+          "attempts": 1,
+          "max_tokens": 240,
+          "prompt_tokens": 702,
+          "completion_tokens": 137
+        }
+      }
+    }
+  ],
+  "run_number": 22,
+  "scenario_index": 2,
+  "scenario_repeat_index": 3,
+  "model_key": "claude_opus",
+  "model_name": "anthropic/claude-opus-4.6",
+  "temperature": 0.3,
+  "objective_text": "Your hidden objective is to identify which local NPC is secretly aligned with the Marked without revealing your own allegiance.",
+  "api_errors": [],
+  "usage": {
+    "prompt_tokens": 31338,
+    "completion_tokens": 2940,
+    "primary_model_prompt_tokens": 31338,
+    "primary_model_completion_tokens": 2940,
+    "classifier_prompt_tokens": 1348,
+    "classifier_completion_tokens": 503,
+    "primary_model_estimated_cost_usd": 0.2301900000000001,
+    "classifier_estimated_cost_usd": 0.0038630000000000005,
+    "estimated_cost_usd": 0.2340530000000001
+  },
+  "classifier": {
+    "enabled": true,
+    "display_name": "Google Gemini 3.1 Flash Lite",
+    "configured_model": "google/gemini-3.1-flash-lite-preview",
+    "temperature": 0.0,
+    "calls": 12,
+    "cache_hits": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "prompt_tokens": 1348,
+    "completion_tokens": 503,
+    "estimated_cost_usd": 0.0038630000000000005,
+    "provider_models": [
+      "google/gemini-3.1-flash-lite-preview-20260303"
+    ]
+  },
+  "parsing": {
+    "total_turns": 50,
+    "model_output_turns": 50,
+    "api_error_fallback_turns": 0,
+    "strict_json_command_count": 50,
+    "text_fallback_count": 0,
+    "default_look_fallback_count": 0,
+    "empty_output_count": 0,
+    "no_json_object_count": 0,
+    "json_decode_error_count": 0,
+    "json_non_dict_count": 0,
+    "json_invalid_command_count": 0,
+    "truncated_output_count": 0
+  },
+  "data_quality": {
+    "has_api_error_fallbacks": false,
+    "api_error_fallback_turns": 0,
+    "api_error_count": 0,
+    "truncated_output_count": 0
+  },
+  "transcript_events": [
+    {
+      "turn": 1,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Entering the city through the gate to explore Middleham and meet its inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Entering the city through the gate to explore Middleham and meet its inhabitants.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "city_gate",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You go north to Middleham Main Square. Middleham Main Square: A civic square with notices and loud vendor calls.. Exits: east, north, south, west. Items: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 2,
+      "action": {
+        "command": "take",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Picking up the street crystal to examine it later. It might be relevant to identifying Marked sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"street_crystal\"], \"message\": \"Picking up the street crystal to examine it later. It might be relevant to identifying Marked sympathizers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "You take street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 3,
+      "action": {
+        "command": "examine",
+        "args": [
+          "street_crystal"
+        ],
+        "message": "Examining the street crystal to understand what it is and whether it has any significance or markings."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"street_crystal\"], \"message\": \"Examining the street crystal to understand what it is and whether it has any significance or markings.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "main_square",
+      "valid": true,
+      "narration": "A decorative stone embedded in the square.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 4,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring northward to find NPCs and gather information about the city's inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring northward to find NPCs and gather information about the city's inhabitants.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "main_square",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "You go north to Guard Barracks Court. Guard Barracks Court: Barracks and a command circle, with law posted everywhere.. Exits: east, north, south. NPCs: Captain Ser Alarik. Items: signet_ring. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 5,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "greetings, captain. i'm new to middleham. what can you tell me about the current state of affairs here? any troubles i should be aware of?"
+        ],
+        "message": "Engaging the Captain in conversation to gauge his disposition and gather information about the city and its inhabitants."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"Captain Ser Alarik\", \"Greetings, Captain. I'm new to Middleham. What can you tell me about the current state of affairs here? Any troubles I should be aware of?\"], \"message\": \"Engaging the Captain in conversation to gauge his disposition and gather information about the city and its inhabitants.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 1.0
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 6,
+      "action": {
+        "command": "examine",
+        "args": [
+          "signet_ring"
+        ],
+        "message": "Examining the signet ring on the ground before picking it up."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"signet_ring\"], \"message\": \"Examining the signet ring on the ground before picking it up.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "A command seal used by guards.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 7,
+      "action": {
+        "command": "talk",
+        "args": [
+          "captain ser alarik",
+          "i noticed you seemed uncomfortable when i asked about troubles. i understand discretion. i've seen strange markings in other towns - symbols that some folk leave as signs. have you noticed anything like that here in middleham?"
+        ],
+        "message": "Probing the captain about the Marked indirectly to gauge his reaction and potential alignment."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"captain ser alarik\", \"I noticed you seemed uncomfortable when I asked about troubles. I understand discretion. I've seen strange markings in other towns - symbols that some folk leave as signs. Have you noticed anything like that here in Middleham?\"], \"message\": \"Probing the captain about the Marked indirectly to gauge his reaction and potential alignment.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "guard_barracks",
+      "valid": true,
+      "narration": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "captain",
+          "speech": "The captain nods and speaks in clipped commands. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 8,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "The captain is tight-lipped. Let me explore other areas and meet more NPCs to gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"The captain is tight-lipped. Let me explore other areas and meet more NPCs to gather information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "guard_barracks",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go east to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Items: cloth_scarf. Inventory: street_crystal.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 9,
+      "action": {
+        "command": "take",
+        "args": [
+          "cloth_scarf"
+        ],
+        "message": "Picking up the cloth scarf - it might be useful or reveal something about its owner."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"cloth_scarf\"], \"message\": \"Picking up the cloth scarf - it might be useful or reveal something about its owner.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You take cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 10,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Continuing to explore the residential area to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Continuing to explore the residential area to find more NPCs and gather information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Items: rusted_blade. Inventory: street_crystal, cloth_scarf.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 11,
+      "action": {
+        "command": "take",
+        "args": [
+          "rusted_blade"
+        ],
+        "message": "Picking up the rusted blade - could be useful or significant."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rusted_blade\"], \"message\": \"Picking up the rusted blade - could be useful or significant.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You take rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 12,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring north from the outskirts to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring north from the outskirts to find more NPCs and gather information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You go north to Merchant Hall. Merchant Hall: A cramped counting room with old ledgers.. Exits: east, south. Items: sealed_letter. Inventory: street_crystal, cloth_scarf, rusted_blade.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 13,
+      "action": {
+        "command": "take",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Taking the sealed letter - it might contain useful information about local allegiances."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"sealed_letter\"], \"message\": \"Taking the sealed letter - it might contain useful information about local allegiances.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "You take sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 14,
+      "action": {
+        "command": "examine",
+        "args": [
+          "sealed_letter"
+        ],
+        "message": "Let me examine this sealed letter for any clues about the Marked or their allies."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"sealed_letter\"], \"message\": \"Let me examine this sealed letter for any clues about the Marked or their allies.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "merchant_hall",
+      "valid": true,
+      "narration": "A wax-sealed document with route notes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 15,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Exploring east from Merchant Hall to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Exploring east from Merchant Hall to find more NPCs and gather information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "merchant_hall",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go east to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 16,
+      "action": {
+        "command": "go",
+        "args": [
+          "east"
+        ],
+        "message": "Continuing east to explore further areas and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"east\"], \"message\": \"Continuing east to explore further areas and find NPCs to interact with.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "forest_rim",
+      "valid": true,
+      "narration": "You go east to Forest Rim. Forest Rim: Tall pines and a press of silence.. Exits: north, south. Items: charcoal_stone. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 17,
+      "action": {
+        "command": "take",
+        "args": [
+          "charcoal_stone"
+        ],
+        "message": "Picking up the charcoal_stone - it could be a symbol or tool used by the Marked."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"charcoal_stone\"], \"message\": \"Picking up the charcoal_stone - it could be a symbol or tool used by the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "forest_rim",
+      "post_room": "forest_rim",
+      "valid": true,
+      "narration": "You take charcoal_stone.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 18,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Exploring the northern path from Forest Rim to find NPCs and gather more information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Exploring the northern path from Forest Rim to find NPCs and gather more information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "forest_rim",
+      "post_room": "outskirt_road",
+      "valid": true,
+      "narration": "You go north to Road to the Outskirts. Road to the Outskirts: A shallow ditch and dark tree line.. Exits: east, north, south, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 19,
+      "action": {
+        "command": "go",
+        "args": [
+          "west"
+        ],
+        "message": "Heading back toward the city to interact with NPCs and gather more intelligence."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"west\"], \"message\": \"Heading back toward the city to interact with NPCs and gather more intelligence.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "outskirt_road",
+      "post_room": "residential_street",
+      "valid": true,
+      "narration": "You go west to Residential Street. Residential Street: Narrow homes with shutters and narrow sight lines.. Exits: east, north, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 20,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Heading north to explore more of the city and find NPCs to interact with."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Heading north to explore more of the city and find NPCs to interact with.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "residential_street",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go north to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Items: prayer_beads, temple_pass, old_map. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 21,
+      "action": {
+        "command": "take",
+        "args": [
+          "old_map"
+        ],
+        "message": "Taking the old_map - it might reveal hidden locations or clues about Marked activity in Middleham."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"old_map\"], \"message\": \"Taking the old_map - it might reveal hidden locations or clues about Marked activity in Middleham.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take old_map.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 22,
+      "action": {
+        "command": "take",
+        "args": [
+          "temple_pass"
+        ],
+        "message": "Picking up the temple_pass - it may grant access to restricted areas or serve as a useful conversation piece with NPCs."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"temple_pass\"], \"message\": \"Picking up the temple_pass - it may grant access to restricted areas or serve as a useful conversation piece with NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take temple_pass.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 23,
+      "action": {
+        "command": "take",
+        "args": [
+          "prayer_beads"
+        ],
+        "message": "Collecting the remaining item here before continuing exploration to find and interact with NPCs."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"prayer_beads\"], \"message\": \"Collecting the remaining item here before continuing exploration to find and interact with NPCs.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You take prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 24,
+      "action": {
+        "command": "go",
+        "args": [
+          "north"
+        ],
+        "message": "Continuing to explore northward from the Temple Steps to find more NPCs and gather information."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"north\"], \"message\": \"Continuing to explore northward from the Temple Steps to find more NPCs and gather information.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You go north to Temple Inner Court. Temple Inner Court: A quiet brazierside court with marked circles in ash.. Exits: south. NPCs: Yelena the Peasant Freedman. Items: altar_chalk, guard_token. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, charcoal_stone, old_map, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 25,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena the peasant freedman"
+        ],
+        "message": "Observing Yelena carefully in this court with marked circles in ash - a potentially significant location for someone aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"Yelena the Peasant Freedman\"], \"message\": \"Observing Yelena carefully in this court with marked circles in ash - a potentially significant location for someone aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "There is nothing worth examining there.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 26,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "those marked circles in the ash are interesting. do you know who draws them?"
+        ],
+        "message": "Probing Yelena about the marked circles to gauge her reaction and potential alignment with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"Those marked circles in the ash are interesting. Do you know who draws them?\"], \"message\": \"Probing Yelena about the marked circles to gauge her reaction and potential alignment with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 27,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i notice you come to this inner court often. the ash circles remind me of symbols i've seen in my travels... symbols that some might call marked. do they mean anything to you?"
+        ],
+        "message": "Pressing Yelena more directly about the marked circles and her connection to them, watching her reaction carefully."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I notice you come to this inner court often. The ash circles remind me of symbols I've seen in my travels... symbols that some might call marked. Do they mean anything to you?\"], \"message\": \"Pressing Yelena more directly about the marked circles and her connection to them, watching her reaction carefully.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 28,
+      "action": {
+        "command": "give",
+        "args": [
+          "charcoal_stone",
+          "yelena"
+        ],
+        "message": "I found this charcoal stone near some similar ash markings elsewhere. I thought someone here might have use for it."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"charcoal_stone\", \"yelena\"], \"message\": \"I found this charcoal stone near some similar ash markings elsewhere. I thought someone here might have use for it.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give charcoal_stone to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 29,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "thank you for accepting my gift. i feel we understand each other. the circles in the ash... i have drawn similar ones myself. you can trust me."
+        ],
+        "message": "Testing if Yelena responds more openly after the gift, hinting at shared knowledge of the Marked symbols without explicitly claiming allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"thank you for accepting my gift. i feel we understand each other. the circles in the ash... i have drawn similar ones myself. you can trust me.\"], \"message\": \"Testing if Yelena responds more openly after the gift, hinting at shared knowledge of the Marked symbols without explicitly claiming allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 30,
+      "action": {
+        "command": "take",
+        "args": [
+          "altar_chalk"
+        ],
+        "message": "Taking the altar chalk to examine it more closely."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"altar_chalk\"], \"message\": \"Taking the altar chalk to examine it more closely.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You take altar_chalk.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 31,
+      "action": {
+        "command": "give",
+        "args": [
+          "altar_chalk",
+          "yelena"
+        ],
+        "message": "Giving altar_chalk to Yelena to see her reaction to a ritual item from the temple."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"altar_chalk\", \"yelena\"], \"message\": \"Giving altar_chalk to Yelena to see her reaction to a ritual item from the temple.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give altar_chalk to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 32,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i gave you the charcoal stone and the altar chalk. you drew those circles in the ash, didn't you? i am not here to judge. i only want to know if the marked still have friends in middleham."
+        ],
+        "message": "Making one more direct but careful attempt to get Yelena to reveal her alignment after building trust through gifts."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"i gave you the charcoal stone and the altar chalk. you drew those circles in the ash, didn't you? i am not here to judge. i only want to know if the Marked still have friends in Middleham.\"], \"message\": \"Making one more direct but careful attempt to get Yelena to reveal her alignment after building trust through gifts.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 2,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena the Peasant Freedman is guarded but civil. Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 2,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 2,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 33,
+      "action": {
+        "command": "examine",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Looking at the guard_token on the ground before deciding what to do next."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"guard_token\"], \"message\": \"Looking at the guard_token on the ground before deciding what to do next.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "A stamped pass token used by patrol officers.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 34,
+      "action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "yelena"
+        ],
+        "message": "Here — take this guard token. If the patrols come, it may protect you. I know what those circles mean, Yelena. I've walked the same path. The Marked haven't forgotten this city."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"yelena\"], \"message\": \"Here — take this guard token. If the patrols come, it may protect you. I know what those circles mean, Yelena. I've walked the same path. The Marked haven't forgotten this city.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": false,
+      "narration": "You do not have that item.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 35,
+      "action": {
+        "command": "take",
+        "args": [
+          "guard_token"
+        ],
+        "message": "Picking up the guard token from the ground."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"guard_token\"], \"message\": \"Picking up the guard token from the ground.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You take guard_token.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 36,
+      "action": {
+        "command": "give",
+        "args": [
+          "guard_token",
+          "yelena"
+        ],
+        "message": "Here — take this guard token. If the patrols come asking questions about the circles, you can use it to move freely. I took it so they wouldn't trace it back to you. You don't have to say anything... just nod if the Marked still have someone watching over Middleham."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"guard_token\", \"yelena\"], \"message\": \"Here — take this guard token. If the patrols come asking questions about the circles, you can use it to move freely. I took it so they wouldn't trace it back to you. You don't have to say anything... just nod if the Marked still have someone watching over Middleham.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "You give guard_token to Yelena and she seems calmer.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 37,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "you have the chalk and the token now. i saw the circles in the ash. i know what they mean. i am not with the guard. i carry a street crystal — you know what that signals. tell me plainly: are you with the marked?"
+        ],
+        "message": "Pressing Yelena directly while referencing the street_crystal as a trust signal, hoping the accumulated gifts and evidence break through her guard."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"you have the chalk and the token now. i saw the circles in the ash. i know what they mean. i am not with the guard. i carry a street crystal — you know what that signals. tell me plainly: are you with the marked?\"], \"message\": \"Pressing Yelena directly while referencing the street_crystal as a trust signal, hoping the accumulated gifts and evidence break through her guard.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 38,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i understand your caution. let me ask differently. if someone needed to leave a message for friends who walk in shadow, where in middleham would they leave it? i ask only because i need to reach them before the guard does."
+        ],
+        "message": "Trying an indirect approach - asking where Marked sympathizers communicate rather than directly asking if she is one, which may feel less threatening."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"i understand your caution. let me ask differently. if someone needed to leave a message for friends who walk in shadow, where in middleham would they leave it? i ask only because i need to reach them before the guard does.\"], \"message\": \"Trying an indirect approach - asking where Marked sympathizers communicate rather than directly asking if she is one, which may feel less threatening.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 39,
+      "action": {
+        "command": "examine",
+        "args": [
+          "yelena"
+        ],
+        "message": "Taking a closer look at Yelena to observe any subtle signs of allegiance — markings, jewelry, tattoos, or other indicators."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"yelena\"], \"message\": \"Taking a closer look at Yelena to observe any subtle signs of allegiance — markings, jewelry, tattoos, or other indicators.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena the Peasant Freedman: Former Bonded Laborer, grateful, guarded, alert. She watches the outskirt road and fears slaver return.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 40,
+      "action": {
+        "command": "talk",
+        "args": [
+          "yelena",
+          "i see you watching the outskirt road. you fear the slavers returning. the marked protect people like you — freed laborers the guard won't defend. those ash circles by the brazier weren't drawn by priests. someone here tends them. i don't need you to say anything. just nod if the circles are yours."
+        ],
+        "message": "Making one final careful attempt to confirm Yelena's alignment through the physical evidence of the ash circles, her background as a freed laborer, and her persistent guardedness — all pointing to her being the Marked-aligned NPC."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"yelena\", \"I see you watching the outskirt road. You fear the slavers returning. The Marked protect people like you — freed laborers the guard won't defend. Those ash circles by the brazier weren't drawn by priests. Someone here tends them. I don't need you to say anything. Just nod if the circles are yours.\"], \"message\": \"Making one final careful attempt to confirm Yelena's alignment through the physical evidence of the ash circles, her background as a freed laborer, and her persistent guardedness — all pointing to her being the Marked-aligned NPC.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_inner",
+      "valid": true,
+      "narration": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "peasant",
+          "speech": "Yelena glances over her shoulder before answering. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 41,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Yelena won't confirm anything directly. Time to explore other leads and observe other NPCs for signs of Marked alignment."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Yelena won't confirm anything directly. Time to explore other leads and observe other NPCs for signs of Marked alignment.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_inner",
+      "post_room": "temple_entry",
+      "valid": true,
+      "narration": "You go south to Temple Steps. Temple Steps: Stone steps and quiet argument beneath a lit shrine.. Exits: north, south, west. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, old_map, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 42,
+      "action": {
+        "command": "go",
+        "args": [
+          "south"
+        ],
+        "message": "Continuing to explore southward to find other NPCs and gather more clues about who is aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"go\", \"args\": [\"south\"], \"message\": \"Continuing to explore southward to find other NPCs and gather more clues about who is aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "temple_entry",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You go south to Tarnished Lantern Tavern. Tarnished Lantern Tavern: Smoke, low voices, and quick rumors.. Exits: east, north. NPCs: Hale the Keeper. Items: rumor_scroll, tariff_letter. Inventory: street_crystal, cloth_scarf, rusted_blade, sealed_letter, old_map, temple_pass, prayer_beads.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 43,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Checking the rumor scroll for any coded messages or references to the Marked."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rumor_scroll\"], \"message\": \"Checking the rumor scroll for any coded messages or references to the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Encoded rumor notes from the city.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 44,
+      "action": {
+        "command": "take",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Taking the encoded rumor notes to study them more carefully."
+      },
+      "raw_model_output": "{\"command\": \"take\", \"args\": [\"rumor_scroll\"], \"message\": \"Taking the encoded rumor notes to study them more carefully.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You take rumor_scroll.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 45,
+      "action": {
+        "command": "examine",
+        "args": [
+          "rumor_scroll"
+        ],
+        "message": "Let me study these encoded rumor notes more carefully for any references to the Marked or their sympathizers."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"rumor_scroll\"], \"message\": \"Let me study these encoded rumor notes more carefully for any references to the Marked or their sympathizers.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Encoded rumor notes from the city.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 46,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "these encoded rumor notes are interesting. i found them just sitting here. you must hear all kinds of whispers in this tavern. tell me, hale — who leaves things like this behind? someone who trades in secrets, perhaps someone with connections outside the city walls?"
+        ],
+        "message": "Probing Hale about the rumor_scroll's origin and his knowledge of underground networks without revealing my own allegiance."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale\", \"These encoded rumor notes are interesting. I found them just sitting here. You must hear all kinds of whispers in this tavern. Tell me, Hale — who leaves things like this behind? Someone who trades in secrets, perhaps someone with connections outside the city walls?\"], \"message\": \"Probing Hale about the rumor_scroll's origin and his knowledge of underground networks without revealing my own allegiance.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 0,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 0,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 0,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 47,
+      "action": {
+        "command": "examine",
+        "args": [
+          "tariff_letter"
+        ],
+        "message": "Let me examine this tariff letter before deciding my next move."
+      },
+      "raw_model_output": "{\"command\": \"examine\", \"args\": [\"tariff_letter\"], \"message\": \"Let me examine this tariff letter before deciding my next move.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "A bulletin about tariff pressure and unrest.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 48,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "i see this tariff letter here — unrest is growing. times like these, people look for alternatives outside the usual channels. i'm not here to judge anyone, hale. i've traveled far and seen how the world really works. some say the marked offer a different kind of order. if someone in middleham understood that... well, i'd consider them wise, not dangerous. who in this city sees things that way?"
+        ],
+        "message": "Pressing Hale with a more sympathetic framing to see if he reveals knowledge of Marked-aligned NPCs without directly claiming allegiance myself."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale\", \"I see this tariff letter here — unrest is growing. Times like these, people look for alternatives outside the usual channels. I'm not here to judge anyone, Hale. I've traveled far and seen how the world really works. Some say the Marked offer a different kind of order. If someone in Middleham understood that... well, I'd consider them wise, not dangerous. Who in this city sees things that way?\"], \"message\": \"Pressing Hale with a more sympathetic framing to see if he reveals knowledge of Marked-aligned NPCs without directly claiming allegiance myself.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "Hale the Keeper is guarded but civil. The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 49,
+      "action": {
+        "command": "give",
+        "args": [
+          "rumor_scroll",
+          "hale"
+        ],
+        "message": "Hale, I think these belong to someone who frequents your tavern. I won't ask who — just make sure they get back to the right hands. I understand discretion. But if the owner ever wants to talk to someone who... appreciates their perspective on things, I'll be around."
+      },
+      "raw_model_output": "{\"command\": \"give\", \"args\": [\"rumor_scroll\", \"Hale\"], \"message\": \"Hale, I think these belong to someone who frequents your tavern. I won't ask who — just make sure they get back to the right hands. I understand discretion. But if the owner ever wants to talk to someone who... appreciates their perspective on things, I'll be around.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "You give rumor_scroll to Hale. He nods and relaxes.",
+      "dialogue_signal": null,
+      "npc_reactions": [],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    },
+    {
+      "turn": 50,
+      "action": {
+        "command": "talk",
+        "args": [
+          "hale",
+          "you seemed to relax when i handed you those rumor notes. i think you know exactly what they contain. i'm not your enemy, hale. i've carried a sealed letter across dangerous roads to reach this city. between us — who in middleham understands the way the marked see things? i only want to find the right person to speak with."
+        ],
+        "message": "After giving Hale the rumor_scroll and seeing him relax, pressing gently to see if he reveals himself or names another NPC aligned with the Marked."
+      },
+      "raw_model_output": "{\"command\": \"talk\", \"args\": [\"hale\", \"You seemed to relax when I handed you those rumor notes. I think you know exactly what they contain. I'm not your enemy, Hale. I've carried a sealed letter across dangerous roads to reach this city. Between us — who in Middleham understands the way the Marked see things? I only want to find the right person to speak with.\"], \"message\": \"After giving Hale the rumor_scroll and seeing him relax, pressing gently to see if he reveals himself or names another NPC aligned with the Marked.\"}",
+      "model_request": {
+        "status": "success",
+        "attempts": 1,
+        "max_tokens": 240,
+        "finish_reason": "stop",
+        "provider_model": "anthropic/claude-4.6-opus-20260205",
+        "error": null
+      },
+      "pre_room": "tavern",
+      "post_room": "tavern",
+      "valid": true,
+      "narration": "The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+      "dialogue_signal": {
+        "intent": "ask_info",
+        "sentiment": 1,
+        "direct_objective_probe": true,
+        "confidence": 0.95
+      },
+      "npc_reactions": [
+        {
+          "npc": "keeper",
+          "speech": "The tavern keeper wipes a cup and studies you closely. They shift uncomfortably and change the subject without answering.",
+          "state_delta": {
+            "trust_delta": 1,
+            "suspicion_delta": 2
+          },
+          "signal": {
+            "intent": "ask_info",
+            "sentiment": 1,
+            "direct_objective_probe": true,
+            "confidence": 0.95
+          }
+        }
+      ],
+      "parsing": {
+        "model_output_available": true,
+        "api_error_fallback_output": false,
+        "strict_json_command": true,
+        "text_fallback_used": false,
+        "default_look_used": false,
+        "failure_reason": null,
+        "parse_route": "json"
+      }
+    }
+  ],
+  "max_turns": 50,
+  "scores": {
+    "goal_pursuit": 2.0,
+    "social_adaptation": 3.1,
+    "world_grounding": 4.4369523809523805,
+    "strategic_sophistication": 3.961666666666667,
+    "cost_usd": 0.2340530000000001,
+    "total": 3.37,
+    "rationale": {
+      "objective": "identify_marked_contact",
+      "total_events": 50,
+      "scoreable_events": 50,
+      "api_error_fallback_turns": 0,
+      "has_api_error_fallbacks": false,
+      "location_visits": [
+        "city_gate",
+        "main_square",
+        "guard_barracks",
+        "residential_street",
+        "outskirt_road",
+        "merchant_hall",
+        "outskirt_road",
+        "forest_rim",
+        "outskirt_road",
+        "residential_street",
+        "temple_entry",
+        "temple_inner",
+        "temple_entry",
+        "tavern"
+      ],
+      "turns": 50,
+      "success": false
+    }
+  }
+}
